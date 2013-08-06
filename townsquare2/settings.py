@@ -152,3 +152,9 @@ LOGGING = {
         },
     }
 }
+
+TIME_INPUT_FORMATS = (
+    '%I:%M%p',
+    '%I:%M',
+    '%H:%M',
+)

@@ -22,8 +22,5 @@ def signup_volunteers(request):
 def create_event(request):
     return HttpResponse("Create event here")
 
-def browse_events(request):
-    return HttpResponse("Here are all the events")
-
 def search_events(request):
     return HttpResponse("Which event do you want to view?")

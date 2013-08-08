@@ -7,12 +7,10 @@ class Volunteer(models.Model):
     signup_date = models.DateField()    
 
     def calculate_hours(self):
-        hours = 0
-        for s in self.session_set.all():
-            tdelta = timedelta(s.end, s.start)
-            hour_diff = tdelta.seconds / 3600.00
-	    hours += hour_diff
-	return hours
+        return sum(
+	    [round(timedelta(s.end, s.start).seconds / 3600.0, 1) 
+	    for s in self.session_set.filter() 
+	    if s.event.volunteer_time])
 
     def __unicode__(self):
         return self.name
@@ -44,6 +42,7 @@ class Event(models.Model):
     end = models.TimeField()
     event_location = models.ForeignKey(EventLocation)
     notes = models.TextField(blank=True)
+    volunteer_time = models.BooleanField(default=True)
 
     def __unicode__(self):
 	for abbrev, longform in self.EVENT_TYPES:
@@ -57,7 +56,8 @@ class Session(models.Model):
         ('ST', 'Staff'),
     }
     volunteer = models.ForeignKey(Volunteer)
-    role = models.CharField(max_length=100, choices=ROLES, default='PT')
+    role = models.CharField(max_length=100, choices=ROLES, 
+	default='PT')
     event = models.ForeignKey(Event)
     start = models.TimeField()
     end = models.TimeField()

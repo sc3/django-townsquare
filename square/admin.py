@@ -7,12 +7,14 @@ class SessionInline(admin.TabularInline):
 
 class EventAdmin(admin.ModelAdmin):
     fieldsets = [
-        ('Event Info', {'fields' : ['type', 'event_location']}),
-    	('Time Info',  {'fields' : ['date', 'start', 'end']}),
-        ('Other',      {'fields' : ['notes'], 'classes': ['collapse']}),
+        ('What and Where is it?',      {'fields': ['type', 'event_location']}),
+    	('When is it?',       {'fields': ['date', 'start', 'end']}),
+        ('Additional Info', {'fields': ['notes', 'volunteer_time'], 		    
+	    'classes': ['collapse']}),
     ]
     inlines = [SessionInline]
+    list_display = ('type', 'date', 'event_location', 'volunteer_time')
 
 admin.site.register(Event, EventAdmin)
-admin.site.register(EventLocation)
 admin.site.register(Volunteer)
+admin.site.register(EventLocation)

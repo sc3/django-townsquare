@@ -51,7 +51,7 @@ class Event(models.Model):
     end = models.TimeField(default=datetime.strptime('5:00PM', '%I:%M%p'))
     event_location = models.ForeignKey(EventLocation)
     notes = models.TextField(blank=True)
-    volunteer_time = models.NullBooleanField(editable=False, default=None)
+    volunteer_time = models.NullBooleanField(default=None)
 
     def save(self, *args, **kwargs):
         if self.volunteer_time is None:

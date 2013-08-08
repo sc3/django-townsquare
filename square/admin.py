@@ -9,7 +9,7 @@ class EventAdmin(admin.ModelAdmin):
     fieldsets = [
         ('What and Where is it?', {'fields': ['event_type', 'event_location']}),
     	('When is it?',           {'fields': ['date', 'start', 'end']}),
-        ('Additional Info',       {'fields': ['notes'], 'classes': ['collapse']}),
+        ('Additional Info',       {'fields': ['notes', 'volunteer_time'], 'classes': ['collapse']}),
     ]
     inlines = [SessionInline]
     list_display = ('event_type', 'date', 'event_location')

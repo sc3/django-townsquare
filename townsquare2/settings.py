@@ -119,6 +119,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'square',
+    'south',
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
@@ -156,5 +157,4 @@ LOGGING = {
 TIME_INPUT_FORMATS = (
     '%I:%M%p',
     '%I:%M',
-    '%H:%M',
 )

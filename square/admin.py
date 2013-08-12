@@ -9,7 +9,7 @@ class EventAdmin(admin.ModelAdmin):
     fieldsets = [
         ('What and Where is it?', {'fields': ['event_type', 'event_location']}),
     	('When is it?',           {'fields': ['date', 'start', 'end']}),
-        ('Additional Info',       {'fields': ['notes', 'volunteer_time'], 'classes': ['collapse']}),
+        ('Additional Info',       {'fields': ['notes', 'is_volunteer_time'], 'classes': ['collapse']}),
     ]
     inlines = [SessionInline]
     list_display = ('event_type', 'date', 'event_location')
@@ -20,8 +20,6 @@ class VolunteerAdmin(admin.ModelAdmin):
     fieldsets = [
         ('Personal Info',   {'fields': ['name', 'email']}),
     	('Legacy Info',     {'fields': ['signup_date', 'hours']}),
-        ('Additional Info', {'fields': [], 		    
-	    'classes': ['collapse']}),
     ]
     list_display = ('name', 'signup_date', 'hours', 'email')
 

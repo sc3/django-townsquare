@@ -6,17 +6,19 @@ class Volunteer(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField(max_length=100, blank=True)
     signup_date = models.DateField(default=datetime.now())
-    hours = models.FloatField(editable=False, default=None)    
+    hours = models.FloatField(editable=False, default=0.0)    
 
     def calculate_hours(self):
-        return sum(
-	    [round(timedelta(s.end, s.start).seconds / 3600.0, 1) 
-	    for s in self.session_set.filter() 
-	    if s.event.volunteer_time])
+        hours = 0
+        for s in self.session_set.all():
+            if s.event.is_volunteer_time:
+                tdelta = timedelta(s.end, s.start)
+                hour_diff = tdelta.seconds / 3600.0
+                rounded = round(hour_diff, 1)
+                hours += rounded
+        return hours
 
     def save(self, *args, **kwargs):
-	# doesn't work; have to reload volunteer to see correct hours
-	# consider using signals...
         self.hours = self.calculate_hours()
         super(Volunteer, self).save(*args, **kwargs)
 
@@ -51,15 +53,8 @@ class Event(models.Model):
     end = models.TimeField(default=datetime.strptime('5:00PM', '%I:%M%p'))
     event_location = models.ForeignKey(EventLocation)
     notes = models.TextField(blank=True)
-    volunteer_time = models.NullBooleanField(default=None)
-
-    def save(self, *args, **kwargs):
-        if self.volunteer_time is None:
-            self.volunteer_time = self.counts_towards_volunteer_time()
-        super(Event, self).save(*args, **kwargs)
-
-    def counts_towards_volunteer_time(self):
-        return self.event_type == 'VP'
+    is_volunteer_time = models.NullBooleanField(default=True)
+    participants = models.ManyToManyField(Volunteer, through='Session')
 
     def __unicode__(self):
 	for abbrev, longform in self.EVENT_TYPES:
@@ -68,17 +63,16 @@ class Event(models.Model):
         return "%s on %s" % (long_type, self.date)
 
 class Session(models.Model):
-    ROLES = {
-        ('PT', 'Participant'),
-        ('ST', 'Staff'),
-    }
     volunteer = models.ForeignKey(Volunteer)
-    role = models.CharField(max_length=100, choices=ROLES, default='PT')
     event = models.ForeignKey(Event)
     start = models.TimeField()
     end = models.TimeField()
     orientation = models.BooleanField(default=False)
     forgot_signout = models.BooleanField(default=False)
+
+    def save(self, *args, **kwargs):
+        super(Session, self).save(*args, **kwargs)
+        self.volunteer.save()
 
     def __unicode__(self):
         return "%s at %s" % (self.volunteer, self.event)

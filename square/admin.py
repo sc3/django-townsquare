@@ -13,7 +13,6 @@ class EventAdmin(admin.ModelAdmin):
     ]
     inlines = [SessionInline]
     list_display = ('event_type', 'date', 'event_location')
-
 class VolunteerAdmin(admin.ModelAdmin):
     # add searching and filtering to volunteers
     readonly_fields = ('hours',)
@@ -22,6 +21,7 @@ class VolunteerAdmin(admin.ModelAdmin):
     	('Legacy Info',     {'fields': ['signup_date', 'hours']}),
     ]
     list_display = ('name', 'signup_date', 'hours', 'email')
+    search_fields = ['name', 'email']
 
 admin.site.register(Event, EventAdmin)
 admin.site.register(Volunteer, VolunteerAdmin)

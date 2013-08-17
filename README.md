@@ -1,4 +1,4 @@
-townsquare2
+django-townsquare
 ===========
 
 Python-Django port of townsquare project

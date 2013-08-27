@@ -1,18 +1,18 @@
 from django.db import models
-from utils import timedelta
+from utils import timeonly_delta
 from datetime import datetime
 
 class Volunteer(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField(max_length=100, blank=True)
-    signup_date = models.DateField(default=datetime.now())
+    signup_date = models.DateField("Sign-up date", default=datetime.now())
     hours = models.FloatField(editable=False, default=0.0)    
 
     def calculate_hours(self):
         hours = 0
         for s in self.session_set.all():
             if s.event.is_volunteer_time:
-                tdelta = timedelta(s.end, s.start)
+                tdelta = timeonly_delta(s.end, s.start)
                 hour_diff = tdelta.seconds / 3600.0
                 rounded = round(hour_diff, 1)
                 hours += rounded
@@ -38,12 +38,7 @@ class EventLocation(models.Model):
 class Event(models.Model):
     EVENT_TYPES = {
         ('VP', 'Volunteer Program'),
-        ('CL', 'Class'),
-        ('WS', 'Workshop'),
-        ('PR', 'Presentation'),
-        ('CM', 'Community Meeting'),
-        ('VM', 'Vision Meeting'),
-        ('FR', 'Fundraiser'),
+        ('ME', 'Meeting'),
         ('SP', 'Special Event')
     }
 
@@ -53,8 +48,7 @@ class Event(models.Model):
     end = models.TimeField(default=datetime.strptime('5:00PM', '%I:%M%p'))
     event_location = models.ForeignKey(EventLocation)
     notes = models.TextField(blank=True)
-    is_volunteer_time = models.NullBooleanField(default=True)
-    participants = models.ManyToManyField(Volunteer, through='Session')
+    is_volunteer_time = models.BooleanField('Counts towards volunteer hours', default=True)
 
     def __unicode__(self):
 	for abbrev, longform in self.EVENT_TYPES:

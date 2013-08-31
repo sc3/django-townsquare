@@ -62,7 +62,6 @@ class Session(models.Model):
     start = models.TimeField()
     end = models.TimeField()
     orientation = models.BooleanField(default=False)
-    forgot_signout = models.BooleanField(default=False)
 
     def save(self, *args, **kwargs):
         super(Session, self).save(*args, **kwargs)

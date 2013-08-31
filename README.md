@@ -1,7 +1,7 @@
 django-townsquare
 ===========
 
-Python-Django port of townsquare project
+Python-Django port of Townsquare project found at https://github.com/sc3/townsquare
 
 Steps to test out the project:
 

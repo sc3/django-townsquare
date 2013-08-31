@@ -5,6 +5,7 @@ class SessionInline(admin.TabularInline):
     model = Session
     extra = 1
 
+
 class EventAdmin(admin.ModelAdmin):
     fieldsets = [
         ('What and Where is it?', {'fields': ['event_type', 'event_location']}),
@@ -13,15 +14,17 @@ class EventAdmin(admin.ModelAdmin):
     ]
     inlines = [SessionInline]
     list_display = ('event_type', 'date', 'event_location')
+
+
 class VolunteerAdmin(admin.ModelAdmin):
-    # add searching and filtering to volunteers
     readonly_fields = ('hours',)
     fieldsets = [
         ('Personal Info',   {'fields': ['name', 'email']}),
     	('Legacy Info',     {'fields': ['signup_date', 'hours']}),
     ]
     list_display = ('name', 'signup_date', 'hours', 'email')
-    search_fields = ['name', 'email']
+    search_fields = ['name']
+
 
 admin.site.register(Event, EventAdmin)
 admin.site.register(Volunteer, VolunteerAdmin)

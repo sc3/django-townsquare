@@ -25,9 +25,3 @@ browse_volunteers.alters_data=False
 def search_volunteers(request):
     output = "Which volunteer do you want to view?"
     return HttpResponse(output)
-
-
-def home(request):
-	output="Welcome to Townsquare"
-	
-	return HttpResponse(output)

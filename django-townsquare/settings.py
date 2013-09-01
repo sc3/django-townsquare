@@ -1,3 +1,6 @@
+import os
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
+
 DEBUG = True
 # TEMPLATE_DEBUG = DEBUG
 
@@ -109,9 +112,9 @@ WSGI_APPLICATION = 'django-townsquare.wsgi.application'
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
-    '/home/misery/src/townsquare2/square/templates/'
-    '/home/misery/src/townsquare2/square/templates/users'
+    # Append the template dir with a leading slash to the project root.
+    os.path.join(PROJECT_ROOT, '/square/templates/'),
+    os.path.join(PROJECT_ROOT, '/square/templates/users')
     
     
 )

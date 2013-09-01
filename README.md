@@ -1,4 +1,4 @@
-django-townsquare
+townsquare2
 ===========
 
 Python-Django port of Townsquare project found at https://github.com/sc3/townsquare

@@ -6,7 +6,10 @@ class Volunteer(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField(max_length=100, blank=True)
     signup_date = models.DateField("Sign-up date", default=datetime.now())
-    hours = models.FloatField(editable=False, default=0.0)    
+    hours = models.FloatField(editable=False, default=0.0) 
+    credentials = models.CharField(max_length=300)
+    vol_image = models.CharField(max_length=200)
+    credit = models.CharField(max_length=7)   
 
     def calculate_hours(self):
         hours = 0

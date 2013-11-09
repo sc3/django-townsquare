@@ -1,0 +1,171 @@
+{% extends "users/base.html" %}
+
+
+{% block title %}Welcome{% endblock %}
+
+
+
+{% block content2 %}
+
+<!-- Credentials bar-->
+<div class="pull-center">
+
+	<div>
+		
+		<table class="table" id="vol_line">
+
+				
+			<tr>		
+					<td>
+					
+					
+					</td>
+								
+					<td>
+						{{va.name}}
+					</td>
+					
+					<td>
+						{{va.hours}}
+					</td>
+					
+					<td>
+						<!--Could probably put in a loop to separate creds by commas-->
+						{{va.credentials}}
+					</td>
+					
+				</tr>
+			
+			
+			
+		</table>
+	
+	</div>
+
+</div>
+
+
+<!--Second take on the credentials bar-->
+
+<div class="row" style="margin-bottom:50px; margin-top:50px;">
+
+	<!--Image-->
+	<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3" style="background-color:#99F;">
+	
+		<img class="image-responsive" src="{{va.vol_image}}" alt="sandwich" width="50" height="50">
+	
+	</div>
+	
+	
+	<!--Name-->
+	<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3" style="background-color:#9FF;">
+	
+		{{va.name}}
+	
+	
+	</div>	
+	
+	
+	
+	<!--Credentials-->
+	<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3" style="background-color:#909;">
+	
+		<!--Could probably put in a loop to separate creds by commas-->
+		{{va.credentials}}
+	
+	
+	</div>
+	
+	
+	<!--Edit bar-->
+	<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3" style="background-color:#9E9;">
+	
+		<p>Edit Account</p>
+	
+	
+	</div>
+
+
+	
+
+</div>
+
+
+
+
+
+<div class="row">
+
+<!-- Badge area -->
+<div class="col-xs-12 col-sm-6 col-md-8 col-lg-8">
+
+	<canvas id="badgearea" width="300" style="border:1px solid #000000; 
+	background-color=orange;"> 	
+	<script>
+	
+	var c=document.getElementById("badgearea");
+	var ctx=c.getContext("2d");
+	ctx.font="30px Arial";
+	ctx.fillText("{{va.name}}", 10, 50);
+	ctx.font="20px Arial";
+	ctx.fillText("{{va.credentials}}", 10, 80);
+	ctx.font="13px Arial";
+	ctx.fillText("Ask me about:", 10, 100);
+	
+	
+	</script>
+	
+	
+	</canvas>
+	
+	
+	<!--<canvas id="badgearea2">
+	
+	<script>
+	
+	badgewrite();
+	
+	</script>
+	
+	
+	</canvas>-->
+	
+
+
+</div>
+
+
+
+<!-- Stats area -->
+<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+
+	<table id="volunteer_list">
+	
+		<tr>
+		
+			<td>Last Month:</td>
+			<td>Last Seen:</td>
+		
+		</tr>
+	
+		<tr>
+		
+			<td>Year to Date:</td>
+			<td>Started: {{va.signup_date}}</td>
+		
+		</tr>
+		
+		<tr>
+		
+			<td>Total Hours:</td>
+			<td>Reward Credits: {{va.credit}}</td>
+		
+		</tr>
+	
+	</table>
+
+</div>
+
+</div>
+
+{% endblock %}

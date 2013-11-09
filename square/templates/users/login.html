@@ -1,0 +1,30 @@
+{% extends "users/base.html" %}
+
+
+{% block title %}Login to Townsquare{% endblock %}
+
+
+
+{% block content2 %}
+
+
+<div class="container">
+
+
+	<!--Setting up a form from view, with form structure passed as "f" -->
+
+	<form action="" method="post">
+
+	{% csrf_token %}
+	{{ f.as_p }}
+
+	<input type="submit" value="Submit" />
+
+
+	</form>
+
+
+</div>
+
+
+{% endblock %}

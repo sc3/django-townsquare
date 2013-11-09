@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from square.models import Volunteer
 from django.template import Context, Template, loader, RequestContext
 from django.shortcuts import render
+from django import forms
 
 
 def about(request):
@@ -10,9 +11,28 @@ def about(request):
 	return HttpResponse(output)
 
 
+def t2login(request):
+	
+	class LoginForm(forms.Form):
+		Email = forms.EmailField()
+		Password = forms.CharField()
+		
+	f = LoginForm()
+	
+	t = loader.get_template('users/login.html')
+	c = RequestContext(request, {'f':f})
+	
+	r = t.render(c)
+	
+	return HttpResponse(r)
+	
+	
+	
+	
+	
 def home(request):
 	
-	#Assign the information on a single voluteer as an admin
+	#Assign the information on a single volunteer as an admin
 	va = Volunteer.objects.get(id="2")
 	
 	#Loading template in "t" and assigning variable to context in "c"

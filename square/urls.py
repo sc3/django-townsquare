@@ -6,4 +6,5 @@ urlpatterns = patterns('',
     url(r'^volunteers/browse$', views.browse_volunteers),
     url(r'^volunteers/home$', views.home),
     url(r'^about$', views.about),
+    url(r'^login$', views.t2login),
 )

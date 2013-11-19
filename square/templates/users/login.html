@@ -12,8 +12,8 @@
 
 
 	<!--Setting up a form from view, with form structure passed as "f" -->
-
-	<form action="" method="post">
+	<!--Trying to have the built-in login form process the login data-->
+	<form action="{% url 'django.contrib.auth.views.login %}" method="post">
 
 	{% csrf_token %}
 	{{ f.as_p }}

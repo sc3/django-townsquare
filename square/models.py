@@ -1,8 +1,14 @@
 from django.db import models
 from utils import timeonly_delta
 from datetime import datetime
+from django.contrib.auth.models import User
 
 class Volunteer(models.Model):
+    
+    #Attempting to have Volunteer extend the admin User model
+    
+    user = models.OneToOneField(User)
+    
     name = models.CharField(max_length=100)
     email = models.EmailField(max_length=100, blank=True)
     signup_date = models.DateField("Sign-up date", default=datetime.now())

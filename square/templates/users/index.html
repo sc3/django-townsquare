@@ -7,50 +7,12 @@
 
 {% block content2 %}
 
-<!-- Credentials bar-->
-<div class="pull-center">
-
-	<div>
-		
-		<table class="table" id="vol_line">
-
-				
-			<tr>		
-					<td>
-					
-					
-					</td>
-								
-					<td>
-						{{va.name}}
-					</td>
-					
-					<td>
-						{{va.hours}}
-					</td>
-					
-					<td>
-						<!--Could probably put in a loop to separate creds by commas-->
-						{{va.credentials}}
-					</td>
-					
-				</tr>
-			
-			
-			
-		</table>
-	
-	</div>
-
-</div>
-
-
 <!--Second take on the credentials bar-->
 
-<div class="row" style="margin-bottom:50px; margin-top:50px;">
+<div class="row" style="padding-bottom: 20px;">
 
 	<!--Image-->
-	<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3" style="background-color:#99F;">
+	<div class="col-xs-3 col-sm-1 col-md-1 col-lg-1">
 	
 		<img class="image-responsive" src="{{va.vol_image}}" alt="sandwich" width="50" height="50">
 	
@@ -58,7 +20,7 @@
 	
 	
 	<!--Name-->
-	<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3" style="background-color:#9FF;">
+	<div class="col-xs-9 col-sm-3 col-md-3 col-lg-3">
 	
 		{{va.name}}
 	
@@ -68,7 +30,7 @@
 	
 	
 	<!--Credentials-->
-	<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3" style="background-color:#909;">
+	<div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
 	
 		<!--Could probably put in a loop to separate creds by commas-->
 		{{va.credentials}}
@@ -78,7 +40,7 @@
 	
 	
 	<!--Edit bar-->
-	<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3" style="background-color:#9E9;">
+	<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
 	
 		<p>Edit Account</p>
 	

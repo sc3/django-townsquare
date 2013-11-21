@@ -168,3 +168,5 @@ TIME_INPUT_FORMATS = (
     '%I:%M%p',
     '%I:%M',
 )
+
+LOGIN_URL = '/townsquare/login'

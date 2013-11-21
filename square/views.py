@@ -28,7 +28,6 @@ def t2signup(request):
 	return HttpResponse(r)
 
 
-
 def t2signup2(request):	
 
 	if request.method == 'POST':

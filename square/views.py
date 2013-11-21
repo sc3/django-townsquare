@@ -5,7 +5,7 @@ from django.shortcuts import render
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
-from square.t2forms import SignupForm, LoginForm
+from square.t2forms import SignupForm, LoginForm, AddEventForm
 from square.utils import process_user
 
 
@@ -102,11 +102,26 @@ def t2login2(request):
 		
 @login_required
 def add_event(request):
+	
+	f = AddEventForm()
+	
 	t = loader.get_template('users/add-event.html')
-	c = RequestContext(request)
+	c = RequestContext(request, {'f':f})
 	r = t.render(c)
 
 	return HttpResponse(r)
+
+
+
+@login_required
+def t2_addevent(request):
+	
+	pass
+
+
+
+
+
 
 
 def t2logout(request):

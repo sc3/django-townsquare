@@ -10,6 +10,9 @@ class Volunteer(models.Model):
     vol_image = models.CharField(max_length=200, blank=True)
     credit = models.FloatField(editable=False, default=0.0)   
 
+    def full_name(self):
+        return self.user.first_name + " " + self.user.last_name
+
     def calculate_hours(self):
         hours = 0
         for s in self.session_set.all():

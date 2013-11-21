@@ -3,6 +3,9 @@ from square.models import Volunteer
 from django.template import Context, Template, loader, RequestContext
 from django.shortcuts import render
 from django import forms
+from django.contrib.auth import authenticate, login
+from django.contrib.auth.models import User
+
 
 
 def about(request):
@@ -14,8 +17,8 @@ def about(request):
 def t2login(request):
 	
 	class LoginForm(forms.Form):
-		Email = forms.EmailField()
-		Password = forms.CharField()
+		Username = forms.CharField()
+		Password = forms.CharField(widget=forms.PasswordInput())
 		
 	f = LoginForm()
 	
@@ -26,6 +29,48 @@ def t2login(request):
 	
 	return HttpResponse(r)
 	
+
+def t2login2(request):
+
+	#May have to move the LoginForm down again to get it to "work"
+	
+	if request.method == 'POST':
+	
+		username = request.POST['Username']
+		password = request.POST['Password']
+		
+		user = authenticate(username=username, password=password)
+		
+		#import pdb; pdb.set_trace()
+		
+		if user is not None:
+			
+			if user.is_active:
+				
+				login(request, user)
+				#Redirect to success page
+				
+				state="Logged in"
+				
+				return HttpResponse("Okay")
+				#return HttpResponseRedirect('/volunteers/browse')
+				
+			else:
+				
+				return HttpResponse("Not valid")
+				#Redirect to signup
+				
+		else:
+			
+			return HttpResponse("Sign Up")
+			#Redirect to signup
+			
+	#return HttpResponse()
+		
+
+	
+		
+
 	
 	
 	

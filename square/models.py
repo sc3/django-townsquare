@@ -1,5 +1,4 @@
 from django.db import models
-from utils import timeonly_delta
 from datetime import datetime
 from django.contrib.auth.models import User
 
@@ -74,3 +73,6 @@ class Session(models.Model):
 
     def __unicode__(self):
         return "%s at %s" % (self.volunteer, self.event)
+
+
+from utils import timeonly_delta

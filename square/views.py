@@ -2,10 +2,11 @@ from django.http import HttpResponse, HttpResponseRedirect
 from square.models import Volunteer
 from django.template import Context, Template, loader, RequestContext
 from django.shortcuts import render
-from django import forms
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
+from square.t2forms import SignupForm, LoginForm
+from square.utils import process_user
 
 
 
@@ -15,12 +16,34 @@ def about(request):
 	return HttpResponse(output)
 
 
+def t2signup(request):
+	
+	f = SignupForm()
+	
+	t = loader.get_template('users/signup.html')
+	c = RequestContext(request, {'f':f})
+	
+	r = t.render(c)
+	
+	return HttpResponse(r)
+
+
+
+def t2signup2(request):	
+
+	if request.method == 'POST':
+	
+		username = request.POST['Username']
+		password = request.POST['Password']
+		first = request.POST['first']
+		last = request.POST['last']
+		new_user=process_user(username, password, first, last)
+		
+		return HttpResponse(new_user)
+
+
 def t2login(request):
 	
-	class LoginForm(forms.Form):
-		Username = forms.CharField()
-		Password = forms.CharField(widget=forms.PasswordInput())
-		
 	f = LoginForm()
 	
 	t = loader.get_template('users/login.html')

@@ -29,4 +29,4 @@ class EventAdmin(admin.ModelAdmin):
 
 admin.site.register(Event, EventAdmin)
 #admin.site.register(Volunteer, VolunteerAdmin)
-#admin.site.register(EventLocation)
+admin.site.register(EventLocation)

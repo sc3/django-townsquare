@@ -4,18 +4,14 @@ from datetime import datetime
 from django.contrib.auth.models import User
 
 class Volunteer(models.Model):
-    
-    #Attempting to have Volunteer extend the admin User model
-    
-    user = models.OneToOneField(User)
-    
+    user = models.OneToOneField(User, null=True)
     name = models.CharField(max_length=100)
     email = models.EmailField(max_length=100, blank=True)
     signup_date = models.DateField("Sign-up date", default=datetime.now())
     hours = models.FloatField(editable=False, default=0.0) 
-    credentials = models.CharField(max_length=300)
-    vol_image = models.CharField(max_length=200)
-    credit = models.CharField(max_length=7)   
+    credentials = models.CharField(max_length=300, blank=True)
+    vol_image = models.CharField(max_length=200, blank=True)
+    credit = models.CharField(max_length=7, blank=True)   
 
     def calculate_hours(self):
         hours = 0

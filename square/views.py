@@ -1,10 +1,11 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from square.models import Volunteer
 from django.template import Context, Template, loader, RequestContext
 from django.shortcuts import render
 from django import forms
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required
 
 
 
@@ -41,8 +42,6 @@ def t2login2(request):
 		
 		user = authenticate(username=username, password=password)
 		
-		#import pdb; pdb.set_trace()
-		
 		if user is not None:
 			
 			if user.is_active:
@@ -52,8 +51,8 @@ def t2login2(request):
 				
 				state="Logged in"
 				
-				return HttpResponse("Okay")
-				#return HttpResponseRedirect('/volunteers/browse')
+				#return HttpResponse(views.home)
+				return HttpResponseRedirect('/townsquare/volunteers/home')
 				
 			else:
 				
@@ -68,13 +67,7 @@ def t2login2(request):
 	#return HttpResponse()
 		
 
-	
-		
-
-	
-	
-	
-	
+@login_required	
 def home(request):
 	
 	#Assign the information on a single volunteer as an admin
@@ -87,30 +80,4 @@ def home(request):
 	#Compiling template and rendering out the context information
 	r = t.render(c)
 	
-	
-	
-	
 	return HttpResponse(r)
-
-
-def browse_volunteers(request):
-    
-    #Assigning information of all volunteers to a variable
-    volunteers = Volunteer.objects.all()
-    
-    #Loading template in "t" and assigning variable to context in "c"
-    t = loader.get_template('users/volunteer_browse.html')
-    c = RequestContext(request, {'volunteers':volunteers,})
-    
-    #Compiling template and rendering out the context information
-    r = t.render(c)
-    
-    #Returning the compiled template with rendered info to template
-    return HttpResponse(r)
-    
-    
-browse_volunteers.alters_data=False
-
-def search_volunteers(request):
-    output = "Which volunteer do you want to view?"
-    return HttpResponse(output)

@@ -37,30 +37,7 @@
             <!--formerly class=active-->
             <li class=""><a href="">Home</a></li>
             <li><a href="/townsquare/about">About</a></li>
-            <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Volunteers<b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="/admin">Admin Login</a></li>
-                    <li class="divider"></li>
-                    <li class="dropdown-header">Nav header</li>
-                    <li><a href="#">Separated link</a></li>
-                    <li><a href="#">One more separated link</a></li>
-                  </ul>
-            </li>
-            <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Events<b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li class="divider"></li>
-                    <li class="dropdown-header">Nav header</li>
-                    <li><a href="#">Separated link</a></li>
-                    <li><a href="#">One more separated link</a></li>
-                  </ul>
-            </li>
+            {% block extranav %} {% endblock %}
             <li><a href="/townsquare/login">Login/Sign up</a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -102,7 +79,7 @@
     <script src="../../static/js/jquery-2.0.3.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="../../static/bootstrap/js/bootstrap.min.js"></script>
-    <script src="../../static/js/addedjs.js"></script>
+    <script src="../../static/js/badge.js"></script>
     
   </body>  
     

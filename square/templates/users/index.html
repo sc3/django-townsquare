@@ -1,8 +1,39 @@
 {% extends "users/base.html" %}
 
 
-{% block title %}Welcome{% endblock %}
+{% block title %}Welcome {{user}} {% endblock %}
 
+
+<!--Changing the extranav-->
+
+{% block extranav %}
+
+<li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Volunteers<b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="/admin">Admin Login</a></li>
+                    <li class="divider"></li>
+                    <li class="dropdown-header">Nav header</li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
+                  </ul>
+            </li>
+            <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Events<b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li class="dropdown-header">Nav header</li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
+                  </ul>
+            </li>
+            
+{% endblock %}
 
 
 {% block content2 %}

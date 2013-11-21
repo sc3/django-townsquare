@@ -2,7 +2,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from square.models import Volunteer
 from django.template import Context, Template, loader, RequestContext
 from django.shortcuts import render
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from square.t2forms import SignupForm, LoginForm
@@ -15,17 +15,24 @@ def about(request):
 	output = "About the Townsquare project:"
 	return HttpResponse(output)
 
-
+@login_required
 def t2signup(request):
 	
-	f = SignupForm()
+	if request.user.is_staff:
 	
-	t = loader.get_template('users/signup.html')
-	c = RequestContext(request, {'f':f})
-	
-	r = t.render(c)
-	
-	return HttpResponse(r)
+		f = SignupForm()
+		
+		t = loader.get_template('users/signup.html')
+		c = RequestContext(request, {'f':f})
+		
+		r = t.render(c)
+		
+		return HttpResponse(r)
+		
+		
+	else:
+		
+		return HttpResponse("Failure")
 
 
 def t2signup2(request):	
@@ -94,11 +101,22 @@ def t2login2(request):
 	#return HttpResponse()
 		
 
+
+def t2logout(request):
+	
+	logout(request)
+	
+	return HttpResponse("Logged out")
+
+
+
+
 @login_required	
 def home(request):
 	
 	#Assign the information on a single volunteer as an admin
-	va = Volunteer.objects.get(id="2")
+	#va = Volunteer.objects.filter(user_id=request.user.id)
+	va = Volunteer.objects.get(id=request.user.volunteer.id)
 	
 	#Loading template in "t" and assigning variable to context in "c"
 	t = loader.get_template('users/index.html')

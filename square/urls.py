@@ -16,6 +16,8 @@ urlpatterns = patterns('',
     #Processing for t2signup
     url(r'^signup2$', views.t2signup2),
     
+    url(r'^logout$', views.t2logout),
+    
     
     
 )

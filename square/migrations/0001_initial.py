@@ -1,18 +1,18 @@
-# encoding: utf-8
+# -*- coding: utf-8 -*-
 import datetime
 from south.db import db
 from south.v2 import SchemaMigration
 from django.db import models
 
+
 class Migration(SchemaMigration):
 
     def forwards(self, orm):
-        
         # Adding model 'Volunteer'
         db.create_table(u'square_volunteer', (
             (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
             ('user', self.gf('django.db.models.fields.related.OneToOneField')(to=orm['auth.User'], unique=True, null=True)),
-            ('signup_date', self.gf('django.db.models.fields.DateField')(default=datetime.datetime(2013, 11, 20, 23, 51, 27, 827401))),
+            ('signup_date', self.gf('django.db.models.fields.DateField')(default=datetime.datetime(2013, 11, 21, 0, 0))),
             ('hours', self.gf('django.db.models.fields.FloatField')(default=0.0)),
             ('credentials', self.gf('django.db.models.fields.CharField')(max_length=300, blank=True)),
             ('vol_image', self.gf('django.db.models.fields.CharField')(max_length=200, blank=True)),
@@ -35,9 +35,9 @@ class Migration(SchemaMigration):
         db.create_table(u'square_event', (
             (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
             ('event_type', self.gf('django.db.models.fields.CharField')(default='VP', max_length=2)),
-            ('date', self.gf('django.db.models.fields.DateField')(default=datetime.datetime(2013, 11, 20, 23, 51, 27, 829338))),
-            ('start', self.gf('django.db.models.fields.TimeField')(default=datetime.datetime(1900, 1, 1, 11, 0))),
-            ('end', self.gf('django.db.models.fields.TimeField')(default=datetime.datetime(1900, 1, 1, 17, 0))),
+            ('date', self.gf('django.db.models.fields.DateField')(default=datetime.datetime(2013, 11, 21, 0, 0))),
+            ('start', self.gf('django.db.models.fields.TimeField')(default=datetime.datetime(1900, 1, 1, 0, 0))),
+            ('end', self.gf('django.db.models.fields.TimeField')(default=datetime.datetime(1900, 1, 1, 0, 0))),
             ('event_location', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['square.EventLocation'])),
             ('notes', self.gf('django.db.models.fields.TextField')(blank=True)),
             ('is_volunteer_time', self.gf('django.db.models.fields.BooleanField')(default=True)),
@@ -57,7 +57,6 @@ class Migration(SchemaMigration):
 
 
     def backwards(self, orm):
-        
         # Deleting model 'Volunteer'
         db.delete_table(u'square_volunteer')
 
@@ -87,7 +86,7 @@ class Migration(SchemaMigration):
         },
         u'auth.user': {
             'Meta': {'object_name': 'User'},
-            'date_joined': ('django.db.models.fields.DateTimeField', [], {'default': 'datetime.datetime(2013, 11, 21, 5, 51, 27, 867896, tzinfo=<UTC>)'}),
+            'date_joined': ('django.db.models.fields.DateTimeField', [], {'default': 'datetime.datetime.now'}),
             'email': ('django.db.models.fields.EmailField', [], {'max_length': '75', 'blank': 'True'}),
             'first_name': ('django.db.models.fields.CharField', [], {'max_length': '30', 'blank': 'True'}),
             'groups': ('django.db.models.fields.related.ManyToManyField', [], {'to': u"orm['auth.Group']", 'symmetrical': 'False', 'blank': 'True'}),
@@ -95,7 +94,7 @@ class Migration(SchemaMigration):
             'is_active': ('django.db.models.fields.BooleanField', [], {'default': 'True'}),
             'is_staff': ('django.db.models.fields.BooleanField', [], {'default': 'False'}),
             'is_superuser': ('django.db.models.fields.BooleanField', [], {'default': 'False'}),
-            'last_login': ('django.db.models.fields.DateTimeField', [], {'default': 'datetime.datetime(2013, 11, 21, 5, 51, 27, 867230, tzinfo=<UTC>)'}),
+            'last_login': ('django.db.models.fields.DateTimeField', [], {'default': 'datetime.datetime.now'}),
             'last_name': ('django.db.models.fields.CharField', [], {'max_length': '30', 'blank': 'True'}),
             'password': ('django.db.models.fields.CharField', [], {'max_length': '128'}),
             'user_permissions': ('django.db.models.fields.related.ManyToManyField', [], {'to': u"orm['auth.Permission']", 'symmetrical': 'False', 'blank': 'True'}),
@@ -110,14 +109,14 @@ class Migration(SchemaMigration):
         },
         u'square.event': {
             'Meta': {'object_name': 'Event'},
-            'date': ('django.db.models.fields.DateField', [], {'default': 'datetime.datetime(2013, 11, 20, 23, 51, 27, 829338)'}),
-            'end': ('django.db.models.fields.TimeField', [], {'default': 'datetime.datetime(1900, 1, 1, 17, 0)'}),
+            'date': ('django.db.models.fields.DateField', [], {'default': 'datetime.datetime(2013, 11, 21, 0, 0)'}),
+            'end': ('django.db.models.fields.TimeField', [], {'default': 'datetime.datetime(1900, 1, 1, 0, 0)'}),
             'event_location': ('django.db.models.fields.related.ForeignKey', [], {'to': u"orm['square.EventLocation']"}),
             'event_type': ('django.db.models.fields.CharField', [], {'default': "'VP'", 'max_length': '2'}),
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'is_volunteer_time': ('django.db.models.fields.BooleanField', [], {'default': 'True'}),
             'notes': ('django.db.models.fields.TextField', [], {'blank': 'True'}),
-            'start': ('django.db.models.fields.TimeField', [], {'default': 'datetime.datetime(1900, 1, 1, 11, 0)'})
+            'start': ('django.db.models.fields.TimeField', [], {'default': 'datetime.datetime(1900, 1, 1, 0, 0)'})
         },
         u'square.eventlocation': {
             'Meta': {'object_name': 'EventLocation'},
@@ -143,7 +142,7 @@ class Migration(SchemaMigration):
             'credit': ('django.db.models.fields.FloatField', [], {'default': '0.0'}),
             'hours': ('django.db.models.fields.FloatField', [], {'default': '0.0'}),
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
-            'signup_date': ('django.db.models.fields.DateField', [], {'default': 'datetime.datetime(2013, 11, 20, 23, 51, 27, 827401)'}),
+            'signup_date': ('django.db.models.fields.DateField', [], {'default': 'datetime.datetime(2013, 11, 21, 0, 0)'}),
             'user': ('django.db.models.fields.related.OneToOneField', [], {'to': u"orm['auth.User']", 'unique': 'True', 'null': 'True'}),
             'vol_image': ('django.db.models.fields.CharField', [], {'max_length': '200', 'blank': 'True'})
         }

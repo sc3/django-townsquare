@@ -39,7 +39,12 @@ def t2signup2(request):
 		last = request.POST['last']
 		new_user=process_user(username, password, first, last)
 		
-		return HttpResponse(new_user)
+		t = loader.get_template('users/signup-display.html')
+		c = RequestContext(request, {'new_user':new_user})
+	
+		r = t.render(c)
+	
+		return HttpResponse(r)
 
 
 def t2login(request):

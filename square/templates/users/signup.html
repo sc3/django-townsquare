@@ -1,0 +1,28 @@
+{% extends "users/base.html" %}
+
+
+{% block title %}Sign Up For Townsquare{% endblock %}
+
+{% block content2 %}
+
+
+<div class="container">
+
+
+	<!--Setting up a form from view, with form structure passed as "f" -->
+	
+	<form action={% url 'square.views.t2signup2' %} method="post">
+
+	{% csrf_token %}
+	{{ f.as_p }}
+
+	<input type="submit" value="Submit" />
+
+
+	</form>
+
+
+</div>
+
+
+{% endblock %}

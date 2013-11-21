@@ -1,0 +1,28 @@
+{% extends "users/index.html" %}
+
+
+{% block title %}Add Townsquare Event{% endblock %}
+
+{% block content2 %}
+
+
+<div class="container">
+
+
+	<!--Setting up a form from view, with form structure passed as "f" -->
+	
+	<form action={% url 'square.views.t2_addevent' %} method="post">
+
+	{% csrf_token %}
+	{{ f.as_p }}
+
+	<input type="submit" value="Save" />
+
+
+	</form>
+
+
+</div>
+
+
+{% endblock %}

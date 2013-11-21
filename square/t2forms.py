@@ -1,7 +1,15 @@
-from django import forms
+from django.forms import Form, ModelForm
+from square.models import Event
+
+class AddEventForm(ModelForm):
+
+	class Meta:
+		model = Event
+		fields = ['event_type', 'event_location', 'date',
+					'start', 'end', 'notes', 'is_volunteer_time']
 
 
-class SignupForm(forms.Form):
+class SignupForm(Form):
 	
 	first = forms.CharField(label='First Name')
 	last = forms.CharField(label='Last Name')
@@ -10,9 +18,7 @@ class SignupForm(forms.Form):
 	Password = forms.CharField(widget=forms.PasswordInput())
 	
 	
-
-
-class LoginForm(forms.Form):
+class LoginForm(Form):
 		
 	Username = forms.CharField()
 	Password = forms.CharField(widget=forms.PasswordInput())

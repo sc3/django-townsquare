@@ -100,6 +100,13 @@ def t2login2(request):
 			
 	#return HttpResponse()
 		
+@login_required
+def add_event(request):
+	t = loader.get_template('users/add-event.html')
+	c = RequestContext(request)
+	r = t.render(c)
+
+	return HttpResponse(r)
 
 
 def t2logout(request):

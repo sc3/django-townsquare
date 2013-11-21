@@ -4,13 +4,11 @@ from django.contrib.auth.models import User
 
 class Volunteer(models.Model):
     user = models.OneToOneField(User, null=True)
-    name = models.CharField(max_length=100)
-    email = models.EmailField(max_length=100, blank=True)
     signup_date = models.DateField("Sign-up date", default=datetime.now())
     hours = models.FloatField(editable=False, default=0.0) 
     credentials = models.CharField(max_length=300, blank=True)
     vol_image = models.CharField(max_length=200, blank=True)
-    credit = models.CharField(max_length=7, blank=True)   
+    credit = models.FloatField(editable=False, default=0.0)   
 
     def calculate_hours(self):
         hours = 0
@@ -24,10 +22,11 @@ class Volunteer(models.Model):
 
     def save(self, *args, **kwargs):
         self.hours = self.calculate_hours()
+        self.credit += self.hours
         super(Volunteer, self).save(*args, **kwargs)
 
     def __unicode__(self):
-        return self.name
+        return self.user.first_name + " " + self.user.last_name
 
 class EventLocation(models.Model):
     full_name = models.CharField(max_length=200)

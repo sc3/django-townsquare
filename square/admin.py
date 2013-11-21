@@ -16,16 +16,17 @@ class EventAdmin(admin.ModelAdmin):
     list_display = ('event_type', 'date', 'event_location')
 
 
-class VolunteerAdmin(admin.ModelAdmin):
+
+'''class VolunteerAdmin(admin.ModelAdmin):
     readonly_fields = ('hours',)
     fieldsets = [
         ('Personal Info',   {'fields': ['name', 'email']}),
     	('Legacy Info',     {'fields': ['signup_date', 'hours']}),
     ]
     list_display = ('name', 'signup_date', 'hours', 'email')
-    search_fields = ['name']
+    search_fields = ['name']'''
 
 
 admin.site.register(Event, EventAdmin)
-admin.site.register(Volunteer, VolunteerAdmin)
-admin.site.register(EventLocation)
+#admin.site.register(Volunteer, VolunteerAdmin)
+#admin.site.register(EventLocation)

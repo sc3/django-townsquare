@@ -11,8 +11,19 @@ def dateize(time):
     return datetime.combine(date.today(), time)
 
 def process_user(uname, pw, first, last):
-	u = User(first_name=first, last_name=last, password=pw, username=uname)
+
+	u = User.objects.create_user(
+		first_name=first, 
+		last_name=last, 
+		password=pw, 
+		username=uname)
+
 	u.save()
-	v = Volunteer(user=u, signup_date=datetime.today())
+
+	v = Volunteer(
+		user=u, 
+		signup_date=datetime.today())
+	
 	v.save()
+
 	return v

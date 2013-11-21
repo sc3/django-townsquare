@@ -114,9 +114,11 @@ def add_event(request):
 
 
 @login_required
-def t2_addevent(request):
+def t2addevent(request):
 	
-	pass
+	#Needs to take information from the addevent form and dump it into the database
+	
+	return HttpResponse("Okay")
 
 
 

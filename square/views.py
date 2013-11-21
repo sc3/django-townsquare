@@ -139,7 +139,7 @@ def t2logout(request):
 def home(request):
 	
 	#Assign the information on a single volunteer as an admin
-	#va = Volunteer.objects.filter(user_id=request.user.id)
+	# NOTE: catch ObjectDoesNotExist exception here, as it may occur.
 	va = Volunteer.objects.get(id=request.user.volunteer.id)
 	
 	#Loading template in "t" and assigning variable to context in "c"

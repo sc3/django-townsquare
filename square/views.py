@@ -126,7 +126,7 @@ def t2addevent(request):
 		start = request.POST['start']
 		end = request.POST['end']
 		n = request.POST['notes']
-		ivt = request.POST['is_volunteer_time']
+		ivt = True if request.POST.get('is_volunteer_time', None) else False
 		
 		new_event = process_event(evt, evl, d, start, end, n, ivt)
 	

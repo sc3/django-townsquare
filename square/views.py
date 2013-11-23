@@ -6,7 +6,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from square.t2forms import SignupForm, LoginForm, AddEventForm
-from square.utils import process_user
+from square.utils import process_user, process_event
 
 
 
@@ -118,12 +118,28 @@ def t2addevent(request):
 	
 	#Needs to take information from the addevent form and dump it into the database
 	
-	return HttpResponse("Okay")
-
-
-
-
-
+	if request.method == 'POST':
+		
+		evt = request.POST['event_type']
+		evl = request.POST['event_location']
+		d = request.POST['date']
+		start = request.POST['start']
+		end = request.POST['end']
+		n = request.POST['notes']
+		ivt = request.POST['is_volunteer_time']
+		
+		new_event = process_event(evt, evl, d, start, end, n, ivt)
+	
+	
+		t = loader.get_template('users/display-event.html')
+		c = RequestContext(request, {'new_event':new_event})
+	
+		r = t.render(c)
+	
+		return HttpResponse(r)
+		
+	
+	
 
 
 def t2logout(request):

@@ -23,10 +23,10 @@ def signup(request):
 
 		if form.is_valid():
 
-			username = request.POST['Username']
-			password = request.POST['Password']
-			first = request.POST['first']
-			last = request.POST['last']
+			username = form.cleaned_data['Username']
+			password = form.cleaned_data['Password']
+			first = form.cleaned_data['first']
+			last = form.cleaned_data['last']
 			new_user = process_user(username, password, first, last)
 
 			# hold onto that new user we just created, to 

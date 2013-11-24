@@ -1,5 +1,5 @@
 from django.forms import Form, ModelForm, CharField, PasswordInput
-from square.models import Event
+from square.models import Event, EventLocation
 
 class AddEventForm(ModelForm):
 

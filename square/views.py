@@ -17,13 +17,9 @@ def about(request):
 @login_required
 def t2signup(request):
 	if request.user.is_staff:
-	
-		f = SignupForm()	
-		t = loader.get_template('users/signup.html')
-		c = RequestContext(request, {'f':f})	
-		r = t.render(c)
 
-		return HttpResponse(r)
+		return render(request, request, 'users/signup.html', 
+						{'f': SignupForm()})
 
 	else:	
 
@@ -40,21 +36,14 @@ def t2signup2(request):
 		last = request.POST['last']
 		new_user=process_user(username, password, first, last)
 		
-		t = loader.get_template('users/signup-display.html')
-		c = RequestContext(request, {'new_user':new_user})
-		r = t.render(c)
-	
-		return HttpResponse(r)
+		return render(request, 'users/signup-display.html', 
+						{'new_user':new_user})
 
 
 def t2login(request):
 	
-	f = LoginForm()
-	t = loader.get_template('users/login.html')
-	c = RequestContext(request, {'f':f})
-	r = t.render(c)
-	
-	return HttpResponse(r)
+	return render(request, 'users/login.html', 
+					{'f': LoginForm()})
 	
 
 def t2login2(request):
@@ -92,20 +81,16 @@ def t2login2(request):
 @login_required
 def add_event(request):
 	
-	f = AddEventForm()
-	
-	t = loader.get_template('users/add-event.html')
-	c = RequestContext(request, {'f':f})
-	r = t.render(c)
-
-	return HttpResponse(r)
+	return render(request, 'users/add-event.html', 
+					{'f': AddEventForm()})
 
 
 
 @login_required
 def t2addevent(request):
 	
-	#Needs to take information from the addevent form and dump it into the database
+	""" Takes information from the addevent form and dumps
+		it into the database """
 	
 	if request.method == 'POST':
 		
@@ -119,11 +104,8 @@ def t2addevent(request):
 		
 		new_event = process_event(evt, evl, d, start, end, n, ivt)
 	
-		t = loader.get_template('users/display-event.html')
-		c = RequestContext(request, {'new_event':new_event})
-		r = t.render(c)
-	
-		return HttpResponse(r)
+		return render(request, 'users/display-event.html', 
+						{'new_event': new_event})
 		
 	
 	
@@ -149,6 +131,6 @@ def home(request):
 	c = RequestContext(request, {'va':va,})
 	
 	#Compiling template and rendering out the context information
-	r = t.render(c)
+	r = t.render(request, c)
 	
 	return HttpResponse(r)

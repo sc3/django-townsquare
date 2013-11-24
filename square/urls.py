@@ -7,12 +7,13 @@ urlpatterns = patterns('',
     url(r'^login$', views.t2login),
     url(r'^logout$', views.t2logout),
     url(r'^volunteers/home$', views.home),
-    url(r'^volunteer/add$', views.t2signup),
+    url(r'^volunteer/add$', views.signup),
     url(r'^event/add$', views.add_event),
+    url(r'^signup-success$', views.t2signup_success),
 
     # Processing views
     url(r'^login2$', views.t2login2),
-    url(r'^signup2$', views.t2signup2),
+    #url(r'^signup2$', views.t2signup2),
     url(r'^event2$', views.t2addevent),
     
 )

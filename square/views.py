@@ -15,30 +15,39 @@ def about(request):
 
 
 @login_required
-def t2signup(request):
-	if request.user.is_staff:
-
-		return render(request, request, 'users/signup.html', 
-						{'f': SignupForm()})
-
-	else:	
-
-		return HttpResponse("Failure")
-
-
-def t2signup2(request):	
-
+def signup(request):
 	if request.method == 'POST':
-	
-		username = request.POST['Username']
-		password = request.POST['Password']
-		first = request.POST['first']
-		last = request.POST['last']
-		new_user=process_user(username, password, first, last)
 		
-		return render(request, 'users/signup-display.html', 
-						{'new_user':new_user})
+		# POST request to signup page does validation/processing
+		form = SignupForm(request.POST)
 
+		if form.is_valid():
+
+			username = request.POST['Username']
+			password = request.POST['Password']
+			first = request.POST['first']
+			last = request.POST['last']
+			new_user = process_user(username, password, first, last)
+
+			# hold onto that new user we just created, to 
+			# display it in the success page.
+			request.session['new_user'] = new_user.id
+
+			return HttpResponseRedirect('/townsquare/signup-success')
+
+	else:
+		# GET request to signup page displays an empty form
+		form = SignupForm()
+
+	return render(request, 'users/signup.html', 
+					{'f': form})
+
+
+def t2signup_success(request):
+
+	v = Volunteer.objects.get(id=request.session['new_user'])
+	return render(request, 'users/signup-display.html', 
+					{'new_user': v})
 
 def t2login(request):
 	

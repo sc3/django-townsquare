@@ -22,9 +22,7 @@ def process_user(uname, pw, first, last):
 
 	u.save()
 
-	v = Volunteer(
-		user=u, 
-		signup_date=datetime.today())
+	v = Volunteer(user=u)
 	
 	v.save()
 

@@ -54,7 +54,7 @@ class Event(models.Model):
     end = models.TimeField(default=datetime.strptime('5:00PM', '%I:%M%p'))
     event_location = models.ForeignKey(EventLocation)
     notes = models.TextField(blank=True)
-    is_volunteer_time = models.NullBooleanField('Counts towards volunteer hours')
+    is_volunteer_time = models.BooleanField('Counts towards volunteer hours')
 
     def __unicode__(self):
 	for abbrev, longform in self.EVENT_TYPES:

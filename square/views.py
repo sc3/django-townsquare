@@ -9,29 +9,24 @@ from square.t2forms import SignupForm, LoginForm, AddEventForm
 from square.utils import process_user, process_event
 
 
-
 def about(request):
-	
 	output = "About the Townsquare project:"
 	return HttpResponse(output)
 
+
 @login_required
 def t2signup(request):
-	
 	if request.user.is_staff:
 	
-		f = SignupForm()
-		
+		f = SignupForm()	
 		t = loader.get_template('users/signup.html')
-		c = RequestContext(request, {'f':f})
-		
+		c = RequestContext(request, {'f':f})	
 		r = t.render(c)
-		
+
 		return HttpResponse(r)
-		
-		
-	else:
-		
+
+	else:	
+
 		return HttpResponse("Failure")
 
 
@@ -47,7 +42,6 @@ def t2signup2(request):
 		
 		t = loader.get_template('users/signup-display.html')
 		c = RequestContext(request, {'new_user':new_user})
-	
 		r = t.render(c)
 	
 		return HttpResponse(r)
@@ -56,18 +50,14 @@ def t2signup2(request):
 def t2login(request):
 	
 	f = LoginForm()
-	
 	t = loader.get_template('users/login.html')
 	c = RequestContext(request, {'f':f})
-	
 	r = t.render(c)
 	
 	return HttpResponse(r)
 	
 
 def t2login2(request):
-
-	#May have to move the LoginForm down again to get it to "work"
 	
 	if request.method == 'POST':
 	
@@ -97,8 +87,7 @@ def t2login2(request):
 			
 			return HttpResponse("Sign Up")
 			#Redirect to signup
-			
-	#return HttpResponse()
+	
 		
 @login_required
 def add_event(request):
@@ -130,10 +119,8 @@ def t2addevent(request):
 		
 		new_event = process_event(evt, evl, d, start, end, n, ivt)
 	
-	
 		t = loader.get_template('users/display-event.html')
 		c = RequestContext(request, {'new_event':new_event})
-	
 		r = t.render(c)
 	
 		return HttpResponse(r)
@@ -145,7 +132,6 @@ def t2addevent(request):
 def t2logout(request):
 	
 	logout(request)
-	
 	return HttpResponse("Logged out")
 
 

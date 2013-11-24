@@ -10,12 +10,10 @@ class AddEventForm(ModelForm):
 					'start', 'end', 'notes', 'is_volunteer_time']
 
 
-
 class SignupForm(Form):
 	
 	first = CharField(label='First Name')
 	last = CharField(label='Last Name')
-	
 	Username = CharField()
 	Password = CharField(widget=PasswordInput())
 	

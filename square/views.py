@@ -94,7 +94,6 @@ def add_event(request):
 					{'f': AddEventForm()})
 
 
-
 @login_required
 def t2addevent(request):
 	
@@ -117,15 +116,10 @@ def t2addevent(request):
 						{'new_event': new_event})
 		
 	
-	
-
-
 def t2logout(request):
 	
 	logout(request)
 	return HttpResponse("Logged out")
-
-
 
 
 @login_required	
@@ -135,11 +129,5 @@ def home(request):
 	# NOTE: catch ObjectDoesNotExist exception here, as it may occur.
 	va = Volunteer.objects.get(id=request.user.volunteer.id)
 	
-	#Loading template in "t" and assigning variable to context in "c"
-	t = loader.get_template('users/index.html')
-	c = RequestContext(request, {'va':va,})
-	
-	#Compiling template and rendering out the context information
-	r = t.render(request, c)
-	
-	return HttpResponse(r)
+	return render(request, 'users/index.html',
+					{'va': va})

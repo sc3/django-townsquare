@@ -10,8 +10,7 @@ urlpatterns = patterns('',
     url(r'^volunteer/add$', views.signup),
     url(r'^event/add$', views.add_event),
     url(r'^signup-success$', views.t2signup_success),
-
-    # Processing views
-    url(r'^event2$', views.t2addevent),
+    url(r'^addevent-success$', views.t2addevent_success),
+    #url(r'^login2$'), views.t2login2),
     
 )

@@ -34,7 +34,7 @@ def process_event(evt, evl, d, start, end, notes, vt):
 	
 	e = Event(
 	event_type=evt,
-	event_location=EventLocation(evl),
+	event_location=evl,
 	date=d,
 	start=start,
 	end=end,

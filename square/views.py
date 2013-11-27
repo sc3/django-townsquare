@@ -1,5 +1,5 @@
 from django.http import HttpResponse, HttpResponseRedirect
-from square.models import Volunteer
+from square.models import Volunteer, Event
 from django.template import Context, Template, loader, RequestContext
 from django.shortcuts import render
 from django.contrib.auth import authenticate, login, logout
@@ -90,31 +90,38 @@ def t2login2(request):
 @login_required
 def add_event(request):
 	
-	return render(request, 'users/add-event.html', 
-					{'f': AddEventForm()})
-
-
-@login_required
-def t2addevent(request):
-	
-	""" Takes information from the addevent form and dumps
-		it into the database """
-	
 	if request.method == 'POST':
 		
-		evt = request.POST['event_type']
-		evl = request.POST['event_location']
-		d = request.POST['date']
-		start = request.POST['start']
-		end = request.POST['end']
-		n = request.POST['notes']
-		ivt = True if request.POST.get('is_volunteer_time', None) else False
-		
-		new_event = process_event(evt, evl, d, start, end, n, ivt)
-	
-		return render(request, 'users/display-event.html', 
-						{'new_event': new_event})
-		
+		# POST request to signup page does validation/processing
+		form = AddEventForm(request.POST)
+
+		if form.is_valid():
+
+			evt = form.cleaned_data['event_type']
+			evl = form.cleaned_data['event_location']
+			d = form.cleaned_data['date']
+			start = form.cleaned_data['start']
+			end = form.cleaned_data['end']
+			n = form.cleaned_data['notes']
+			ivt = form.cleaned_data['is_volunteer_time']
+			
+			new_event = process_event(evt, evl, d, start, end, n, ivt)
+			request.session['new_event'] = new_event.id
+
+			return HttpResponseRedirect('/townsquare/addevent-success')
+
+	else:
+		form = AddEventForm()
+
+	return render(request, 'users/add-event.html', 
+					{'f': form})
+
+
+def t2addevent_success(request):
+
+	e = Event.objects.get(id=request.session['new_event'])
+	return render(request, 'users/display-event.html', 
+					{'new_event': e})
 	
 def t2logout(request):
 	

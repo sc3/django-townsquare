@@ -12,8 +12,6 @@ urlpatterns = patterns('',
     url(r'^signup-success$', views.t2signup_success),
 
     # Processing views
-    url(r'^login2$', views.t2login2),
-    #url(r'^signup2$', views.t2signup2),
     url(r'^event2$', views.t2addevent),
     
 )

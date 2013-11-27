@@ -29,7 +29,7 @@ class Volunteer(models.Model):
         super(Volunteer, self).save(*args, **kwargs)
 
     def __unicode__(self):
-        return self.user.first_name + " " + self.user.last_name
+        return self.full_name()
 
 class EventLocation(models.Model):
     full_name = models.CharField(max_length=200)

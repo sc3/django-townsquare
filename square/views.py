@@ -49,42 +49,68 @@ def t2signup_success(request):
 	return render(request, 'users/signup-display.html', 
 					{'new_user': v})
 
+
+@login_required
+def browse_volunteers(request):
+	
+	vols = Volunteer.objects.all()
+	
+	t = loader.get_template('users/volunteer_browse.html')
+	c = RequestContext(request, {'volunteers':vols,})
+	
+	r = t.render(c)
+	
+	return HttpResponse(r)
+
+
+
+
+
 def t2login(request):
+	
+	if request.method == 'POST':
+		
+		# POST request to login page does validation/processing
+		form = LoginForm(request.POST)
+		
+		if form.is_valid():
+			
+			username = form.cleaned_data['Username']
+			password = form.cleaned_data['Password']
+		
+			user = authenticate(username=username, password=password)
+			
+			
+			if user is not None:
+			
+				if user.is_active:
+					
+					login(request, user)
+					#Redirect to success page
+					
+					state="Logged in"
+					
+					#return HttpResponse(views.home)
+					return HttpResponseRedirect('/townsquare/volunteer/home')
+					
+				else:
+					
+					return HttpResponse("Not valid")
+					#Redirect to signup
+			
+			
+			else:
+			
+				return HttpResponse("Sign Up")
+				#Redirect to signup
+			
+			
+				
 	
 	return render(request, 'users/login.html', 
 					{'f': LoginForm()})
 	
 
-def t2login2(request):
-	
-	if request.method == 'POST':
-	
-		username = request.POST['Username']
-		password = request.POST['Password']
-		
-		user = authenticate(username=username, password=password)
-		
-		if user is not None:
-			
-			if user.is_active:
-				
-				login(request, user)
-				#Redirect to success page
-				
-				state="Logged in"
-				
-				#return HttpResponse(views.home)
-				return HttpResponseRedirect('/townsquare/volunteers/home')
-				
-			else:
-				
-				return HttpResponse("Not valid")
-				#Redirect to signup
-				
-		else:
-			
-			return HttpResponse("Sign Up")
-			#Redirect to signup
 	
 		
 @login_required

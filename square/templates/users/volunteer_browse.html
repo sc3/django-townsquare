@@ -1,0 +1,37 @@
+{% extends "users/index.html" %}
+
+{% block title %}Browse Volunteers{% endblock %}
+
+
+{% block content2 %}
+
+
+<table id="volunteer_list">
+
+	<tr>
+	
+		<th>Name</th>
+		<th>Hours</th>
+	
+	</tr>
+
+
+	{% for volunteer in volunteers %}
+	
+		<tr>
+		
+			<td>{{volunteer.user_id}}</td>
+			
+			<td>{{volunteer.hours}}</td>
+		
+		
+		</tr>
+
+
+	{% endfor %}
+
+</table>
+
+
+
+{% endblock %}

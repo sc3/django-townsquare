@@ -1,0 +1,32 @@
+{% extends "users/index.html" %}
+
+{% block title %}Browse Events{% endblock %}
+
+
+{% block content2 %}
+
+
+<table id="volunteer_list">
+
+	
+
+	{% for event in events %}
+	
+		<tr>
+		
+			<td>{{event.event_type}}</td>
+			
+			<td>{{event.event_location}}</td>
+		
+		
+		</tr>
+
+
+	{% endfor %}
+
+</table>
+
+
+
+{% endblock %}
+

@@ -1,5 +1,5 @@
 from django.http import HttpResponse, HttpResponseRedirect
-from square.models import Volunteer
+from square.models import Volunteer, Event, EventLocation
 from django.template import Context, Template, loader, RequestContext
 from django.shortcuts import render
 from django.contrib.auth import authenticate, login, logout
@@ -10,8 +10,15 @@ from square.utils import process_user, process_event
 
 
 def about(request):
-	output = "About the Townsquare project:"
-	return HttpResponse(output)
+	
+	blurb = "Something about Townsquare."
+	
+	t = loader.get_template('users/about.html')
+	c = RequestContext(request, {'blurb':blurb,})
+	
+	r = t.render(c)
+	
+	return HttpResponse(r)
 
 
 @login_required
@@ -140,6 +147,23 @@ def t2addevent(request):
 	
 		return render(request, 'users/display-event.html', 
 						{'new_event': new_event})
+
+
+@login_required
+def browse_events(request):
+	
+	evs = Event.objects.all()
+	
+	t = loader.get_template('users/event_browse.html')
+	c = RequestContext(request, {'events':evs,})
+	
+	r = t.render(c)
+	
+	return HttpResponse(r)
+
+
+
+
 		
 	
 def t2logout(request):

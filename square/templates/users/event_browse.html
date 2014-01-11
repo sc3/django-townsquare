@@ -13,12 +13,16 @@
 	{% for event in events %}
 	
 		<tr>
-		
-			<td>{{event.event_type}}</td>
+			
+			<td>{{event.date}}</td>
+			
+			<!--For some reason, get_FOO_display() only works without parentheses)-->
+			<td>{{event.get_event_type_display}}</td>
 			
 			<td>{{event.event_location}}</td>
 		
-		
+			<td><button type="button"></button></td>
+			
 		</tr>
 
 

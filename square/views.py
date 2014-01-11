@@ -71,6 +71,13 @@ def browse_volunteers(request):
 
 
 
+@login_required
+def search_volunteers(request):
+	
+	
+	
+	return HttpResponse()
+
 
 
 def t2login(request):

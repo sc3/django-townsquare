@@ -22,3 +22,14 @@ class LoginForm(Form):
 		
 	Username = CharField()
 	Password = CharField(widget=PasswordInput())
+
+
+#Need a form set to put in the sign in/sign out information (sessions)
+
+class SessionForm(Form):
+	
+	session_events = Event.objects.all()
+	
+	
+	
+	

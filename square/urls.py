@@ -12,6 +12,7 @@ urlpatterns = patterns('',
     url(r'^event/browse$', views.browse_events),
     url(r'^signup-success$', views.t2signup_success),
     url(r'^volunteer/browse$', views.browse_volunteers),
+    url(r'^volunteer/search$', views.search_volunteers),
 
     # Processing views
     url(r'^event2$', views.t2addevent),

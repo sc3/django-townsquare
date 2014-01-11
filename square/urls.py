@@ -1,5 +1,10 @@
-from django.conf.urls import patterns, url
+from django.conf.urls import patterns, url, include
 from square import views
+from square.api import VolunteerResource
+
+
+volunteer_resource = VolunteerResource()
+
 
 urlpatterns = patterns('',
 
@@ -17,4 +22,6 @@ urlpatterns = patterns('',
     # Processing views
     url(r'^event2$', views.t2addevent),
     
+    #Data access
+    url(r'^api/', include(volunteer_resource.urls)),
 )

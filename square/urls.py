@@ -11,6 +11,5 @@ urlpatterns = patterns('',
     url(r'^event/add$', views.add_event),
     url(r'^signup-success$', views.t2signup_success),
     url(r'^addevent-success$', views.t2addevent_success),
-    #url(r'^login2$'), views.t2login2),
     
 )

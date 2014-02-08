@@ -49,44 +49,41 @@ def t2signup_success(request):
 	return render(request, 'users/signup-display.html', 
 					{'new_user': v})
 
-def t2login(request):
-	
-	return render(request, 'users/login.html', 
-					{'f': LoginForm()})
-	
 
-def t2login2(request):
+def t2login(request):
 	
 	if request.method == 'POST':
 	
-		username = request.POST['Username']
-		password = request.POST['Password']
+		form = LoginForm(request.POST) 
+
+		if form.is_valid():
+
+			u = form.cleaned_data['Username']
+			p = form.cleaned_data['Password']
 		
-		user = authenticate(username=username, password=password)
+			user = authenticate(username=u, password=p)
 		
-		if user is not None:
-			
-			if user.is_active:
-				
+			if user is not None:
+					
 				login(request, user)
-				#Redirect to success page
-				
-				state="Logged in"
-				
+
 				#return HttpResponse(views.home)
 				return HttpResponseRedirect('/townsquare/volunteers/home')
-				
+					
 			else:
 				
-				return HttpResponse("Not valid")
+				return HttpResponse("Invalid login.")
 				#Redirect to signup
-				
-		else:
-			
-			return HttpResponse("Sign Up")
-			#Redirect to signup
+
+	else:
+
+		# GET request to login results in empty form
+		form = LoginForm()
 	
-		
+	return render(request, 'users/login.html', 
+					{'f': form})
+	
+
 @login_required
 def add_event(request):
 	

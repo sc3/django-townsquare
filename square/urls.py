@@ -1,9 +1,16 @@
 from django.conf.urls import patterns, url, include
 from square import views
-from square.api import VolunteerResource
+from square.api import VolunteerResource, UserResource
+from tastypie.api import Api
 
 
-volunteer_resource = VolunteerResource()
+v1_api = Api(api_name="v1")
+v1_api.register(UserResource())
+v1_api.register(VolunteerResource())
+
+
+
+
 
 
 urlpatterns = patterns('',
@@ -23,5 +30,6 @@ urlpatterns = patterns('',
     url(r'^event2$', views.t2addevent),
     
     #Data access
-    url(r'^api/', include(volunteer_resource.urls)),
+    url(r'^api/', include(v1_api.urls)),
+    
 )

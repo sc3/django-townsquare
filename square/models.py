@@ -3,7 +3,10 @@ from datetime import datetime
 from django.contrib.auth.models import User
 
 class Volunteer(models.Model):
-    user = models.OneToOneField(User, null=True)
+    
+    #Editing user to be a ForeignKey
+    user = models.ForeignKey(User, null=True, unique=True)
+    
     signup_date = models.DateField("Sign-up date", default=datetime.now())
     hours = models.FloatField(editable=False, default=0.0) 
     credentials = models.CharField(max_length=300, blank=True)

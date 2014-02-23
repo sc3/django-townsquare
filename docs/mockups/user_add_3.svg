@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1024"
+   height="1500"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="mockup_3.svg">
+  <defs
+     id="defs4">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 750 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="1024 : 750 : 1"
+       inkscape:persp3d-origin="512 : 500 : 1"
+       id="perspective2985" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.5"
+     inkscape:cx="514.22834"
+     inkscape:cy="968.65584"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1280"
+     inkscape:window-height="726"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1">
+    <sodipodi:guide
+       orientation="1,0"
+       position="0,1570"
+       id="guide3003" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="1024,1575.714"
+       id="guide3005" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="0,1500"
+       id="guide3007" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="0,0"
+       id="guide3834" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,447.63782)">
+    <rect
+       style="fill:#1a1a1a;fill-opacity:1;stroke:none"
+       id="rect3001"
+       width="1024"
+       height="40"
+       x="0"
+       y="-447.63782" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:bold;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:MgOpen Moderna Bold"
+       x="32"
+       y="-419.37521"
+       id="text3009"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3011"
+         x="32"
+         y="-419.37521"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna Bold">Townsquare</tspan></text>
+    <g
+       id="g3019"
+       transform="matrix(0.45185522,0,0,0.45185522,-100.84314,-307.0949)">
+      <rect
+         y="-285.71875"
+         x="240.55287"
+         height="39.39394"
+         width="41.414139"
+         id="rect3013"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000" />
+      <path
+         transform="translate(0,-447.63782)"
+         inkscape:connector-curvature="0"
+         id="path3015"
+         d="m 240.88057,162.56823 40.89077,38.56946"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         transform="translate(0,-447.63782)"
+         inkscape:connector-curvature="0"
+         id="path3017"
+         d="m 281.9499,162.21111 -41.06933,38.92658"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+    <rect
+       style="fill:#e6e6e6;fill-opacity:1;stroke:none"
+       id="rect3804"
+       width="176.76767"
+       height="20"
+       x="201.79465"
+       y="-436.63782" />
+    <g
+       id="g3799"
+       transform="matrix(0.7594511,0,0,0.7594511,59.074286,-157.28637)"
+       style="fill:#ffffff">
+      <g
+         id="g3796"
+         style="fill:none;stroke:#ffffff">
+        <path
+           sodipodi:type="arc"
+           style="fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:0.78431373;stroke-dasharray:none;stroke-dashoffset:0"
+           id="path3024"
+           sodipodi:cx="121.42238"
+           sodipodi:cy="110.78516"
+           sodipodi:rx="10.713739"
+           sodipodi:ry="10.713739"
+           d="m 132.13612,110.78516 c 0,5.91703 -4.79671,10.71374 -10.71374,10.71374 -5.91704,0 -10.71374,-4.79671 -10.71374,-10.71374 0,-5.91704 4.7967,-10.71374 10.71374,-10.71374 5.91703,0 10.71374,4.7967 10.71374,10.71374 z"
+           transform="matrix(0.63414794,0,0,0.63414794,92.277328,-429.24857)" />
+      </g>
+      <path
+         inkscape:connector-curvature="0"
+         id="path3794"
+         d="m 173.56257,-353.99464 8.571,9.28524"
+         style="fill:#ffffff;stroke:#f9f9f9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:bold;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:MgOpen Moderna Bold"
+       x="962.71722"
+       y="-423.63782"
+       id="text3009-9"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3011-6"
+         x="962.71722"
+         y="-423.63782"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna Bold">Sign On</tspan></text>
+    <rect
+       style="fill:#e6e6e6;fill-opacity:1;stroke:none"
+       id="rect3829"
+       width="1024"
+       height="1460.6061"
+       x="0"
+       y="-408.24387" />
+    <g
+       id="g3240"
+       transform="translate(40,-50)">
+      <rect
+         transform="scale(-1,1)"
+         style="fill:#ffffff;fill-opacity:1;stroke:#1a1a1a;stroke-width:0.37467873"
+         id="rect3836-6-0"
+         width="719.62531"
+         height="99.62532"
+         x="-822.93457"
+         y="-290.5166" />
+      <flowRoot
+         transform="translate(82,-413.63782)"
+         style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         id="flowRoot3085"
+         xml:space="preserve"><flowRegion
+           id="flowRegion3087"><rect
+             style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+             y="136"
+             x="30"
+             height="205"
+             width="696"
+             id="rect3089" /></flowRegion><flowPara
+           id="flowPara3109">Below are pending waiver forms. Please:</flowPara><flowPara
+           id="flowPara6915">    - Print and have the volunteer or the volunteer and a parent/guardian sign and return the form.</flowPara><flowPara
+           id="flowPara6917">    - Check off the volunteer when the signed waiver is returned. They are now able to participate</flowPara></flowRoot>    </g>
+    <rect
+       y="-234.42053"
+       x="-863.31458"
+       height="531.73175"
+       width="719.1347"
+       id="rect6903"
+       style="fill:#ffffff;fill-opacity:1;stroke:#1a1a1a;stroke-width:0.86531132"
+       transform="scale(-1,1)" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot6905"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+       transform="translate(121.91584,-367.69846)"><flowRegion
+         id="flowRegion6907"><rect
+           id="rect6909"
+           width="696"
+           height="205"
+           x="30"
+           y="136"
+           style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna" /></flowRegion><flowPara
+         id="flowPara6958"><flowSpan
+   style="fill:#ff0000"
+   id="flowSpan6952">⊝</flowSpan> &lt;volunteer_name_1&gt;</flowPara><flowPara
+         id="flowPara6913"><flowSpan
+   style="fill:#ff0000"
+   id="flowSpan6956">⊝</flowSpan> &lt;volunteer_name_2&gt;</flowPara><flowPara
+         id="flowPara7046"><flowSpan
+   style="fill:#ffff00"
+   id="flowSpan7052">⊝</flowSpan> &lt;volunteer_name_3&gt;</flowPara><flowPara
+         id="flowPara7048"><flowSpan
+   style="fill:#ff0000"
+   id="flowSpan7056">⊝</flowSpan> &lt;volunteer_name_4&gt;</flowPara><flowPara
+         id="flowPara7050"><flowSpan
+   style="fill:#ffff00"
+   id="flowSpan7054">⊝</flowSpan> &lt;volunteer_name_5&gt;</flowPara></flowRoot>    <flowRoot
+       transform="translate(341.91584,-367.69846)"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+       id="flowRoot6964"
+       xml:space="preserve"><flowRegion
+         id="flowRegion6966"><rect
+           style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+           y="136"
+           x="30"
+           height="205"
+           width="696"
+           id="rect6968" /></flowRegion><flowPara
+         id="flowPara6970">☐ Print</flowPara><flowPara
+         id="flowPara6974">☐ Print</flowPara><flowPara
+         id="flowPara7040">☐ Reprint</flowPara><flowPara
+         id="flowPara7042">☐ Print</flowPara><flowPara
+         id="flowPara7044">☐ Reprint</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot6993"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+       transform="translate(441.91584,-367.69846)"><flowRegion
+         id="flowRegion6995"><rect
+           id="rect6997"
+           width="368"
+           height="204"
+           x="30"
+           y="136"
+           style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna" /></flowRegion><flowPara
+         id="flowPara7001" /><flowPara
+         id="flowPara7005" /><flowPara
+         id="flowPara7007" /></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot7024"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+       transform="translate(439.91584,-367.69846)"><flowRegion
+         id="flowRegion7026"><rect
+           id="rect7028"
+           width="386"
+           height="202"
+           x="30"
+           y="136"
+           style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna" /></flowRegion><flowPara
+         id="flowPara7030"></flowPara><flowPara
+         id="flowPara7034"></flowPara><flowPara
+         id="flowPara7036">☐ Returned</flowPara><flowPara
+         id="flowPara7032"></flowPara><flowPara
+         id="flowPara7038">☐ Returned    </flowPara></flowRoot>  </g>
+</svg>

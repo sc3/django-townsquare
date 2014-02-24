@@ -14,7 +14,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="mockup_5.svg">
+   sodipodi:docname="user-info.svg">
   <defs
      id="defs4">
     <inkscape:perspective
@@ -32,8 +32,8 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.70710678"
-     inkscape:cx="442.18272"
+     inkscape:zoom="1"
+     inkscape:cx="444.18272"
      inkscape:cy="1173.384"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -186,13 +186,13 @@
        height="800"
        width="720"
        id="rect3836-6-0"
-       style="fill:#ffffff;fill-opacity:1;stroke:#1a1a1a;stroke-width:0.93977475"
+       style="fill:#ffffff;fill-opacity:1;stroke:#1a1a1a;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"
        transform="scale(-1,1)" />
     <flowRoot
        xml:space="preserve"
        id="flowRoot3085"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
-       transform="translate(129.67916,-417.63782)"><flowRegion
+       transform="translate(135,-440.63782)"><flowRegion
          id="flowRegion3087"><rect
            id="rect3089"
            width="681.85785"
@@ -200,16 +200,8 @@
            x="30"
            y="136"
            style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna" /></flowRegion><flowPara
-         style="font-weight:normal"
-         id="flowPara7426">Below is a list of recent Volunteer events for <flowSpan
-   id="flowSpan7267"
-   style="font-weight:bold">&lt;volunteer_name&gt;</flowSpan> at FreeGeek Chicago.</flowPara><flowPara
          id="flowPara7436"
-         style="font-weight:normal"><flowSpan
-   id="flowSpan7438"
-   style="font-weight:bold">&lt;volunteer_name&gt;</flowSpan> began volunteering with FreeGeek Chicago on <flowSpan
-   id="flowSpan7440"
-   style="font-weight:bold">&lt;orientation_date&gt;</flowSpan>.</flowPara></flowRoot>    <flowRoot
+         style="font-weight:normal">Started Volunteering &lt;added_date&gt;</flowPara></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot6993"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
@@ -465,14 +457,32 @@
     <text
        sodipodi:linespacing="125%"
        id="text5602"
-       y="-314.7774"
-       x="158.95116"
+       y="-308.54581"
+       x="164.272"
        style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        xml:space="preserve"><tspan
          style="font-size:28px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
          id="tspan5604"
-         y="-314.7774"
-         x="158.95116"
+         y="-308.54581"
+         x="164.272"
          sodipodi:role="line">&lt;Volunteer Name&gt; (Volunteer #112313244)</tspan></text>
+    <path
+       style="fill:none;stroke:#4d4d4d;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 164.63456,-248.13782 664.68038,0"
+       id="path3876"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:71.99986267px;font-style:normal;font-weight:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="833.87604"
+       y="-257.97934"
+       id="text5301"
+       sodipodi:linespacing="125%"
+       transform="scale(0.99999811,1.0000019)"><tspan
+         id="tspan5325"
+         sodipodi:role="line"
+         x="833.87604"
+         y="-257.97934"
+         style="font-size:17.99996567px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;text-anchor:end;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna">Edit Event Info...</tspan></text>
   </g>
 </svg>

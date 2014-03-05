@@ -129,7 +129,6 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'square',
     'south',
-    'tastypie',
     #'django_admin_bootstrapped',
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:

@@ -4,6 +4,8 @@ from square.models import Volunteer, Event, EventLocation
 
 from django.core.management import call_command
 
+from django.core import serializers
+
 def timeonly_delta(time1, time2):
     start_date = dateize(time1)
     end_date = dateize(time2)

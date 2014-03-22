@@ -15,6 +15,10 @@ class Volunteer(models.Model):
 
     def full_name(self):
         return self.user.first_name + " " + self.user.last_name
+        
+    def natural_key(self):
+		
+		return self.full_name()
 
     def calculate_hours(self):
         hours = 0

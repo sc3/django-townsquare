@@ -2,6 +2,8 @@ from datetime import date, time, datetime
 from django.contrib.auth.models import User
 from square.models import Volunteer, Event, EventLocation
 
+from django.core.management import call_command
+
 def timeonly_delta(time1, time2):
     start_date = dateize(time1)
     end_date = dateize(time2)
@@ -45,4 +47,18 @@ def process_event(evt, evl, d, start, end, notes, vt):
 	
 	return(e)
 		
-		
+
+#Function for dumping data into a JSON file to use with typeahead. Better if automated.
+def data_dump():
+	
+	dataOut = (volData, 'w')
+	
+	call_command('dumpdata', 'Volunteer', format='json', indent=4, stdout=output)
+	
+	dataOut.close()
+	
+	
+#Function for loading JSON file to use with typeahead	
+def	data_load():
+	
+	call_command('loaddata', '/data/nhl.json')	

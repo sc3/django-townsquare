@@ -181,3 +181,23 @@ def home(request):
 	
 	return render(request, 'users/index.html',
 					{'va': va})
+
+
+def nhl(request):
+	
+	datafile = '[{ "team": "New Jersey Devils" },{ "team": "New York Islanders" },{ "team": "New York Rangers" },{ "team": "Philadelphia Flyers" },{ "team": "Pittsburgh Penguins" },{ "team": "Chicago Blackhawks" },{ "team": "Columbus Blue Jackets" },{ "team": "Detroit Red Wings" },{ "team": "Nashville Predators" },{ "team": "St. Louis Blues" },{ "team": "Boston Bruins" },{ "team": "Buffalo Sabres" },{ "team": "Montreal Canadiens" },{ "team": "Ottawa Senators" },{ "team": "Toronto Maple Leafs" },{ "team": "Calgary Flames" },{ "team": "Colorado Avalanche" },{ "team": "Edmonton Oilers" },{ "team": "Minnesota Wild" },{ "team": "Vancouver Canucks" },{ "team": "Carolina Hurricanes" },{ "team": "Florida Panthers" },{ "team": "Tampa Bay Lightning" },{ "team": "Washington Capitals" },{ "team": "Winnipeg Jets" },{ "team": "Anaheim Ducks" },{ "team": "Dallas Stars" },{ "team": "Los Angeles Kings" },{ "team": "Phoenix Coyotes" },{ "team": "San Jose Sharks" }]'
+
+	return HttpResponse(datafile)
+
+
+
+def voljson(request):
+	
+	datafile = '[{"pk": "1", "model": "square.volunteer", "fields": {"signup_date": "2013-11-21", "hours": "0.0", "credit": "0.0", "user": "5", "credentials": "", "vol_image": ""}}, {"pk": "2", "model": "square.volunteer", "fields": {"signup_date": "2013-12-14", "hours": "0.0", "credit": "0.0", "user": "6", "credentials": "", "vol_image": ""}}]'
+	
+	return HttpResponse(datafile)
+	
+	
+	
+	
+

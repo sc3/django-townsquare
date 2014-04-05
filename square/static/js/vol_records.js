@@ -4,7 +4,7 @@
 var volrecords = new Bloodhound(
 {
 
-	datumTokenizer: Bloodhound.tokenizers.obj.whitespace('dates'),
+	datumTokenizer: Bloodhound.tokenizers.obj.whitespace('objects'),
 	queryTokenizer: Bloodhound.tokenizers.whitespace,
 	//limit: 100,
 	
@@ -38,7 +38,7 @@ $('#volrec .typeahead').typeahead(null,
 {
 
 	name: 'vol-records',
-	displayKey: 'dates',
+	displayKey: 'objects',
 
 
 	//'ttAdapter' wraps the suggestion engine in an apdapter compatible with the ta plugin

@@ -3,14 +3,17 @@ from datetime import datetime
 from django.contrib.auth.models import User
 
 class Volunteer(models.Model):
-    
-    #Editing user to be a ForeignKey
+        
     user = models.OneToOneField(User, null=True, unique=True)
     signup_date = models.DateField("Sign-up date", default=datetime.now())
-    hours = models.FloatField(editable=False, default=0.0) 
+    
+    #Editing hours to be a CharField (from FloatField, for typeahead)
+    hours = models.CharField(editable=False, default=0.0, max_length=20) 
     credentials = models.CharField(max_length=300, blank=True)
     vol_image = models.CharField(max_length=200, blank=True)
-    credit = models.FloatField(editable=False, default=0.0)   
+    
+    #Editing credit to be a CharField (from FloatField, for typeahead)
+    credit = models.CharField(editable=False, default=0.0, max_length=20)   
 
     def full_name(self):
         return self.user.first_name + " " + self.user.last_name
@@ -20,6 +23,10 @@ class Volunteer(models.Model):
 		return self.full_name()
 
     def calculate_hours(self):
+        
+        #Converting hours to integer
+        int(hours)
+        
         hours = 0
         for s in self.session_set.all():
             if s.event.is_volunteer_time:
@@ -27,7 +34,7 @@ class Volunteer(models.Model):
                 hour_diff = tdelta.seconds / 3600.0
                 rounded = round(hour_diff, 1)
                 hours += rounded
-        return hours
+        return str(hours)
 
     def save(self, *args, **kwargs):
         self.hours = self.calculate_hours()

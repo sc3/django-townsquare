@@ -1,1 +1,0 @@
-[{"pk": 1, "model": "square.volunteer", "fields": {"signup_date": "2013-11-21", "hours": 0.0, "credit": 0.0, "user": ["ahopper"], "credentials": "", "vol_image": ""}}, {"pk": 2, "model": "square.volunteer", "fields": {"signup_date": "2013-12-14", "hours": 0.0, "credit": 0.0, "user": ["katecleansing"], "credentials": "", "vol_image": ""}}]

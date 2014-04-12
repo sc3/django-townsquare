@@ -2,8 +2,11 @@ from datetime import date, time, datetime
 from django.contrib.auth.models import User
 from square.models import Volunteer, Event, EventLocation
 
+<<<<<<< HEAD
 from django.core.management import call_command
 
+=======
+>>>>>>> api_rawstrap
 from django.core import serializers
 
 def timeonly_delta(time1, time2):

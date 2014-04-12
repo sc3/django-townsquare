@@ -3,7 +3,6 @@
 
 var volrecords = new Bloodhound(
 {
-<<<<<<< HEAD
 	
 	datumTokenizer: Bloodhound.tokenizers.obj.whitespace('dates'),
 	queryTokenizer: Bloodhound.tokenizers.whitespace,
@@ -26,8 +25,6 @@ var volrecords = new Bloodhound(
 		
 	}
 	
-=======
-
 	datumTokenizer: Bloodhound.tokenizers.whitespace('first_name'),
 	queryTokenizer: Bloodhound.tokenizers.whitespace,
 	//limit: 100,
@@ -77,7 +74,6 @@ var volrecords = new Bloodhound(
 
 	}
 
->>>>>>> api_rawstrap
 });
 
 
@@ -88,7 +84,6 @@ volrecords.initialize();
 
 $('#volrec .typeahead').typeahead(null,
 {
-<<<<<<< HEAD
 	
 	name: 'vol-records',
 	displayKey: 'dates',
@@ -99,8 +94,6 @@ $('#volrec .typeahead').typeahead(null,
 	
 });
 	
-=======
-
 	name: 'vol-records',
 	displayKey: 'first_name',
 
@@ -108,5 +101,3 @@ $('#volrec .typeahead').typeahead(null,
 	source: volrecords.ttAdapter()
 
 });
-
->>>>>>> api_rawstrap

@@ -1,5 +1,5 @@
 from django.http import HttpResponse, HttpResponseRedirect
-from square.models import Volunteer
+from square.models import Volunteer, Event, EventLocation
 from django.template import Context, Template, loader, RequestContext
 from django.shortcuts import render
 from django.contrib.auth import authenticate, login, logout
@@ -10,8 +10,15 @@ from square.utils import process_user, process_event
 
 
 def about(request):
-	output = "About the Townsquare project:"
-	return HttpResponse(output)
+	
+	blurb = "Something about Townsquare."
+	
+	t = loader.get_template('users/about.html')
+	c = RequestContext(request, {'blurb':blurb,})
+	
+	r = t.render(c)
+	
+	return HttpResponse(r)
 
 
 @login_required
@@ -49,42 +56,68 @@ def t2signup_success(request):
 	return render(request, 'users/signup-display.html', 
 					{'new_user': v})
 
+
+@login_required
+def browse_volunteers(request):
+	
+	vols = Volunteer.objects.all()
+	
+	t = loader.get_template('users/volunteer_browse.html')
+	c = RequestContext(request, {'volunteers':vols,})
+	
+	r = t.render(c)
+	
+	return HttpResponse(r)
+
+
+
+
+
 def t2login(request):
+	
+	if request.method == 'POST':
+		
+		# POST request to login page does validation/processing
+		form = LoginForm(request.POST)
+		
+		if form.is_valid():
+			
+			username = form.cleaned_data['Username']
+			password = form.cleaned_data['Password']
+		
+			user = authenticate(username=username, password=password)
+			
+			
+			if user is not None:
+			
+				if user.is_active:
+					
+					login(request, user)
+					#Redirect to success page
+					
+					state="Logged in"
+					
+					#return HttpResponse(views.home)
+					return HttpResponseRedirect('/townsquare/volunteer/home')
+					
+				else:
+					
+					return HttpResponse("Not valid")
+					#Redirect to signup
+			
+			
+			else:
+			
+				return HttpResponse("Sign Up")
+				#Redirect to signup
+			
+			
+				
 	
 	return render(request, 'users/login.html', 
 					{'f': LoginForm()})
 	
 
-def t2login2(request):
-	
-	if request.method == 'POST':
-	
-		username = request.POST['Username']
-		password = request.POST['Password']
-		
-		user = authenticate(username=username, password=password)
-		
-		if user is not None:
-			
-			if user.is_active:
-				
-				login(request, user)
-				#Redirect to success page
-				
-				state="Logged in"
-				
-				#return HttpResponse(views.home)
-				return HttpResponseRedirect('/townsquare/volunteers/home')
-				
-			else:
-				
-				return HttpResponse("Not valid")
-				#Redirect to signup
-				
-		else:
-			
-			return HttpResponse("Sign Up")
-			#Redirect to signup
 	
 		
 @login_required
@@ -114,6 +147,23 @@ def t2addevent(request):
 	
 		return render(request, 'users/display-event.html', 
 						{'new_event': new_event})
+
+
+@login_required
+def browse_events(request):
+	
+	evs = Event.objects.all()
+	
+	t = loader.get_template('users/event_browse.html')
+	c = RequestContext(request, {'events':evs,})
+	
+	r = t.render(c)
+	
+	return HttpResponse(r)
+
+
+
+
 		
 	
 def t2logout(request):
@@ -131,3 +181,23 @@ def home(request):
 	
 	return render(request, 'users/index.html',
 					{'va': va})
+
+
+def nhl(request):
+	
+	datafile = '[{ "team": "New Jersey Devils" },{ "team": "New York Islanders" },{ "team": "New York Rangers" },{ "team": "Philadelphia Flyers" },{ "team": "Pittsburgh Penguins" },{ "team": "Chicago Blackhawks" },{ "team": "Columbus Blue Jackets" },{ "team": "Detroit Red Wings" },{ "team": "Nashville Predators" },{ "team": "St. Louis Blues" },{ "team": "Boston Bruins" },{ "team": "Buffalo Sabres" },{ "team": "Montreal Canadiens" },{ "team": "Ottawa Senators" },{ "team": "Toronto Maple Leafs" },{ "team": "Calgary Flames" },{ "team": "Colorado Avalanche" },{ "team": "Edmonton Oilers" },{ "team": "Minnesota Wild" },{ "team": "Vancouver Canucks" },{ "team": "Carolina Hurricanes" },{ "team": "Florida Panthers" },{ "team": "Tampa Bay Lightning" },{ "team": "Washington Capitals" },{ "team": "Winnipeg Jets" },{ "team": "Anaheim Ducks" },{ "team": "Dallas Stars" },{ "team": "Los Angeles Kings" },{ "team": "Phoenix Coyotes" },{ "team": "San Jose Sharks" }]'
+
+	return HttpResponse(datafile)
+
+
+
+def voljson(request):
+	
+	datafile = '[{"pk": "1", "model": "square.volunteer", "fields": {"signup_date": "2013-11-21", "hours": "0.0", "credit": "0.0", "user": "5", "credentials": "", "vol_image": ""}}, {"pk": "2", "model": "square.volunteer", "fields": {"signup_date": "2013-12-14", "hours": "0.0", "credit": "0.0", "user": "6", "credentials": "", "vol_image": ""}}]'
+	
+	return HttpResponse(datafile)
+	
+	
+	
+	
+

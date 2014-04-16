@@ -1,0 +1,815 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1024"
+   height="1500"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="event-add.svg">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Mend"
+       style="overflow:visible;">
+      <path
+         id="path4306"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;"
+         transform="scale(0.4) rotate(180) translate(10,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lend"
+       style="overflow:visible;">
+      <path
+         id="path4300"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 750 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="1024 : 750 : 1"
+       inkscape:persp3d-origin="512 : 500 : 1"
+       id="perspective2985" />
+    <inkscape:perspective
+       id="perspective2836"
+       inkscape:persp3d-origin="282.14923 : 60 : 1"
+       inkscape:vp_z="564.29846 : 90 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 90 : 1"
+       sodipodi:type="inkscape:persp3d" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#e6e6e6"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.49120352"
+     inkscape:cx="731.08176"
+     inkscape:cy="1073.7693"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1360"
+     inkscape:window-height="688"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:object-nodes="true">
+    <sodipodi:guide
+       orientation="1,0"
+       position="0,1570"
+       id="guide3003" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="1024,1575.714"
+       id="guide3005" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="0,1500"
+       id="guide3007" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="0,0"
+       id="guide3834" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="183.18138,1400"
+       id="guide3932" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="background"
+     sodipodi:insensitive="true"
+     style="display:inline">
+    <rect
+       transform="translate(0,447.63782)"
+       style="fill:#e6e6e6;fill-opacity:1;stroke:none"
+       id="rect3829"
+       width="1024"
+       height="1460.6061"
+       x="0"
+       y="-408.24387" />
+  </g>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,447.63782)">
+    <rect
+       style="fill:#1a1a1a;fill-opacity:1;stroke:none"
+       id="rect3001"
+       width="1024"
+       height="40"
+       x="0"
+       y="-447.63782" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:bold;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:MgOpen Moderna Bold"
+       x="32"
+       y="-419.37521"
+       id="text3009"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3011"
+         x="32"
+         y="-419.37521"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna Bold">Townsquare</tspan></text>
+    <g
+       id="g3019"
+       transform="matrix(0.45185522,0,0,0.45185522,-100.84314,-307.0949)">
+      <rect
+         y="-285.71875"
+         x="240.55287"
+         height="39.39394"
+         width="41.414139"
+         id="rect3013"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000" />
+      <path
+         transform="translate(0,-447.63782)"
+         inkscape:connector-curvature="0"
+         id="path3015"
+         d="m 240.88057,162.56823 40.89077,38.56946"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         transform="translate(0,-447.63782)"
+         inkscape:connector-curvature="0"
+         id="path3017"
+         d="m 281.9499,162.21111 -41.06933,38.92658"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+    <rect
+       style="fill:#e6e6e6;fill-opacity:1;stroke:none"
+       id="rect3804"
+       width="200"
+       height="20"
+       x="177.75302"
+       y="-436.63782" />
+    <g
+       id="g3799"
+       transform="matrix(0.7594511,0,0,0.7594511,237.26519,-156.41334)"
+       style="fill:#ffffff;stroke:#000000">
+      <g
+         id="g3796"
+         style="fill:none;stroke:#000000">
+        <path
+           sodipodi:type="arc"
+           style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:0.78431373;stroke-dasharray:none;stroke-dashoffset:0"
+           id="path3024"
+           sodipodi:cx="121.42238"
+           sodipodi:cy="110.78516"
+           sodipodi:rx="10.713739"
+           sodipodi:ry="10.713739"
+           d="m 132.13612,110.78516 c 0,5.91703 -4.79671,10.71374 -10.71374,10.71374 -5.91704,0 -10.71374,-4.79671 -10.71374,-10.71374 0,-5.91704 4.7967,-10.71374 10.71374,-10.71374 5.91703,0 10.71374,4.7967 10.71374,10.71374 z"
+           transform="matrix(0.63414794,0,0,0.63414794,92.277328,-429.24857)" />
+      </g>
+      <path
+         inkscape:connector-curvature="0"
+         id="path3794"
+         d="m 173.56257,-353.99464 8.571,9.28524"
+         style="fill:#ffffff;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:bold;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:MgOpen Moderna Bold"
+       x="962.71722"
+       y="-423.63782"
+       id="text3009-9"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3011-6"
+         x="962.71722"
+         y="-423.63782"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna Bold">Sign On</tspan></text>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot6993"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+       transform="translate(441.91584,-367.69846)"><flowRegion
+         id="flowRegion6995"><rect
+           id="rect6997"
+           width="368"
+           height="204"
+           x="30"
+           y="136"
+           style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna" /></flowRegion><flowPara
+         id="flowPara7001" /><flowPara
+         id="flowPara7005" /><flowPara
+         id="flowPara7007" /></flowRoot>    <rect
+       transform="scale(-1,1)"
+       style="fill:#ffffff;fill-opacity:1;stroke:#1a1a1a;stroke-width:0.30075696"
+       id="rect3836-6-0-4"
+       width="720"
+       height="537.55804"
+       x="-860.14502"
+       y="-347.36444" />
+    <text
+       xml:space="preserve"
+       style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="160.5"
+       y="-308.17282"
+       id="text3196"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="160.5"
+         y="-308.17282"
+         id="tspan3200"
+         style="font-size:28px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna">Add Event</tspan></text>
+    <text
+       sodipodi:linespacing="165%"
+       id="text3206"
+       y="-260.99252"
+       x="271.22656"
+       style="font-size:72px;font-style:normal;font-weight:normal;text-align:end;line-height:164.99999762%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:164.99999762%;text-anchor:end;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         id="tspan3208"
+         y="-260.99252"
+         x="271.22656"
+         sodipodi:role="line">Event Type:</tspan><tspan
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:164.99999762%;text-anchor:end;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         y="-237.89252"
+         x="271.22656"
+         sodipodi:role="line"
+         id="tspan3128" /><tspan
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:164.99999762%;text-anchor:end;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         y="-214.79253"
+         x="271.22656"
+         sodipodi:role="line"
+         id="tspan3212">Event Date:</tspan><tspan
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:164.99999762%;text-anchor:end;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         y="-191.69252"
+         x="271.22656"
+         sodipodi:role="line"
+         id="tspan3214" /><tspan
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:164.99999762%;text-anchor:end;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         y="-168.59253"
+         x="271.22656"
+         sodipodi:role="line"
+         id="tspan3216">Event Location:</tspan><tspan
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:164.99999762%;text-anchor:end;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         y="-145.49252"
+         x="271.22656"
+         sodipodi:role="line"
+         id="tspan3218" /><tspan
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:164.99999762%;text-anchor:end;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         y="-122.39252"
+         x="271.22656"
+         sodipodi:role="line"
+         id="tspan3220" /><tspan
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:164.99999762%;text-anchor:end;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         y="-99.292526"
+         x="271.22656"
+         sodipodi:role="line"
+         id="tspan5127" /><tspan
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:164.99999762%;text-anchor:end;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         y="-76.192528"
+         x="271.22656"
+         sodipodi:role="line"
+         id="tspan5139" /><tspan
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:164.99999762%;text-anchor:end;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         y="-53.092525"
+         x="271.22656"
+         sodipodi:role="line"
+         id="tspan5217" /><tspan
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:164.99999762%;text-anchor:end;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         y="-29.992527"
+         x="271.22656"
+         sodipodi:role="line"
+         id="tspan5257">Special Notes:</tspan></text>
+    <g
+       id="g4214"
+       transform="translate(-12.399577,11.120922)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text4637-0"
+         y="-226.97516"
+         x="473.2536"
+         style="font-size:48px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:38px"
+           y="-226.97516"
+           x="473.2536"
+           id="tspan4639-2"
+           sodipodi:role="line">⌄</tspan></text>
+      <rect
+         y="-243.94176"
+         x="297.05429"
+         height="24.153412"
+         width="99.153412"
+         id="rect4142"
+         style="fill:none;stroke:#000000;stroke-width:0.84658849;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <rect
+         style="fill:none;stroke:#000000;stroke-width:0.84658849;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         id="rect4144"
+         width="99.153412"
+         height="24.153412"
+         x="401.05429"
+         y="-243.94176" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4188"
+         y="-227.78835"
+         x="303.05429"
+         style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+           y="-227.78835"
+           x="303.05429"
+           id="tspan4190"
+           sodipodi:role="line">03/15/2014</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         x="411.05429"
+         y="-227.78835"
+         id="text4192"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4194"
+           x="411.05429"
+           y="-227.78835"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna">6:30 PM</tspan></text>
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path4196"
+         d="m 511.07525,-231.74374 14.14214,0"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <text
+         xml:space="preserve"
+         style="font-size:48px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         x="713.2536"
+         y="-226.97516"
+         id="text4198"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4200"
+           x="713.2536"
+           y="-226.97516"
+           style="font-size:38px">⌄</tspan></text>
+      <rect
+         style="fill:none;stroke:#000000;stroke-width:0.84658849;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         id="rect4202"
+         width="99.153412"
+         height="24.153412"
+         x="537.05432"
+         y="-243.94176" />
+      <rect
+         y="-243.94176"
+         x="641.05432"
+         height="24.153412"
+         width="99.153412"
+         id="rect4204"
+         style="fill:none;stroke:#000000;stroke-width:0.84658849;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <text
+         xml:space="preserve"
+         style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         x="543.05432"
+         y="-227.78835"
+         id="text4206"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4208"
+           x="543.05432"
+           y="-227.78835"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna">03/15/2014</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text4210"
+         y="-227.78835"
+         x="651.05432"
+         style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+           y="-227.78835"
+           x="651.05432"
+           id="tspan4212"
+           sodipodi:role="line">9:30 PM</tspan></text>
+    </g>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4637-0-9"
+       y="-261.17932"
+       x="403.91718"
+       style="font-size:48px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:38px"
+         y="-261.17932"
+         x="403.91718"
+         id="tspan4639-2-3"
+         sodipodi:role="line">⌄</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect4144-7"
+       width="150"
+       height="25"
+       x="284.89532"
+       y="-277.79211" />
+    <text
+       xml:space="preserve"
+       style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="293.82535"
+       y="-261.99252"
+       id="text4192-4"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4194-0"
+         x="293.82535"
+         y="-261.99252"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna">OpenBuild</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mend)"
+       d="m 893.95393,-273.45356 171.30527,0"
+       id="path4291"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <g
+       id="g5161"
+       transform="translate(81.471824,-7.351247)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text5107"
+         y="-160.30023"
+         x="469.19583"
+         style="font-size:48px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:38px"
+           y="-160.30023"
+           x="469.19583"
+           id="tspan5109"
+           sodipodi:role="line">⌄</tspan></text>
+      <rect
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         id="rect5111"
+         width="200"
+         height="25"
+         x="300.17398"
+         y="-176.91302" />
+      <text
+         xml:space="preserve"
+         style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         x="309.104"
+         y="-161.22702"
+         id="text5113"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan5115"
+           x="309.104"
+           y="-161.22702"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna">Custom</tspan></text>
+    </g>
+    <g
+       id="g5176"
+       transform="translate(-98.528176,-16.351247)">
+      <rect
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         id="rect5133"
+         width="200"
+         height="25"
+         x="480.17398"
+         y="-142.91302" />
+      <text
+         xml:space="preserve"
+         style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         x="485.104"
+         y="-127.11302"
+         id="text5135"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan5137"
+           x="485.104"
+           y="-127.11302"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna">1111 W Saint Louis Ave, Apt 398</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:72px;font-style:normal;font-weight:normal;text-align:end;line-height:209.99999046%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="377.79138"
+       y="-169.19113"
+       id="text5141"
+       sodipodi:linespacing="209.99999%"><tspan
+         sodipodi:role="line"
+         id="tspan5143"
+         x="377.79138"
+         y="-169.19113"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:209.99999046%;text-anchor:end;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna">Venue</tspan><tspan
+         sodipodi:role="line"
+         x="377.79138"
+         y="-143.99113"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:209.99999046%;text-anchor:end;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         id="tspan5168">Address</tspan><tspan
+         sodipodi:role="line"
+         x="377.79138"
+         y="-118.79114"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:209.99999046%;text-anchor:end;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         id="tspan5170">City</tspan><tspan
+         sodipodi:role="line"
+         x="377.79138"
+         y="-93.591133"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:209.99999046%;text-anchor:end;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         id="tspan5172">State / Province</tspan><tspan
+         sodipodi:role="line"
+         x="377.79138"
+         y="-68.391136"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:209.99999046%;text-anchor:end;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         id="tspan5174">Postal Code</tspan></text>
+    <g
+       transform="translate(-98.528176,8.928982)"
+       id="g5181">
+      <rect
+         y="-142.91302"
+         x="480.17398"
+         height="25"
+         width="200"
+         id="rect5183"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text5185"
+         y="-127.11302"
+         x="485.104"
+         style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+           y="-127.11302"
+           x="485.104"
+           id="tspan5187"
+           sodipodi:role="line">Chicago</tspan></text>
+    </g>
+    <g
+       id="g5189"
+       transform="translate(-98.528176,33.967373)">
+      <rect
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         id="rect5191"
+         width="200"
+         height="25"
+         x="480.17398"
+         y="-142.91302" />
+      <text
+         xml:space="preserve"
+         style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         x="485.104"
+         y="-127.11302"
+         id="text5193"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan5195"
+           x="485.104"
+           y="-127.11302"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna">Illinois</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text5107-7"
+         y="-126.30305"
+         x="649.82416"
+         style="font-size:48px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:38px"
+           y="-126.30305"
+           x="649.82416"
+           id="tspan5109-8"
+           sodipodi:role="line">⌄</tspan></text>
+    </g>
+    <g
+       transform="translate(-98.528176,58.687143)"
+       id="g5197">
+      <rect
+         y="-142.91302"
+         x="480.17398"
+         height="25"
+         width="200"
+         id="rect5199"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text5201"
+         y="-127.11302"
+         x="485.104"
+         style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+           y="-127.11302"
+           x="485.104"
+           id="tspan5203"
+           sodipodi:role="line">60647</tspan></text>
+    </g>
+    <g
+       transform="translate(321.47182,-7.351247)"
+       id="g5205">
+      <text
+         xml:space="preserve"
+         style="font-size:48px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         x="445.19583"
+         y="-160.30023"
+         id="text5207"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan5209"
+           x="445.19583"
+           y="-160.30023"
+           style="font-size:38px">⌄</tspan></text>
+      <rect
+         y="-176.91302"
+         x="300.17398"
+         height="25"
+         width="175"
+         id="rect5211"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text5213"
+         y="-161.22702"
+         x="309.104"
+         style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+           y="-161.22702"
+           x="309.104"
+           id="tspan5215"
+           sodipodi:role="line">FreeGeek Chicago</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="585.64575"
+       y="-163.26428"
+       id="text5221"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5223"
+         x="585.64575"
+         y="-163.26428"
+         style="font-size:22px;fill:#ff0000">OR</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000"
+       id="rect5255"
+       width="500"
+       height="150"
+       x="284.72134"
+       y="-39.369106" />
+    <path
+       style="fill:#4d4d4d;stroke:#000000;stroke-width:0.99999881px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 160.5,-298.13804 669,2.2e-4"
+       id="path5702"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <g
+       id="g3916"
+       transform="translate(5.415206,102.38882)">
+      <rect
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         id="rect4263"
+         width="150"
+         height="150"
+         x="1075.8555"
+         y="-388.91302" />
+      <text
+         xml:space="preserve"
+         style="font-size:72px;font-style:normal;font-weight:normal;line-height:100%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         x="1085.5051"
+         y="-373.11343"
+         id="text4265"
+         sodipodi:linespacing="100%"><tspan
+           sodipodi:role="line"
+           id="tspan4267"
+           x="1085.5051"
+           y="-373.11343"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna">OpenBuild</tspan><tspan
+           id="tspan4277"
+           sodipodi:role="line"
+           x="1085.5051"
+           y="-359.11343"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna" /><tspan
+           id="tspan4271"
+           sodipodi:role="line"
+           x="1085.5051"
+           y="-345.11343"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna">OpenHack</tspan><tspan
+           id="tspan4279"
+           sodipodi:role="line"
+           x="1085.5051"
+           y="-331.11343"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna">----------------------------</tspan><tspan
+           id="tspan4273"
+           sodipodi:role="line"
+           x="1085.5051"
+           y="-317.11343"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna">Teardown Thursdays</tspan><tspan
+           id="tspan4281"
+           sodipodi:role="line"
+           x="1085.5051"
+           y="-303.11343"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna">----------------------------</tspan><tspan
+           id="tspan4283"
+           sodipodi:role="line"
+           x="1085.5051"
+           y="-289.11343"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna">Special Event</tspan><tspan
+           id="tspan4287"
+           sodipodi:role="line"
+           x="1085.5051"
+           y="-275.11343"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna">----------------------------</tspan><tspan
+           id="tspan4289"
+           sodipodi:role="line"
+           x="1085.5051"
+           y="-261.11343"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna">Add New Event Type</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:48px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         x="1194.7512"
+         y="-372.33185"
+         id="text5107-9"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan5109-9"
+           x="1194.7512"
+           y="-372.33185"
+           style="font-size:38px">⌄</tspan></text>
+      <rect
+         y="-388.84238"
+         x="1075.844"
+         height="25"
+         width="150"
+         id="rect3134"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    </g>
+    <rect
+       style="fill:#e6e6e6;fill-opacity:1;stroke:#00ff00;stroke-width:2;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect4054"
+       width="100"
+       height="30"
+       x="284.72134"
+       y="130.63089"
+       ry="4.3186178" />
+    <text
+       xml:space="preserve"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+       x="304.72134"
+       y="154.63089"
+       id="text4100"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4102"
+         x="304.72134"
+         y="154.63089">Save</tspan></text>
+    <rect
+       ry="4.3186178"
+       y="130.63089"
+       x="684.72131"
+       height="30"
+       width="100"
+       id="rect4104"
+       style="fill:#e6e6e6;fill-opacity:1;stroke:#ff0000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text4106"
+       y="154.63089"
+       x="698.72131"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+       xml:space="preserve"><tspan
+         y="154.63089"
+         x="698.72131"
+         id="tspan4108"
+         sodipodi:role="line">Cancel</tspan></text>
+  </g>
+</svg>

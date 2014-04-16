@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1024"
+   height="2500"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="mockup_2.svg">
+  <defs
+     id="defs4">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 750 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="1024 : 750 : 1"
+       inkscape:persp3d-origin="512 : 500 : 1"
+       id="perspective2985" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.5100597"
+     inkscape:cx="455.38995"
+     inkscape:cy="1411.976"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1280"
+     inkscape:window-height="726"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1">
+    <sodipodi:guide
+       orientation="1,0"
+       position="0,0"
+       id="guide3003" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="1024,1575.714"
+       id="guide3005" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="0,0"
+       id="guide3834" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="0,1000"
+       id="guide3095" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="0,2000"
+       id="guide3101" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="0,2500"
+       id="guide3208" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="background">
+    <rect
+       style="fill:#e6e6e6;fill-opacity:1;stroke:none"
+       id="rect3829"
+       width="1024"
+       height="2500"
+       x="0"
+       y="1.3134766e-05" />
+  </g>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,1447.6378)">
+    <g
+       id="g3131"
+       transform="translate(0,500)">
+      <rect
+         y="-447.63782"
+         x="0"
+         height="40"
+         width="1024"
+         id="rect3001"
+         style="fill:#1a1a1a;fill-opacity:1;stroke:none" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3009"
+         y="-419.37521"
+         x="32"
+         style="font-size:40px;font-style:normal;font-weight:bold;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:MgOpen Moderna Bold"
+         xml:space="preserve"><tspan
+           style="font-size:24px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna Bold"
+           y="-419.37521"
+           x="32"
+           id="tspan3011"
+           sodipodi:role="line">Townsquare</tspan></text>
+      <g
+         transform="matrix(0.45185522,0,0,0.45185522,-100.84314,-307.0949)"
+         id="g3019">
+        <rect
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000"
+           id="rect3013"
+           width="41.414139"
+           height="39.39394"
+           x="240.55287"
+           y="-285.71875" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 240.88057,162.56823 40.89077,38.56946"
+           id="path3015"
+           inkscape:connector-curvature="0"
+           transform="translate(0,-447.63782)" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 281.9499,162.21111 -41.06933,38.92658"
+           id="path3017"
+           inkscape:connector-curvature="0"
+           transform="translate(0,-447.63782)" />
+      </g>
+      <rect
+         y="-436.63782"
+         x="201.79465"
+         height="20"
+         width="176.76767"
+         id="rect3804"
+         style="fill:#e6e6e6;fill-opacity:1;stroke:none" />
+      <g
+         style="fill:#ffffff"
+         transform="matrix(0.7594511,0,0,0.7594511,59.074286,-157.28637)"
+         id="g3799">
+        <g
+           style="fill:none;stroke:#ffffff"
+           id="g3796">
+          <path
+             transform="matrix(0.63414794,0,0,0.63414794,92.277328,-429.24857)"
+             d="m 132.13612,110.78516 c 0,5.91703 -4.79671,10.71374 -10.71374,10.71374 -5.91704,0 -10.71374,-4.79671 -10.71374,-10.71374 0,-5.91704 4.7967,-10.71374 10.71374,-10.71374 5.91703,0 10.71374,4.7967 10.71374,10.71374 z"
+             sodipodi:ry="10.713739"
+             sodipodi:rx="10.713739"
+             sodipodi:cy="110.78516"
+             sodipodi:cx="121.42238"
+             id="path3024"
+             style="fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:0.78431373;stroke-dasharray:none;stroke-dashoffset:0"
+             sodipodi:type="arc" />
+        </g>
+        <path
+           style="fill:#ffffff;stroke:#f9f9f9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 173.56257,-353.99464 8.571,9.28524"
+           id="path3794"
+           inkscape:connector-curvature="0" />
+      </g>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3009-9"
+         y="-423.63782"
+         x="962.71722"
+         style="font-size:14px;font-style:normal;font-weight:bold;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:MgOpen Moderna Bold"
+         xml:space="preserve"><tspan
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna Bold"
+           y="-423.63782"
+           x="962.71722"
+           id="tspan3011-6"
+           sodipodi:role="line">Sign On</tspan></text>
+    </g>
+    <g
+       id="g3892"
+       transform="translate(1.6082384,-15.42002)">
+      <rect
+         y="167.82634"
+         x="72.723015"
+         height="319.25861"
+         width="879.25854"
+         id="rect3836"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.74139661" />
+      <flowRoot
+         transform="translate(0,-447.63782)"
+         style="font-size:12px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         id="flowRoot3838"
+         xml:space="preserve"><flowRegion
+           id="flowRegion3840"><rect
+             style="font-size:12px"
+             y="621.2121"
+             x="88.888885"
+             height="327.27274"
+             width="848.48486"
+             id="rect3842" /></flowRegion><flowPara
+           style="font-size:18px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna;text-anchor:middle;text-align:center"
+           id="flowPara3844">Code of Conduct</flowPara><flowPara
+           id="flowPara3870"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna" /><flowPara
+           id="flowPara3890"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna">FreeGeek staff and volunteers pledge to act in a respectful manner at all times while in and around the FreeGeek space, and whenever interacting with another FreeGeek volunteer or staff person during core hours.</flowPara><flowPara
+           id="flowPara3872"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna" /><flowPara
+           id="flowPara3874"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna">FreeGeek is a diverse space, and we welcome a diversity of perspectives. All volunteers and staff should display common courtesy and sensitivity towards anyone who comes through FreeGeek's doors.</flowPara><flowPara
+           id="flowPara3876"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna" /><flowPara
+           id="flowPara3878"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna">FreeGeek is strongly opposed to violence and to insure that each person that is involved with FreeGeek or that is in the FreeGeek space has a sense of security and can maintain their personal dignity, FreeGeek is committed to active nonviolence, in speech and action. FreeGeek staff and volunteers pledge to respectfully and peacefully resolve any disputes or disagreements.</flowPara><flowPara
+           id="flowPara3880"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna" /><flowPara
+           id="flowPara3882"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna">FreeGeek is an information technology-oriented organization. Staff and volunteers pledge to refrain from any sexual language, innuendo or offensive remarks related to gender, sexual orientation, spiritual belief systems and religion, political views or ethnicity. Disparaging remarks about any group of people, unwanted sexual advances toward volunteers or staff, excessive cursing, cursing around children and other disruptive behaviors are unacceptable. These behaviors are unrelated to FreeGeek's goals and they can be completely alienating to other volunteers.</flowPara><flowPara
+           id="flowPara3884"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna" /><flowPara
+           id="flowPara3886"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna">If two or more staff agree (unless only one staff person is on duty), any volunteer may be asked to leave the space for the remainder of any open day. If any staff member believes that more serious measures are required, the staff will meet and attempt to reach consensus on a course of action.</flowPara><flowPara
+           id="flowPara3855"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna" /><flowPara
+           id="flowPara3857"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna" /></flowRoot>    </g>
+    <g
+       transform="translate(-0.30411121,-1004.5733)"
+       id="g3892-6">
+      <rect
+         y="157.14296"
+         x="72.728836"
+         height="419.15054"
+         width="879.15057"
+         id="rect3836-6"
+         style="fill:#ffffff;fill-opacity:1;stroke:#1a1a1a;stroke-width:0.84944969" />
+      <flowRoot
+         transform="translate(0,-447.63782)"
+         style="font-size:12px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         id="flowRoot3838-2"
+         xml:space="preserve"><flowRegion
+           id="flowRegion3840-6"><rect
+             style="font-size:12px"
+             y="621.2121"
+             x="88.888885"
+             height="388.69821"
+             width="851.34192"
+             id="rect3842-7" /></flowRegion><flowPara
+           style="font-size:18px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;text-anchor:middle;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+           id="flowPara3844-5">Waiver and Release of Claims</flowPara><flowPara
+           id="flowPara3870-6"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna" /><flowPara
+           id="flowPara3886-9"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna">I acknowledge that I have decided to volunteer with FreeGeek Chicago, NFP (FGC).  I acknowledge that I will receive no compensation from FGC for any of my volunteer services.  I acknowledge that I am not an employee of FGC and I will not be considered an employee of FGC for any purpose.  Furthermore, I acknowledge and understand that my volunteer services for FGC may be ended by me or FGC at any time and for any reason.</flowPara><flowPara
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+           id="flowPara4034" /><flowPara
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+           id="flowPara4024">I acknowledge and understand that when volunteering with any organization, including FGC, there are risks associated with volunteering that I will face including but not limited to personal injury to me or damage to or theft of my property.  I further acknowledge and understand that these risks cannot be completely controlled or prevented.  By way of example only, possible injuries that could occur during my volunteer service include bodily injury to me caused by lifting, a slip and fall, or harm that may be caused by others.</flowPara><flowPara
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+           id="flowPara4036" /><flowPara
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+           id="flowPara4028">Accordingly, for good and valuable consideration, including but not limited to the privilege of volunteering with FGC, I hereby agree as follows:</flowPara><flowPara
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+           id="flowPara4030" /><flowPara
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+           id="flowPara4122" /><flowPara
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+           id="flowPara4124" /><flowPara
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+           id="flowPara4126" /><flowPara
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+           id="flowPara4128" /><flowPara
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+           id="flowPara4032" /><flowPara
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+           id="flowPara4130" /><flowPara
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+           id="flowPara4132" /><flowPara
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+           id="flowPara4134" /><flowPara
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+           id="flowPara4136" /><flowPara
+           id="flowPara3857-5"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna">I hereby acknowledge that I have been given a reasonable opportunity to read the foregoing waiver and release of claims, and that I have read and fully understand its provisions.</flowPara></flowRoot>      <flowRoot
+         xml:space="preserve"
+         id="flowRoot4048"
+         style="font-size:12px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         transform="translate(14.177492,-239.70748)"><flowRegion
+           id="flowRegion4050"><rect
+             id="rect4052"
+             width="782.77399"
+             height="254.41934"
+             x="88.888885"
+             y="621.2121"
+             style="font-size:12px" /></flowRegion><flowPara
+           id="flowPara4068"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna">1. By signing below, I acknowledge that my volunteer services for FGC are entirely voluntary, and I hereby voluntarily assume any and all risks (both known and unknown) associated with my volunteer service for FGC, including but not limited to those risks described above.</flowPara><flowPara
+           id="flowPara4072"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna" /><flowPara
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+           id="flowPara4076">2. By signing below, I agree on my own behalf and on behalf of my representatives, assigns, heirs and next of kin, to waive, discharge, release and further agree to not to sue FGC (and its officers, directors, employees, agents, representatives and volunteers) from any and all responsibility, liability, claims, demands, costs, expenses (including attorneys’ fees) or actions arising out of or relating in any way to my volunteer services with FGC, including, but not limited to, all actions based upon negligence and all claims, for any personal or physical injury or damage to me or my property, whether occurring on FGC’s premises or otherwise arising in connection with my volunteer services at FGC.</flowPara><flowPara
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+           id="flowPara4078" /></flowRoot>    </g>
+    <g
+       id="g3240"
+       transform="translate(40,-1062.1589)">
+      <rect
+         transform="scale(-1,1)"
+         style="fill:#ffffff;fill-opacity:1;stroke:#1a1a1a;stroke-width:0.55600834"
+         id="rect3836-6-0"
+         width="719.44397"
+         height="219.44398"
+         x="-822.70819"
+         y="-284.3598" />
+      <flowRoot
+         transform="translate(82,-413.63782)"
+         style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         id="flowRoot3085"
+         xml:space="preserve"><flowRegion
+           id="flowRegion3087"><rect
+             style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+             y="136"
+             x="30"
+             height="205"
+             width="696"
+             id="rect3089" /></flowRegion><flowPara
+           id="flowPara3091">Hello <flowSpan
+   id="flowSpan3093"
+   style="font-weight:bold">&lt;Volunteer_Name&gt;</flowSpan>,</flowPara><flowPara
+           id="flowPara3254" /><flowPara
+           id="flowPara3095">The FreeGeek Chicago Community is happy that <flowSpan
+   id="flowSpan3097"
+   style="font-weight:bold">you</flowSpan> want to hop on board and volunteer with us! Whether you want to earn a computer, get some hands-on training with computer hardware, learn to develop software, or just help FreeGeek with day-to-day administration, we have a volunteer opportunity to offer you.</flowPara><flowPara
+           id="flowPara3101" /><flowPara
+           id="flowPara3105">Before you can start volunteering with FreeGeek, we do need you to</flowPara><flowPara
+           id="flowPara3107">1. Agree to and electronically sign our &quot;Waiver and Release of Claims&quot;</flowPara><flowPara
+           id="flowPara3109">2. Agree to and electronically sign our &quot;Code of Conduct&quot;</flowPara></flowRoot>    </g>
+    <g
+       id="g4235"
+       transform="matrix(1.063355,0,0,1.0015357,677.79783,-812.54373)">
+      <rect
+         ry="15.763401"
+         transform="translate(0,-447.63782)"
+         y="841.57489"
+         x="89.730133"
+         height="61.841034"
+         width="167.33456"
+         id="rect3465"
+         style="fill:#00ff00;fill-opacity:1;stroke:#1a1a1a;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <rect
+         y="411.21942"
+         x="109.85725"
+         height="29.285507"
+         width="29.285507"
+         id="rect3459"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.71449322" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3461"
+         y="432.73749"
+         x="150.33488"
+         style="font-size:24px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:24px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna Bold"
+           y="432.73749"
+           x="150.33488"
+           id="tspan3463"
+           sodipodi:role="line">Accept</tspan></text>
+    </g>
+    <g
+       id="g4241"
+       transform="matrix(1,0,0,1.001321,-12.12027,-814.98914)">
+      <rect
+         style="fill:#ff0000;fill-opacity:1;stroke:#1a1a1a;stroke-width:2.06261086;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         id="rect4243"
+         width="177.93739"
+         height="61.854294"
+         x="89.723503"
+         y="393.93045"
+         ry="15.766781" />
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.71449322"
+         id="rect4245"
+         width="29.285507"
+         height="29.285507"
+         x="109.85725"
+         y="411.21942" />
+      <text
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         x="150.33488"
+         y="432.73749"
+         id="text4247"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4249"
+           x="150.33488"
+           y="432.73749"
+           style="font-size:24px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna Bold">Decline</tspan></text>
+    </g>
+    <g
+       id="g4235-0"
+       transform="matrix(1.063355,0,0,1.0015357,675.83228,99.039388)">
+      <rect
+         ry="15.763401"
+         transform="translate(0,-447.63782)"
+         y="841.57489"
+         x="89.730133"
+         height="61.841034"
+         width="167.33456"
+         id="rect3465-0"
+         style="fill:#00ff00;fill-opacity:1;stroke:#1a1a1a;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <rect
+         y="411.21942"
+         x="109.85725"
+         height="29.285507"
+         width="29.285507"
+         id="rect3459-2"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.71449322" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3461-5"
+         y="432.73749"
+         x="150.33488"
+         style="font-size:24px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:24px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna Bold"
+           y="432.73749"
+           x="150.33488"
+           id="tspan3463-2"
+           sodipodi:role="line">Agree</tspan></text>
+    </g>
+    <g
+       id="g4241-7"
+       transform="matrix(1,0,0,1.001321,-14.08582,96.59398)">
+      <rect
+         style="fill:#ff0000;fill-opacity:1;stroke:#1a1a1a;stroke-width:2.06261086;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         id="rect4243-0"
+         width="177.93739"
+         height="61.854294"
+         x="89.723503"
+         y="393.93045"
+         ry="15.766781" />
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.71449322"
+         id="rect4245-9"
+         width="29.285507"
+         height="29.285507"
+         x="109.85725"
+         y="411.21942" />
+      <text
+         xml:space="preserve"
+         style="font-size:24px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         x="150.33488"
+         y="432.73749"
+         id="text4247-4"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4249-9"
+           x="150.33488"
+           y="432.73749"
+           style="font-size:24px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna Bold">Disagree</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="1038"
+       y="-844.11908"
+       id="text4528"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4530"
+         x="1038"
+         y="-844.11908"
+         style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ff0000;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna">Check out http://www.waiversign.com/online-waiver-overview/ for digital signature</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="1038.5316"
+       y="-806.61407"
+       id="text4528-8"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="1038.5316"
+         y="-806.61407"
+         style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ff0000;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         id="tspan6835">Should review to see if this &quot;digital signature&quot; is sufficient in the State of Illinois OR</tspan><tspan
+         sodipodi:role="line"
+         x="1038.5316"
+         y="-786.61407"
+         style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ff0000;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         id="tspan6839">do we need to spool all of these forms and print at Orientation break to have volunteers sign?</tspan></text>
+    <g
+       transform="matrix(1,0,0,1.001321,589.84532,-1537.2782)"
+       id="g3161">
+      <rect
+         ry="9.7685518"
+         y="417.68036"
+         x="89.504814"
+         height="38.322777"
+         width="178.37477"
+         id="rect3163"
+         style="fill:#ffffff;fill-opacity:1;stroke:#1a1a1a;stroke-width:1.62552619;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3165"
+         y="444.74246"
+         x="127.70747"
+         style="font-size:24px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:24px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna Bold"
+           y="444.74246"
+           x="127.70747"
+           id="tspan3167"
+           sodipodi:role="line">Continue</tspan></text>
+    </g>
+    <g
+       id="g3147"
+       transform="translate(0,-500.79482)">
+      <rect
+         style="fill:#1a1a1a;fill-opacity:1;stroke:none"
+         id="rect3149"
+         width="1024"
+         height="40"
+         x="0"
+         y="-447.63782" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:bold;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:MgOpen Moderna Bold"
+         x="32"
+         y="-419.37521"
+         id="text3151"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3153"
+           x="32"
+           y="-419.37521"
+           style="font-size:24px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna Bold">Townsquare</tspan></text>
+      <g
+         id="g3155"
+         transform="matrix(0.45185522,0,0,0.45185522,-100.84314,-307.0949)">
+        <rect
+           y="-285.71875"
+           x="240.55287"
+           height="39.39394"
+           width="41.414139"
+           id="rect3157"
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000" />
+        <path
+           transform="translate(0,-447.63782)"
+           inkscape:connector-curvature="0"
+           id="path3159"
+           d="m 240.88057,162.56823 40.89077,38.56946"
+           style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+        <path
+           transform="translate(0,-447.63782)"
+           inkscape:connector-curvature="0"
+           id="path3161"
+           d="m 281.9499,162.21111 -41.06933,38.92658"
+           style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      </g>
+      <rect
+         style="fill:#e6e6e6;fill-opacity:1;stroke:none"
+         id="rect3164"
+         width="176.76767"
+         height="20"
+         x="201.79465"
+         y="-436.63782" />
+      <g
+         id="g3166"
+         transform="matrix(0.7594511,0,0,0.7594511,59.074286,-157.28637)"
+         style="fill:#ffffff">
+        <g
+           id="g3168"
+           style="fill:none;stroke:#ffffff">
+          <path
+             sodipodi:type="arc"
+             style="fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:0.78431373;stroke-dasharray:none;stroke-dashoffset:0"
+             id="path3170"
+             sodipodi:cx="121.42238"
+             sodipodi:cy="110.78516"
+             sodipodi:rx="10.713739"
+             sodipodi:ry="10.713739"
+             d="m 132.13612,110.78516 c 0,5.91703 -4.79671,10.71374 -10.71374,10.71374 -5.91704,0 -10.71374,-4.79671 -10.71374,-10.71374 0,-5.91704 4.7967,-10.71374 10.71374,-10.71374 5.91703,0 10.71374,4.7967 10.71374,10.71374 z"
+             transform="matrix(0.63414794,0,0,0.63414794,92.277328,-429.24857)" />
+        </g>
+        <path
+           inkscape:connector-curvature="0"
+           id="path3172"
+           d="m 173.56257,-353.99464 8.571,9.28524"
+           style="fill:#ffffff;stroke:#f9f9f9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:14px;font-style:normal;font-weight:bold;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:MgOpen Moderna Bold"
+         x="962.71722"
+         y="-423.63782"
+         id="text3174"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3176"
+           x="962.71722"
+           y="-423.63782"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna Bold">Sign On</tspan></text>
+    </g>
+    <g
+       transform="translate(0,-998.95376)"
+       id="g3178">
+      <rect
+         y="-447.63782"
+         x="0"
+         height="40"
+         width="1024"
+         id="rect3180"
+         style="fill:#1a1a1a;fill-opacity:1;stroke:none" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3182"
+         y="-419.37521"
+         x="32"
+         style="font-size:40px;font-style:normal;font-weight:bold;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:MgOpen Moderna Bold"
+         xml:space="preserve"><tspan
+           style="font-size:24px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna Bold"
+           y="-419.37521"
+           x="32"
+           id="tspan3184"
+           sodipodi:role="line">Townsquare</tspan></text>
+      <g
+         transform="matrix(0.45185522,0,0,0.45185522,-100.84314,-307.0949)"
+         id="g3186">
+        <rect
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000"
+           id="rect3188"
+           width="41.414139"
+           height="39.39394"
+           x="240.55287"
+           y="-285.71875" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 240.88057,162.56823 40.89077,38.56946"
+           id="path3190"
+           inkscape:connector-curvature="0"
+           transform="translate(0,-447.63782)" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 281.9499,162.21111 -41.06933,38.92658"
+           id="path3192"
+           inkscape:connector-curvature="0"
+           transform="translate(0,-447.63782)" />
+      </g>
+      <rect
+         y="-436.63782"
+         x="201.79465"
+         height="20"
+         width="176.76767"
+         id="rect3194"
+         style="fill:#e6e6e6;fill-opacity:1;stroke:none" />
+      <g
+         style="fill:#ffffff"
+         transform="matrix(0.7594511,0,0,0.7594511,59.074286,-157.28637)"
+         id="g3196">
+        <g
+           style="fill:none;stroke:#ffffff"
+           id="g3198">
+          <path
+             transform="matrix(0.63414794,0,0,0.63414794,92.277328,-429.24857)"
+             d="m 132.13612,110.78516 c 0,5.91703 -4.79671,10.71374 -10.71374,10.71374 -5.91704,0 -10.71374,-4.79671 -10.71374,-10.71374 0,-5.91704 4.7967,-10.71374 10.71374,-10.71374 5.91703,0 10.71374,4.7967 10.71374,10.71374 z"
+             sodipodi:ry="10.713739"
+             sodipodi:rx="10.713739"
+             sodipodi:cy="110.78516"
+             sodipodi:cx="121.42238"
+             id="path3200"
+             style="fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:0.78431373;stroke-dasharray:none;stroke-dashoffset:0"
+             sodipodi:type="arc" />
+        </g>
+        <path
+           style="fill:#ffffff;stroke:#f9f9f9;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 173.56257,-353.99464 8.571,9.28524"
+           id="path3202"
+           inkscape:connector-curvature="0" />
+      </g>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3204"
+         y="-423.63782"
+         x="962.71722"
+         style="font-size:14px;font-style:normal;font-weight:bold;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:MgOpen Moderna Bold"
+         xml:space="preserve"><tspan
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna Bold"
+           y="-423.63782"
+           x="962.71722"
+           id="tspan3206"
+           sodipodi:role="line">Sign On</tspan></text>
+    </g>
+  </g>
+</svg>

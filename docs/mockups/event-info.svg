@@ -1,0 +1,1928 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1024"
+   height="1500"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="event-info.svg">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Mend"
+       style="overflow:visible;">
+      <path
+         id="path4306"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;"
+         transform="scale(0.4) rotate(180) translate(10,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lend"
+       style="overflow:visible;">
+      <path
+         id="path4300"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 750 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="1024 : 750 : 1"
+       inkscape:persp3d-origin="512 : 500 : 1"
+       id="perspective2985" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#e6e6e6"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.69977474"
+     inkscape:cx="260.53141"
+     inkscape:cy="1285.8833"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1360"
+     inkscape:window-height="688"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:object-nodes="true"
+     inkscape:snap-global="false">
+    <sodipodi:guide
+       orientation="1,0"
+       position="0,1570"
+       id="guide3003" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="1024,1575.714"
+       id="guide3005" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="0,1500"
+       id="guide3007" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="0,0"
+       id="guide3834" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="background"
+     sodipodi:insensitive="true"
+     style="display:inline">
+    <rect
+       transform="translate(0,447.63782)"
+       style="fill:#e6e6e6;fill-opacity:1;stroke:none"
+       id="rect3829"
+       width="1024"
+       height="1460.6061"
+       x="0"
+       y="-408.24387" />
+  </g>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,447.63782)">
+    <rect
+       style="fill:#1a1a1a;fill-opacity:1;stroke:none"
+       id="rect3001"
+       width="1024"
+       height="40"
+       x="0"
+       y="-447.63782" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:bold;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:MgOpen Moderna Bold"
+       x="32"
+       y="-419.37521"
+       id="text3009"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3011"
+         x="32"
+         y="-419.37521"
+         style="font-size:24px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna Bold">Townsquare</tspan></text>
+    <g
+       id="g3019"
+       transform="matrix(0.45185522,0,0,0.45185522,-100.84314,-307.0949)">
+      <rect
+         y="-285.71875"
+         x="240.55287"
+         height="39.39394"
+         width="41.414139"
+         id="rect3013"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000" />
+      <path
+         transform="translate(0,-447.63782)"
+         inkscape:connector-curvature="0"
+         id="path3015"
+         d="m 240.88057,162.56823 40.89077,38.56946"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         transform="translate(0,-447.63782)"
+         inkscape:connector-curvature="0"
+         id="path3017"
+         d="m 281.9499,162.21111 -41.06933,38.92658"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+    <rect
+       style="fill:#e6e6e6;fill-opacity:1;stroke:none"
+       id="rect3804"
+       width="200"
+       height="20"
+       x="177.75302"
+       y="-436.63782" />
+    <g
+       id="g3799"
+       transform="matrix(0.7594511,0,0,0.7594511,237.26519,-156.41334)"
+       style="fill:#ffffff;stroke:#000000">
+      <g
+         id="g3796"
+         style="fill:none;stroke:#000000">
+        <path
+           sodipodi:type="arc"
+           style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:0.78431373;stroke-dasharray:none;stroke-dashoffset:0"
+           id="path3024"
+           sodipodi:cx="121.42238"
+           sodipodi:cy="110.78516"
+           sodipodi:rx="10.713739"
+           sodipodi:ry="10.713739"
+           d="m 132.13612,110.78516 c 0,5.91703 -4.79671,10.71374 -10.71374,10.71374 -5.91704,0 -10.71374,-4.79671 -10.71374,-10.71374 0,-5.91704 4.7967,-10.71374 10.71374,-10.71374 5.91703,0 10.71374,4.7967 10.71374,10.71374 z"
+           transform="matrix(0.63414794,0,0,0.63414794,92.277328,-429.24857)" />
+      </g>
+      <path
+         inkscape:connector-curvature="0"
+         id="path3794"
+         d="m 173.56257,-353.99464 8.571,9.28524"
+         style="fill:#ffffff;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:bold;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:MgOpen Moderna Bold"
+       x="962.71722"
+       y="-423.63782"
+       id="text3009-9"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3011-6"
+         x="962.71722"
+         y="-423.63782"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna Bold">Sign On</tspan></text>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot6993"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+       transform="translate(441.91584,-367.69846)"><flowRegion
+         id="flowRegion6995"><rect
+           id="rect6997"
+           width="368"
+           height="204"
+           x="30"
+           y="136"
+           style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna" /></flowRegion><flowPara
+         id="flowPara7001" /><flowPara
+         id="flowPara7005" /><flowPara
+         id="flowPara7007" /></flowRoot>    <rect
+       transform="scale(-1,1)"
+       style="fill:#ffffff;fill-opacity:1;stroke:#1a1a1a;stroke-width:0.83377182;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect3836-6-0-4"
+       width="720.16455"
+       height="348.68723"
+       x="-860.58142"
+       y="-348.21924" />
+    <text
+       xml:space="preserve"
+       style="font-size:28px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="162.34172"
+       y="-313.65781"
+       id="text3196"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="162.34172"
+         y="-313.65781"
+         id="tspan3200"
+         style="font-size:28px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"><tspan
+   style="fill:#00ff00"
+   id="tspan3475"></tspan> OpenBuild (Event #112313244)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:71.99986267px;font-style:normal;font-weight:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="829.7052"
+       y="-242.97935"
+       id="text5301"
+       sodipodi:linespacing="125%"
+       transform="scale(0.9999981,1.0000019)"><tspan
+         id="tspan5325"
+         sodipodi:role="line"
+         x="829.7052"
+         y="-242.97935"
+         style="font-size:17.99996567px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;text-anchor:end;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna">Edit Event Info...</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text5406"
+       y="-286.94562"
+       x="162.34172"
+       style="font-size:14px;font-style:normal;font-weight:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         y="-286.94562"
+         x="162.34172"
+         sodipodi:role="line"
+         id="tspan5606">06:30 PM on 03.15.2014 --- 09:30 PM on 03.15.2014 at &lt;event-location&gt;.</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mend)"
+       d="m 1032.1497,317.6021 135.3167,0"
+       id="path5410"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:18px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="1199.1362"
+       y="323.36026"
+       id="text5596"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5598"
+         x="1199.1362"
+         y="323.36026">Clicking &quot;Edit Event Info&quot; will dropdown the &quot;Add Event&quot; options</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:72px;font-style:normal;font-weight:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="162.65828"
+       y="-233.99252"
+       id="text5608"
+       sodipodi:linespacing="125%"><tspan
+         id="tspan5612"
+         sodipodi:role="line"
+         x="162.65828"
+         y="-233.99252"
+         style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna" /></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect5616"
+       width="200"
+       height="20"
+       x="184.64354"
+       y="-143.64507" />
+    <text
+       xml:space="preserve"
+       style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="183.83678"
+       y="-178.63506"
+       id="text5618"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5620"
+         x="183.83678"
+         y="-178.63506"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna">Volunteer Name </tspan></text>
+    <g
+       id="g5660"
+       transform="translate(311.04319,-167.08131)">
+      <rect
+         ry="2.8790786"
+         y="23.436237"
+         x="-150.47131"
+         height="20"
+         width="20"
+         id="rect5622"
+         style="fill:#e6e6e6;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <path
+         transform="matrix(1.2522988,0,0,1.2522988,-569.74721,-517.59101)"
+         d="m 346.20922,438.15979 c 0,1.88821 -1.5307,3.41891 -3.41891,3.41891 -1.88821,0 -3.4189,-1.5307 -3.4189,-3.41891 0,-1.88821 1.53069,-3.41891 3.4189,-3.41891 1.88821,0 3.41891,1.5307 3.41891,3.41891 z"
+         sodipodi:ry="3.418906"
+         sodipodi:rx="3.418906"
+         sodipodi:cy="438.15979"
+         sodipodi:cx="342.79031"
+         id="path5626"
+         style="fill:#808080;fill-opacity:1;stroke:none"
+         sodipodi:type="arc" />
+      <path
+         sodipodi:end="3.1415927"
+         sodipodi:start="0"
+         transform="matrix(-1.2522988,0,0,-1.2522988,296.46621,601.30789)"
+         d="m 355.38628,445.89731 c 0,3.57766 -2.90026,6.47792 -6.47792,6.47792 -3.57766,0 -6.47793,-2.90026 -6.47793,-6.47792 0,0 0,0 0,0 l 6.47793,0 z"
+         sodipodi:ry="6.4779263"
+         sodipodi:rx="6.4779263"
+         sodipodi:cy="445.89731"
+         sodipodi:cx="348.90836"
+         id="path5628"
+         style="fill:#808080;fill-opacity:1;stroke:none"
+         sodipodi:type="arc" />
+    </g>
+    <text
+       sodipodi:linespacing="125%"
+       id="text5665"
+       y="-129.25906"
+       x="191.17047"
+       style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         y="-129.25906"
+         x="191.17047"
+         id="tspan5667"
+         sodipodi:role="line">James Slater </tspan></text>
+    <g
+       transform="translate(311.04319,-143.08131)"
+       id="g5669">
+      <rect
+         style="fill:#e6e6e6;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         id="rect5671"
+         width="20"
+         height="20"
+         x="-150.47131"
+         y="23.436237"
+         ry="2.8790786" />
+      <text
+         xml:space="preserve"
+         style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         x="-149.19107"
+         y="39.796124"
+         id="text5677"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan5679"
+           x="-149.19107"
+           y="39.796124"
+           style="font-size:20px;font-weight:bold;fill:#808080">+</tspan></text>
+    </g>
+    <rect
+       y="-169.64507"
+       x="184.64354"
+       height="20"
+       width="200"
+       id="rect5704"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <g
+       transform="translate(311.04319,-193.08131)"
+       id="g5706">
+      <rect
+         style="fill:#e6e6e6;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         id="rect5708"
+         width="20"
+         height="20"
+         x="-150.47131"
+         y="23.436237"
+         ry="2.8790786" />
+      <path
+         sodipodi:type="arc"
+         style="fill:#808080;fill-opacity:1;stroke:none"
+         id="path5710"
+         sodipodi:cx="342.79031"
+         sodipodi:cy="438.15979"
+         sodipodi:rx="3.418906"
+         sodipodi:ry="3.418906"
+         d="m 346.20922,438.15979 c 0,1.88821 -1.5307,3.41891 -3.41891,3.41891 -1.88821,0 -3.4189,-1.5307 -3.4189,-3.41891 0,-1.88821 1.53069,-3.41891 3.4189,-3.41891 1.88821,0 3.41891,1.5307 3.41891,3.41891 z"
+         transform="matrix(1.2522988,0,0,1.2522988,-569.74721,-517.59101)" />
+      <path
+         sodipodi:type="arc"
+         style="fill:#808080;fill-opacity:1;stroke:none"
+         id="path5712"
+         sodipodi:cx="348.90836"
+         sodipodi:cy="445.89731"
+         sodipodi:rx="6.4779263"
+         sodipodi:ry="6.4779263"
+         d="m 355.38628,445.89731 c 0,3.57766 -2.90026,6.47792 -6.47792,6.47792 -3.57766,0 -6.47793,-2.90026 -6.47793,-6.47792 0,0 0,0 0,0 l 6.47793,0 z"
+         transform="matrix(-1.2522988,0,0,-1.2522988,296.46621,601.30789)"
+         sodipodi:start="0"
+         sodipodi:end="3.1415927" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="191.17047"
+       y="-155.25906"
+       id="text5714"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5716"
+         x="191.17047"
+         y="-155.25906"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna">&lt;Looooooong Volunteer Name&gt;</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text5718"
+       y="-178.63506"
+       x="394.14355"
+       style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         y="-178.63506"
+         x="394.14355"
+         id="tspan5720"
+         sodipodi:role="line">Time In</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect5722"
+       width="75"
+       height="20"
+       x="394.64355"
+       y="-169.64507" />
+    <rect
+       y="-169.64507"
+       x="480.64355"
+       height="20"
+       width="75"
+       id="rect5735"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <text
+       xml:space="preserve"
+       style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="480.14355"
+       y="-178.50905"
+       id="text5737"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5739"
+         x="480.14355"
+         y="-178.50905"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna">Time Out</tspan></text>
+    <rect
+       y="-143.64507"
+       x="394.64355"
+       height="20"
+       width="75"
+       id="rect5741"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect5743"
+       width="75"
+       height="20"
+       x="480.64355"
+       y="-143.64507" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text5745"
+       y="-155.25906"
+       x="397.17047"
+       style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         y="-155.25906"
+         x="397.17047"
+         id="tspan5747"
+         sodipodi:role="line">12:30 PM</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="485.17047"
+       y="-155.25906"
+       id="text5749"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5751"
+         x="485.17047"
+         y="-155.25906"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna">04:45 PM</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4637-0-9"
+       y="-154.87653"
+       x="357.96036"
+       style="font-size:48px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:38px"
+         y="-154.87653"
+         x="357.96036"
+         id="tspan4639-2-3"
+         sodipodi:role="line">⌄</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:48px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="357.96036"
+       y="-128.87653"
+       id="text5762"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5764"
+         x="357.96036"
+         y="-128.87653"
+         style="font-size:38px">⌄</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:48px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="441.96036"
+       y="-154.87653"
+       id="text5766"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5768"
+         x="441.96036"
+         y="-154.87653"
+         style="font-size:38px">⌄</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text5770"
+       y="-128.87653"
+       x="441.96036"
+       style="font-size:48px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:38px"
+         y="-128.87653"
+         x="441.96036"
+         id="tspan5772"
+         sodipodi:role="line">⌄</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text5774"
+       y="-154.87653"
+       x="527.96033"
+       style="font-size:48px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:38px"
+         y="-154.87653"
+         x="527.96033"
+         id="tspan5776"
+         sodipodi:role="line">⌄</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:48px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="527.96033"
+       y="-128.87653"
+       id="text5778"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5780"
+         x="527.96033"
+         y="-128.87653"
+         style="font-size:38px">⌄</tspan></text>
+    <path
+       inkscape:connector-curvature="0"
+       id="path5782"
+       d="m 1032.1497,-202.3979 135.3167,0"
+       style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mend)" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text5784"
+       y="-196.63974"
+       x="1199.1362"
+       style="font-size:18px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         y="-196.63974"
+         x="1199.1362"
+         id="tspan5786"
+         sodipodi:role="line">When we add a new volunteer, their signout time is immediately assigned their signin time.</tspan><tspan
+         y="-174.13974"
+         x="1199.1362"
+         sodipodi:role="line"
+         id="tspan5788">This way, volunteers do not accure hours until they sign out.</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mend)"
+       d="m 1032.1497,-142.3979 135.3167,0"
+       id="path5790"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:18px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="1199.1362"
+       y="-136.63974"
+       id="text5792"
+       sodipodi:linespacing="125%"><tspan
+         id="tspan5796"
+         sodipodi:role="line"
+         x="1199.1362"
+         y="-136.63974">Drop-down times should segemented by 15mins, and only show valid time entries.</tspan><tspan
+         sodipodi:role="line"
+         x="1199.1362"
+         y="-114.13974"
+         id="tspan5800">Valid time entries would be a signin / signout time during the event times +/- 1 or 2hrs.</tspan></text>
+    <path
+       inkscape:connector-curvature="0"
+       id="path5802"
+       d="m -29.5336,-182.3979 -135.3167,0"
+       style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mend)" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text5804"
+       y="-178.07928"
+       x="-616.98663"
+       style="font-size:18px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         id="tspan5808"
+         y="-178.07928"
+         x="-616.98663"
+         sodipodi:role="line">Clicking Icon brings you to volunteer's full profile</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mend)"
+       d="m -29.5336,-142.3979 -135.3167,0"
+       id="path5812"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:18px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="-529.17474"
+       y="-139.51883"
+       id="text5814"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="-529.17474"
+         y="-139.51883"
+         id="tspan5816">Clicking Icon adds new volunteer entry</tspan></text>
+    <g
+       id="g5818"
+       transform="translate(786.67467,-193.08131)">
+      <rect
+         ry="2.8790786"
+         y="23.436237"
+         x="-150.47131"
+         height="20"
+         width="20"
+         id="rect5820"
+         style="fill:#ff0000;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text5822"
+         y="40.726276"
+         x="-148.17151"
+         style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:20px;font-weight:bold;fill:#000000"
+           y="40.726276"
+           x="-148.17151"
+           id="tspan5824"
+           sodipodi:role="line">X</tspan></text>
+    </g>
+    <g
+       transform="translate(786.67467,-167.08131)"
+       id="g5826">
+      <rect
+         style="fill:#ff0000;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         id="rect5828"
+         width="20"
+         height="20"
+         x="-150.47131"
+         y="23.436237"
+         ry="2.8790786" />
+      <text
+         xml:space="preserve"
+         style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         x="-148.17151"
+         y="40.726276"
+         id="text5830"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan5832"
+           x="-148.17151"
+           y="40.726276"
+           style="font-size:20px;font-weight:bold;fill:#000000">X</tspan></text>
+    </g>
+    <g
+       id="g5834"
+       transform="translate(1315.0173,-103.42695)">
+      <rect
+         ry="2.8790786"
+         y="23.436237"
+         x="-150.47131"
+         height="20"
+         width="20"
+         id="rect5836"
+         style="fill:#ff0000;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text5838"
+         y="40.726276"
+         x="-148.17151"
+         style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:20px;font-weight:bold;fill:#000000"
+           y="40.726276"
+           x="-148.17151"
+           id="tspan5840"
+           sodipodi:role="line">X</tspan></text>
+    </g>
+    <text
+       sodipodi:linespacing="125%"
+       id="text5842"
+       y="-64.783005"
+       x="1198.1183"
+       style="font-size:18px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         id="tspan5846"
+         y="-64.783005"
+         x="1198.1183"
+         sodipodi:role="line">Remove Volunteer from Event</tspan></text>
+    <g
+       transform="translate(125.52503,-212.34311)"
+       id="g5850">
+      <rect
+         style="fill:#e6e6e6;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         id="rect5852"
+         width="20"
+         height="20"
+         x="-150.47131"
+         y="23.436237"
+         ry="2.8790786" />
+      <path
+         sodipodi:type="arc"
+         style="fill:#808080;fill-opacity:1;stroke:none"
+         id="path5854"
+         sodipodi:cx="342.79031"
+         sodipodi:cy="438.15979"
+         sodipodi:rx="3.418906"
+         sodipodi:ry="3.418906"
+         d="m 346.20922,438.15979 c 0,1.88821 -1.5307,3.41891 -3.41891,3.41891 -1.88821,0 -3.4189,-1.5307 -3.4189,-3.41891 0,-1.88821 1.53069,-3.41891 3.4189,-3.41891 1.88821,0 3.41891,1.5307 3.41891,3.41891 z"
+         transform="matrix(1.2522988,0,0,1.2522988,-569.74721,-517.59101)" />
+      <path
+         sodipodi:type="arc"
+         style="fill:#808080;fill-opacity:1;stroke:none"
+         id="path5856"
+         sodipodi:cx="348.90836"
+         sodipodi:cy="445.89731"
+         sodipodi:rx="6.4779263"
+         sodipodi:ry="6.4779263"
+         d="m 355.38628,445.89731 c 0,3.57766 -2.90026,6.47792 -6.47792,6.47792 -3.57766,0 -6.47793,-2.90026 -6.47793,-6.47792 0,0 0,0 0,0 l 6.47793,0 z"
+         transform="matrix(-1.2522988,0,0,-1.2522988,296.46621,601.30789)"
+         sodipodi:start="0"
+         sodipodi:end="3.1415927" />
+    </g>
+    <g
+       id="g5858"
+       transform="translate(125.52503,-175.11031)">
+      <rect
+         ry="2.8790786"
+         y="23.436237"
+         x="-150.47131"
+         height="20"
+         width="20"
+         id="rect5860"
+         style="fill:#e6e6e6;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text5862"
+         y="39.796124"
+         x="-149.19107"
+         style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:20px;font-weight:bold;fill:#808080"
+           y="39.796124"
+           x="-149.19107"
+           id="tspan5864"
+           sodipodi:role="line">+</tspan></text>
+    </g>
+    <text
+       sodipodi:linespacing="125%"
+       id="text5866"
+       y="-178.50905"
+       x="566.14355"
+       style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         y="-178.50905"
+         x="566.14355"
+         id="tspan5868"
+         sodipodi:role="line">Duration</tspan></text>
+    <rect
+       style="fill:#e6e6e6;stroke:none"
+       id="rect5870"
+       width="60"
+       height="20"
+       x="566.64355"
+       y="-169.64507" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text5872"
+       y="-155.25906"
+       x="621.27399"
+       style="font-size:72px;font-style:normal;font-weight:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;text-anchor:end;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         y="-155.25906"
+         x="621.27399"
+         id="tspan5874"
+         sodipodi:role="line">4.25 hrs</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text5876"
+       y="-263.88861"
+       x="160"
+       style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         y="-263.88861"
+         x="160"
+         id="tspan5878"
+         sodipodi:role="line">Total Participants</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="160"
+       y="-246.94234"
+       id="text5880"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5882"
+         x="160"
+         y="-246.94234"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna">Total Service Hours </tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:72px;font-style:normal;font-weight:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="321.11249"
+       y="-263.88861"
+       id="text5884"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5886"
+         x="321.11249"
+         y="-263.88861"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;text-anchor:end;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna">24</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text5888"
+       y="-246.94234"
+       x="339.88824"
+       style="font-size:72px;font-style:normal;font-weight:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;text-anchor:end;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         y="-246.94234"
+         x="339.88824"
+         id="tspan5890"
+         sodipodi:role="line">376.75</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="397.17047"
+       y="-129.81952"
+       id="text5892"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5894"
+         x="397.17047"
+         y="-129.81952"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna">11:30 AM</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text5896"
+       y="-129.81952"
+       x="485.17047"
+       style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         y="-129.81952"
+         x="485.17047"
+         id="tspan5898"
+         sodipodi:role="line">11:30 AM</tspan></text>
+    <rect
+       y="-144.92529"
+       x="566.64355"
+       height="20"
+       width="60"
+       id="rect5900"
+       style="fill:#e6e6e6;stroke:none" />
+    <text
+       xml:space="preserve"
+       style="font-size:72px;font-style:normal;font-weight:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="621.27399"
+       y="-130.53929"
+       id="text5902"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5904"
+         x="621.27399"
+         y="-130.53929"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;text-anchor:end;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna">0.00 hrs</tspan></text>
+    <path
+       inkscape:connector-curvature="0"
+       id="path5906"
+       d="m 160.5,-238.73679 675.14395,0"
+       style="fill:#4d4d4d;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text3142"
+       y="-309.61081"
+       x="-633.1709"
+       style="font-size:28px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:28px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         id="tspan3144"
+         y="-309.61081"
+         x="-633.1709"
+         sodipodi:role="line">&lt;event_type&gt; (Event #&lt;event-id&gt;)</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Mend)"
+       d="m -29.5336,-322.3979 -135.3167,0"
+       id="path3146"
+       inkscape:connector-curvature="0" />
+    <rect
+       y="231.95676"
+       x="-860.4054"
+       height="705.59302"
+       width="719.81256"
+       id="rect3129"
+       style="fill:#ffffff;fill-opacity:1;stroke:#1a1a1a;stroke-width:1.1857692;stroke-miterlimit:4;stroke-dasharray:none"
+       transform="scale(-1,1)" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text3131"
+       y="266.34219"
+       x="162.34172"
+       style="font-size:28px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:28px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         id="tspan3133"
+         y="266.34219"
+         x="162.34172"
+         sodipodi:role="line">OpenBuild (Event #112313244)</tspan></text>
+    <text
+       transform="scale(0.9999981,1.0000019)"
+       sodipodi:linespacing="125%"
+       id="text3135"
+       y="335.06656"
+       x="829.7052"
+       style="font-size:71.99986267px;font-style:normal;font-weight:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:17.99996567px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;text-anchor:end;fill:#800080;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         y="335.06656"
+         x="829.7052"
+         sodipodi:role="line"
+         id="tspan3137">Edit Event Info...</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-weight:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="162.34172"
+       y="293.05438"
+       id="text3139"
+       sodipodi:linespacing="125%"><tspan
+         id="tspan3141"
+         sodipodi:role="line"
+         x="162.34172"
+         y="293.05438"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna">06:30 PM on 03.15.2014 --- 09:30 PM on 03.15.2014 at &lt;event-location&gt;.</tspan></text>
+    <rect
+       y="856.35492"
+       x="184.64354"
+       height="20"
+       width="200"
+       id="rect3143"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text3145"
+       y="821.36493"
+       x="183.83678"
+       style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         y="821.36493"
+         x="183.83678"
+         id="tspan3147"
+         sodipodi:role="line">Volunteer Name </tspan></text>
+    <g
+       transform="translate(311.04319,832.91869)"
+       id="g3149">
+      <rect
+         style="fill:#e6e6e6;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         id="rect3151"
+         width="20"
+         height="20"
+         x="-150.47131"
+         y="23.436237"
+         ry="2.8790786" />
+      <path
+         sodipodi:type="arc"
+         style="fill:#808080;fill-opacity:1;stroke:none"
+         id="path3153"
+         sodipodi:cx="342.79031"
+         sodipodi:cy="438.15979"
+         sodipodi:rx="3.418906"
+         sodipodi:ry="3.418906"
+         d="m 346.20922,438.15979 c 0,1.88821 -1.5307,3.41891 -3.41891,3.41891 -1.88821,0 -3.4189,-1.5307 -3.4189,-3.41891 0,-1.88821 1.53069,-3.41891 3.4189,-3.41891 1.88821,0 3.41891,1.5307 3.41891,3.41891 z"
+         transform="matrix(1.2522988,0,0,1.2522988,-569.74721,-517.59101)" />
+      <path
+         sodipodi:type="arc"
+         style="fill:#808080;fill-opacity:1;stroke:none"
+         id="path3155"
+         sodipodi:cx="348.90836"
+         sodipodi:cy="445.89731"
+         sodipodi:rx="6.4779263"
+         sodipodi:ry="6.4779263"
+         d="m 355.38628,445.89731 c 0,3.57766 -2.90026,6.47792 -6.47792,6.47792 -3.57766,0 -6.47793,-2.90026 -6.47793,-6.47792 0,0 0,0 0,0 l 6.47793,0 z"
+         transform="matrix(-1.2522988,0,0,-1.2522988,296.46621,601.30789)"
+         sodipodi:start="0"
+         sodipodi:end="3.1415927" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="191.17047"
+       y="870.74097"
+       id="text3157"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3159"
+         x="191.17047"
+         y="870.74097"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna">James Slater </tspan></text>
+    <g
+       id="g3161"
+       transform="translate(311.04319,856.91869)">
+      <rect
+         ry="2.8790786"
+         y="23.436237"
+         x="-150.47131"
+         height="20"
+         width="20"
+         id="rect3163"
+         style="fill:#e6e6e6;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3165"
+         y="39.796124"
+         x="-149.19107"
+         style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:20px;font-weight:bold;fill:#808080"
+           y="39.796124"
+           x="-149.19107"
+           id="tspan3167"
+           sodipodi:role="line">+</tspan></text>
+    </g>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect3169"
+       width="200"
+       height="20"
+       x="184.64354"
+       y="830.35492" />
+    <g
+       id="g3171"
+       transform="translate(311.04319,806.91869)">
+      <rect
+         ry="2.8790786"
+         y="23.436237"
+         x="-150.47131"
+         height="20"
+         width="20"
+         id="rect3173"
+         style="fill:#e6e6e6;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <path
+         transform="matrix(1.2522988,0,0,1.2522988,-569.74721,-517.59101)"
+         d="m 346.20922,438.15979 c 0,1.88821 -1.5307,3.41891 -3.41891,3.41891 -1.88821,0 -3.4189,-1.5307 -3.4189,-3.41891 0,-1.88821 1.53069,-3.41891 3.4189,-3.41891 1.88821,0 3.41891,1.5307 3.41891,3.41891 z"
+         sodipodi:ry="3.418906"
+         sodipodi:rx="3.418906"
+         sodipodi:cy="438.15979"
+         sodipodi:cx="342.79031"
+         id="path3175"
+         style="fill:#808080;fill-opacity:1;stroke:none"
+         sodipodi:type="arc" />
+      <path
+         sodipodi:end="3.1415927"
+         sodipodi:start="0"
+         transform="matrix(-1.2522988,0,0,-1.2522988,296.46621,601.30789)"
+         d="m 355.38628,445.89731 c 0,3.57766 -2.90026,6.47792 -6.47792,6.47792 -3.57766,0 -6.47793,-2.90026 -6.47793,-6.47792 0,0 0,0 0,0 l 6.47793,0 z"
+         sodipodi:ry="6.4779263"
+         sodipodi:rx="6.4779263"
+         sodipodi:cy="445.89731"
+         sodipodi:cx="348.90836"
+         id="path3177"
+         style="fill:#808080;fill-opacity:1;stroke:none"
+         sodipodi:type="arc" />
+    </g>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3179"
+       y="844.74097"
+       x="191.17047"
+       style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         y="844.74097"
+         x="191.17047"
+         id="tspan3181"
+         sodipodi:role="line">&lt;Looooooong Volunteer Name&gt;</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="394.14355"
+       y="821.36493"
+       id="text3183"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3185"
+         x="394.14355"
+         y="821.36493"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna">Time In</tspan></text>
+    <rect
+       y="830.35492"
+       x="394.64355"
+       height="20"
+       width="75"
+       id="rect3187"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect3189"
+       width="75"
+       height="20"
+       x="480.64355"
+       y="830.35492" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text3191"
+       y="821.49097"
+       x="480.14355"
+       style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         y="821.49097"
+         x="480.14355"
+         id="tspan3193"
+         sodipodi:role="line">Time Out</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect3195"
+       width="75"
+       height="20"
+       x="394.64355"
+       y="856.35492" />
+    <rect
+       y="856.35492"
+       x="480.64355"
+       height="20"
+       width="75"
+       id="rect3197"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <text
+       xml:space="preserve"
+       style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="397.17047"
+       y="844.74097"
+       id="text3199"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3201"
+         x="397.17047"
+         y="844.74097"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna">12:30 PM</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3203"
+       y="844.74097"
+       x="485.17047"
+       style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         y="844.74097"
+         x="485.17047"
+         id="tspan3205"
+         sodipodi:role="line">04:45 PM</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:48px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="357.96036"
+       y="845.12347"
+       id="text3207"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3209"
+         x="357.96036"
+         y="845.12347"
+         style="font-size:38px">⌄</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3211"
+       y="871.12347"
+       x="357.96036"
+       style="font-size:48px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:38px"
+         y="871.12347"
+         x="357.96036"
+         id="tspan3213"
+         sodipodi:role="line">⌄</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3215"
+       y="845.12347"
+       x="441.96036"
+       style="font-size:48px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:38px"
+         y="845.12347"
+         x="441.96036"
+         id="tspan3217"
+         sodipodi:role="line">⌄</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:48px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="441.96036"
+       y="871.12347"
+       id="text3219"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3221"
+         x="441.96036"
+         y="871.12347"
+         style="font-size:38px">⌄</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:48px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="527.96033"
+       y="845.12347"
+       id="text3223"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3225"
+         x="527.96033"
+         y="845.12347"
+         style="font-size:38px">⌄</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3227"
+       y="871.12347"
+       x="527.96033"
+       style="font-size:48px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:38px"
+         y="871.12347"
+         x="527.96033"
+         id="tspan3229"
+         sodipodi:role="line">⌄</tspan></text>
+    <g
+       transform="translate(786.67467,806.91869)"
+       id="g3231">
+      <rect
+         style="fill:#ff0000;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         id="rect3233"
+         width="20"
+         height="20"
+         x="-150.47131"
+         y="23.436237"
+         ry="2.8790786" />
+      <text
+         xml:space="preserve"
+         style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         x="-148.17151"
+         y="40.726276"
+         id="text3235"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan3237"
+           x="-148.17151"
+           y="40.726276"
+           style="font-size:20px;font-weight:bold;fill:#000000">X</tspan></text>
+    </g>
+    <g
+       id="g3239"
+       transform="translate(786.67467,832.91869)">
+      <rect
+         ry="2.8790786"
+         y="23.436237"
+         x="-150.47131"
+         height="20"
+         width="20"
+         id="rect3241"
+         style="fill:#ff0000;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3243"
+         y="40.726276"
+         x="-148.17151"
+         style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:20px;font-weight:bold;fill:#000000"
+           y="40.726276"
+           x="-148.17151"
+           id="tspan3245"
+           sodipodi:role="line">X</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="566.14355"
+       y="821.49097"
+       id="text3247"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3249"
+         x="566.14355"
+         y="821.49097"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna">Duration</tspan></text>
+    <rect
+       y="830.35492"
+       x="566.64355"
+       height="20"
+       width="60"
+       id="rect3251"
+       style="fill:#e6e6e6;stroke:none" />
+    <text
+       xml:space="preserve"
+       style="font-size:72px;font-style:normal;font-weight:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="621.27399"
+       y="844.74097"
+       id="text3253"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3255"
+         x="621.27399"
+         y="844.74097"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;text-anchor:end;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna">4.25 hrs</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="160"
+       y="316.11139"
+       id="text3257"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3259"
+         x="160"
+         y="316.11139"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna">Total Participants</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3261"
+       y="333.05768"
+       x="160"
+       style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         y="333.05768"
+         x="160"
+         id="tspan3263"
+         sodipodi:role="line">Total Service Hours </tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3265"
+       y="316.11139"
+       x="321.11249"
+       style="font-size:72px;font-style:normal;font-weight:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;text-anchor:end;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         y="316.11139"
+         x="321.11249"
+         id="tspan3267"
+         sodipodi:role="line">24</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:72px;font-style:normal;font-weight:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="339.88824"
+       y="333.05768"
+       id="text3269"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3271"
+         x="339.88824"
+         y="333.05768"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;text-anchor:end;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna">376.75</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3273"
+       y="870.18048"
+       x="397.17047"
+       style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         y="870.18048"
+         x="397.17047"
+         id="tspan3275"
+         sodipodi:role="line">11:30 AM</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="485.17047"
+       y="870.18048"
+       id="text3277"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3279"
+         x="485.17047"
+         y="870.18048"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna">11:30 AM</tspan></text>
+    <rect
+       style="fill:#e6e6e6;stroke:none"
+       id="rect3281"
+       width="60"
+       height="20"
+       x="566.64355"
+       y="855.07471" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text3283"
+       y="869.46069"
+       x="621.27399"
+       style="font-size:72px;font-style:normal;font-weight:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;text-anchor:end;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         y="869.46069"
+         x="621.27399"
+         id="tspan3285"
+         sodipodi:role="line">0.00 hrs</tspan></text>
+    <path
+       style="fill:#4d4d4d;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 160.5,341.26321 675.14395,0"
+       id="path3287"
+       inkscape:connector-curvature="0" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path3289"
+       d="m 160.5,801.26321 675.14395,0"
+       style="fill:#4d4d4d;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <text
+       sodipodi:linespacing="165%"
+       id="text3206"
+       y="366.24731"
+       x="261.22656"
+       style="font-size:72px;font-style:normal;font-weight:normal;text-align:end;line-height:164.99999762%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:164.99999762%;text-anchor:end;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         id="tspan3208"
+         y="366.24731"
+         x="261.22656"
+         sodipodi:role="line">Event Type:</tspan><tspan
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:164.99999762%;text-anchor:end;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         y="389.34732"
+         x="261.22656"
+         sodipodi:role="line"
+         id="tspan3128" /><tspan
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:164.99999762%;text-anchor:end;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         y="412.44733"
+         x="261.22656"
+         sodipodi:role="line"
+         id="tspan3212">Event Date:</tspan><tspan
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:164.99999762%;text-anchor:end;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         y="435.5473"
+         x="261.22656"
+         sodipodi:role="line"
+         id="tspan3214" /><tspan
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:164.99999762%;text-anchor:end;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         y="458.64731"
+         x="261.22656"
+         sodipodi:role="line"
+         id="tspan3216">Event Location:</tspan><tspan
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:164.99999762%;text-anchor:end;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         y="481.74731"
+         x="261.22656"
+         sodipodi:role="line"
+         id="tspan3218" /><tspan
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:164.99999762%;text-anchor:end;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         y="504.84729"
+         x="261.22656"
+         sodipodi:role="line"
+         id="tspan3220" /><tspan
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:164.99999762%;text-anchor:end;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         y="527.94733"
+         x="261.22656"
+         sodipodi:role="line"
+         id="tspan5127" /><tspan
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:164.99999762%;text-anchor:end;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         y="551.0473"
+         x="261.22656"
+         sodipodi:role="line"
+         id="tspan5139" /><tspan
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:164.99999762%;text-anchor:end;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         y="574.14734"
+         x="261.22656"
+         sodipodi:role="line"
+         id="tspan5217" /><tspan
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:164.99999762%;text-anchor:end;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         y="597.24731"
+         x="261.22656"
+         sodipodi:role="line"
+         id="tspan5257">Special Notes:</tspan></text>
+    <g
+       id="g4214"
+       transform="translate(-22.39959,638.36076)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text4637-0"
+         y="-226.97516"
+         x="473.2536"
+         style="font-size:48px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:38px"
+           y="-226.97516"
+           x="473.2536"
+           id="tspan4639-2"
+           sodipodi:role="line">⌄</tspan></text>
+      <rect
+         y="-243.94176"
+         x="297.05429"
+         height="24.153412"
+         width="99.153412"
+         id="rect4142"
+         style="fill:none;stroke:#000000;stroke-width:0.84658849;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <rect
+         style="fill:none;stroke:#000000;stroke-width:0.84658849;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         id="rect4144"
+         width="99.153412"
+         height="24.153412"
+         x="401.05429"
+         y="-243.94176" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4188"
+         y="-227.78835"
+         x="303.05429"
+         style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+           y="-227.78835"
+           x="303.05429"
+           id="tspan4190"
+           sodipodi:role="line">03/15/2014</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         x="411.05429"
+         y="-227.78835"
+         id="text4192"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4194"
+           x="411.05429"
+           y="-227.78835"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna">6:30 PM</tspan></text>
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path4196"
+         d="m 511.07525,-231.74374 14.14214,0"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <text
+         xml:space="preserve"
+         style="font-size:48px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         x="713.2536"
+         y="-226.97516"
+         id="text4198"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4200"
+           x="713.2536"
+           y="-226.97516"
+           style="font-size:38px">⌄</tspan></text>
+      <rect
+         style="fill:none;stroke:#000000;stroke-width:0.84658849;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         id="rect4202"
+         width="99.153412"
+         height="24.153412"
+         x="537.05432"
+         y="-243.94176" />
+      <rect
+         y="-243.94176"
+         x="641.05432"
+         height="24.153412"
+         width="99.153412"
+         id="rect4204"
+         style="fill:none;stroke:#000000;stroke-width:0.84658849;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <text
+         xml:space="preserve"
+         style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         x="543.05432"
+         y="-227.78835"
+         id="text4206"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4208"
+           x="543.05432"
+           y="-227.78835"
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna">03/15/2014</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text4210"
+         y="-227.78835"
+         x="651.05432"
+         style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+           y="-227.78835"
+           x="651.05432"
+           id="tspan4212"
+           sodipodi:role="line">9:30 PM</tspan></text>
+    </g>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4637-0-9-6"
+       y="366.06052"
+       x="393.91718"
+       style="font-size:48px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         style="font-size:38px"
+         y="366.06052"
+         x="393.91718"
+         id="tspan4639-2-3-3"
+         sodipodi:role="line">⌄</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect4144-7"
+       width="150"
+       height="25"
+       x="274.89532"
+       y="349.44772" />
+    <text
+       xml:space="preserve"
+       style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="283.82535"
+       y="365.24731"
+       id="text4192-4"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4194-0"
+         x="283.82535"
+         y="365.24731"
+         style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna">OpenBuild</tspan></text>
+    <g
+       id="g5161"
+       transform="translate(71.47182,619.88859)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text5107"
+         y="-160.30023"
+         x="469.19583"
+         style="font-size:48px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:38px"
+           y="-160.30023"
+           x="469.19583"
+           id="tspan5109"
+           sodipodi:role="line">⌄</tspan></text>
+      <rect
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         id="rect5111"
+         width="200"
+         height="25"
+         x="300.17398"
+         y="-176.91302" />
+      <text
+         xml:space="preserve"
+         style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         x="309.104"
+         y="-161.22702"
+         id="text5113"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan5115"
+           x="309.104"
+           y="-161.22702"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna">Custom</tspan></text>
+    </g>
+    <g
+       id="g5176"
+       transform="translate(-108.52819,610.88859)">
+      <rect
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         id="rect5133"
+         width="200"
+         height="25"
+         x="480.17398"
+         y="-142.91302" />
+      <text
+         xml:space="preserve"
+         style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         x="485.104"
+         y="-127.11302"
+         id="text5135"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan5137"
+           x="485.104"
+           y="-127.11302"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna">1111 W Saint Louis Ave, Apt 398</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:72px;font-style:normal;font-weight:normal;text-align:end;line-height:209.99999046%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="367.79138"
+       y="458.04871"
+       id="text5141"
+       sodipodi:linespacing="209.99999%"><tspan
+         sodipodi:role="line"
+         id="tspan5143"
+         x="367.79138"
+         y="458.04871"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:209.99999046%;text-anchor:end;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna">Venue</tspan><tspan
+         sodipodi:role="line"
+         x="367.79138"
+         y="483.24872"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:209.99999046%;text-anchor:end;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         id="tspan5168">Address</tspan><tspan
+         sodipodi:role="line"
+         x="367.79138"
+         y="508.44873"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:209.99999046%;text-anchor:end;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         id="tspan5170">City</tspan><tspan
+         sodipodi:role="line"
+         x="367.79138"
+         y="533.64868"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:209.99999046%;text-anchor:end;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         id="tspan5172">State / Province</tspan><tspan
+         sodipodi:role="line"
+         x="367.79138"
+         y="558.84869"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:209.99999046%;text-anchor:end;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+         id="tspan5174">Postal Code</tspan></text>
+    <g
+       transform="translate(-108.52819,636.16882)"
+       id="g5181">
+      <rect
+         y="-142.91302"
+         x="480.17398"
+         height="25"
+         width="200"
+         id="rect5183"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text5185"
+         y="-127.11302"
+         x="485.104"
+         style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+           y="-127.11302"
+           x="485.104"
+           id="tspan5187"
+           sodipodi:role="line">Chicago</tspan></text>
+    </g>
+    <g
+       id="g5189"
+       transform="translate(-108.52819,661.20721)">
+      <rect
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         id="rect5191"
+         width="200"
+         height="25"
+         x="480.17398"
+         y="-142.91302" />
+      <text
+         xml:space="preserve"
+         style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         x="485.104"
+         y="-127.11302"
+         id="text5193"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan5195"
+           x="485.104"
+           y="-127.11302"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna">Illinois</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text5107-7"
+         y="-126.30305"
+         x="649.82416"
+         style="font-size:48px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:38px"
+           y="-126.30305"
+           x="649.82416"
+           id="tspan5109-8"
+           sodipodi:role="line">⌄</tspan></text>
+    </g>
+    <g
+       transform="translate(-108.52819,685.92698)"
+       id="g5197">
+      <rect
+         y="-142.91302"
+         x="480.17398"
+         height="25"
+         width="200"
+         id="rect5199"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text5201"
+         y="-127.11302"
+         x="485.104"
+         style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+           y="-127.11302"
+           x="485.104"
+           id="tspan5203"
+           sodipodi:role="line">60647</tspan></text>
+    </g>
+    <g
+       transform="translate(311.47182,619.88859)"
+       id="g5205">
+      <text
+         xml:space="preserve"
+         style="font-size:48px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         x="445.19583"
+         y="-160.30023"
+         id="text5207"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan5209"
+           x="445.19583"
+           y="-160.30023"
+           style="font-size:38px">⌄</tspan></text>
+      <rect
+         y="-176.91302"
+         x="300.17398"
+         height="25"
+         width="175"
+         id="rect5211"
+         style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text5213"
+         y="-161.22702"
+         x="309.104"
+         style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+           y="-161.22702"
+           x="309.104"
+           id="tspan5215"
+           sodipodi:role="line">FreeGeek Chicago</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:72px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="575.64575"
+       y="463.97559"
+       id="text5221"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5223"
+         x="575.64575"
+         y="463.97559"
+         style="font-size:22px;fill:#ff0000">OR</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000"
+       id="rect5255"
+       width="500"
+       height="150"
+       x="274.72134"
+       y="587.87073" />
+    <rect
+       style="fill:#e6e6e6;fill-opacity:1;stroke:#00ff00;stroke-width:2;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect4054"
+       width="100"
+       height="30"
+       x="274.4545"
+       y="748.73004"
+       ry="4.3186178" />
+    <text
+       xml:space="preserve"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+       x="294.4545"
+       y="772.73004"
+       id="text4100"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4102"
+         x="294.4545"
+         y="772.73004">Save</tspan></text>
+    <rect
+       ry="4.3186178"
+       y="748.73004"
+       x="674.45447"
+       height="30"
+       width="100"
+       id="rect4104"
+       style="fill:#e6e6e6;fill-opacity:1;stroke:#ff0000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text4106"
+       y="772.73004"
+       x="688.45447"
+       style="font-size:24px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:MgOpen Moderna;-inkscape-font-specification:MgOpen Moderna"
+       xml:space="preserve"><tspan
+         y="772.73004"
+         x="688.45447"
+         id="tspan4108"
+         sodipodi:role="line">Cancel</tspan></text>
+  </g>
+</svg>

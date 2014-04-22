@@ -5,7 +5,7 @@ from django.shortcuts import render
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
-from square.t2forms import SignupForm, LoginForm, AddEventForm
+from square.t2forms import AddVolunteerForm, LoginForm, AddEventForm
 from square.utils import process_user, process_event
 
 
@@ -76,11 +76,11 @@ def home(request):
 
 
 @login_required
-def signup(request):
+def add_volunteer(request):
 	if request.method == 'POST':
 		
-		# POST request to signup page does validation/processing
-		form = SignupForm(request.POST)
+		# POST request to add_volunteer page does validation/processing
+		form = AddVolunteerForm(request.POST)
 
 		if form.is_valid():
 
@@ -97,10 +97,10 @@ def signup(request):
 			return HttpResponseRedirect('/townsquare/volunteer/browse')
 
 	else:
-		# GET request to signup page displays an empty form
-		form = SignupForm()
+		# GET request to add_volunteer page displays an empty form
+		form = AddVolunteerForm()
 
-	return render(request, 'users/signup.html', 
+	return render(request, 'users/add_volunteer.html', 
 					{'f': form})
 
 

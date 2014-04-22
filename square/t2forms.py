@@ -10,7 +10,7 @@ class AddEventForm(ModelForm):
 					'start', 'end', 'notes', 'is_volunteer_time']
 
 
-class SignupForm(Form):
+class AddVolunteerForm(Form):
 	
 	first = CharField(label='First Name')
 	last = CharField(label='Last Name')

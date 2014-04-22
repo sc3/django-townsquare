@@ -21,6 +21,60 @@ def about(request):
 	return HttpResponse(r)
 
 
+def t2login(request):
+    
+    if request.method == 'POST':
+        
+        # POST request to login page does validation/processing
+        form = LoginForm(request.POST)
+        
+        if form.is_valid():
+            
+            username = form.cleaned_data['Username']
+            password = form.cleaned_data['Password']
+        
+            user = authenticate(username=username, password=password)
+            
+            
+            if user is not None:
+            
+                if user.is_active:
+                    
+                    login(request, user)
+                    #Redirect to success page
+                    
+                    state="Logged in"
+                    
+                    #return HttpResponse(views.home)
+                    return HttpResponseRedirect('/townsquare/volunteer/home')
+                    
+                else:
+                    
+                    return HttpResponse("Not valid")
+                    #Redirect to signup
+            
+            
+            else:
+            
+                return HttpResponse("Sign Up")
+                #Redirect to signup
+                
+    
+    return render(request, 'users/login.html', 
+                    {'f': LoginForm()})
+
+
+@login_required 
+def home(request):
+    
+    #Assign the information on a single volunteer as an admin
+    # NOTE: catch ObjectDoesNotExist exception here, as it may occur.
+    va = Volunteer.objects.get(id=request.user.volunteer.id)
+    
+    return render(request, 'users/index.html',
+                    {'va': va})
+
+
 @login_required
 def signup(request):
 	if request.method == 'POST':
@@ -52,9 +106,9 @@ def signup(request):
 
 def t2signup_success(request):
 
-	v = Volunteer.objects.get(id=request.session['new_user'])
-	return render(request, 'users/signup-display.html', 
-					{'new_user': v})
+    v = Volunteer.objects.get(id=request.session['new_user'])
+    return render(request, 'users/signup-display.html', 
+                    {'new_user': v})
 
 
 @login_required
@@ -68,54 +122,6 @@ def browse_volunteers(request):
 	r = t.render(c)
 	
 	return HttpResponse(r)
-
-
-
-
-
-def t2login(request):
-	
-	if request.method == 'POST':
-		
-		# POST request to login page does validation/processing
-		form = LoginForm(request.POST)
-		
-		if form.is_valid():
-			
-			username = form.cleaned_data['Username']
-			password = form.cleaned_data['Password']
-		
-			user = authenticate(username=username, password=password)
-			
-			
-			if user is not None:
-			
-				if user.is_active:
-					
-					login(request, user)
-					#Redirect to success page
-					
-					state="Logged in"
-					
-					#return HttpResponse(views.home)
-					return HttpResponseRedirect('/townsquare/volunteer/home')
-					
-				else:
-					
-					return HttpResponse("Not valid")
-					#Redirect to signup
-			
-			
-			else:
-			
-				return HttpResponse("Sign Up")
-				#Redirect to signup
-			
-			
-				
-	
-	return render(request, 'users/login.html', 
-					{'f': LoginForm()})
 	
 		
 @login_required
@@ -143,6 +149,8 @@ def t2addevent(request):
 		
 		new_event = process_event(evt, evl, d, start, end, n, ivt)
 	
+        # TODO: add event success -> browse_events page
+
 		return render(request, 'users/display-event.html', 
 						{'new_event': new_event})
 
@@ -158,44 +166,11 @@ def browse_events(request):
 	r = t.render(c)
 	
 	return HttpResponse(r)
-
-
-
-
-		
+	
 	
 def t2logout(request):
 	
 	logout(request)
 	return HttpResponse("Logged out")
 
-
-@login_required	
-def home(request):
-	
-	#Assign the information on a single volunteer as an admin
-	# NOTE: catch ObjectDoesNotExist exception here, as it may occur.
-	va = Volunteer.objects.get(id=request.user.volunteer.id)
-	
-	return render(request, 'users/index.html',
-					{'va': va})
-
-
-def nhl(request):
-	
-	datafile = '[{ "team": "New Jersey Devils" },{ "team": "New York Islanders" },{ "team": "New York Rangers" },{ "team": "Philadelphia Flyers" },{ "team": "Pittsburgh Penguins" },{ "team": "Chicago Blackhawks" },{ "team": "Columbus Blue Jackets" },{ "team": "Detroit Red Wings" },{ "team": "Nashville Predators" },{ "team": "St. Louis Blues" },{ "team": "Boston Bruins" },{ "team": "Buffalo Sabres" },{ "team": "Montreal Canadiens" },{ "team": "Ottawa Senators" },{ "team": "Toronto Maple Leafs" },{ "team": "Calgary Flames" },{ "team": "Colorado Avalanche" },{ "team": "Edmonton Oilers" },{ "team": "Minnesota Wild" },{ "team": "Vancouver Canucks" },{ "team": "Carolina Hurricanes" },{ "team": "Florida Panthers" },{ "team": "Tampa Bay Lightning" },{ "team": "Washington Capitals" },{ "team": "Winnipeg Jets" },{ "team": "Anaheim Ducks" },{ "team": "Dallas Stars" },{ "team": "Los Angeles Kings" },{ "team": "Phoenix Coyotes" },{ "team": "San Jose Sharks" }]'
-
-	return HttpResponse(datafile)
-
-
-
-def voljson(request):
-	
-	datafile = '[{"pk": "1", "model": "square.volunteer", "fields": {"signup_date": "2013-11-21", "hours": "0.0", "credit": "0.0", "user": "5", "credentials": "", "vol_image": ""}}, {"pk": "2", "model": "square.volunteer", "fields": {"signup_date": "2013-12-14", "hours": "0.0", "credit": "0.0", "user": "6", "credentials": "", "vol_image": ""}}]'
-	
-	return HttpResponse(datafile)
-	
-	
-	
-	
 

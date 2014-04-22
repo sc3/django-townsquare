@@ -26,7 +26,7 @@ urlpatterns = patterns('',
     
     #JSON for typeahead
     #url(r'^data/nhl.json$', views.nhl)
-    url(r'^data/vol.json$', views.voljson),
+    #url(r'^data/vol.json$', views.voljson),
     
     #Data access
     url(r'^api/', include(v1_api.urls)),

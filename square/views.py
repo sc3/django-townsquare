@@ -94,7 +94,7 @@ def signup(request):
 			# display it in the success page.
 			request.session['new_user'] = new_user.id
 
-			return HttpResponseRedirect('/townsquare/signup-success')
+			return HttpResponseRedirect('/townsquare/volunteer/browse')
 
 	else:
 		# GET request to signup page displays an empty form
@@ -102,13 +102,6 @@ def signup(request):
 
 	return render(request, 'users/signup.html', 
 					{'f': form})
-
-
-def t2signup_success(request):
-
-    v = Volunteer.objects.get(id=request.session['new_user'])
-    return render(request, 'users/signup-display.html', 
-                    {'new_user': v})
 
 
 @login_required

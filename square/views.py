@@ -5,7 +5,7 @@ from django.shortcuts import render
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
-from square.t2forms import SignupForm, LoginForm, AddEventForm
+from square.t2forms import AddVolunteerForm, LoginForm, AddEventForm
 from square.utils import process_user, process_event
 
 
@@ -76,11 +76,11 @@ def home(request):
 
 
 @login_required
-def signup(request):
+def add_volunteer(request):
 	if request.method == 'POST':
 		
-		# POST request to signup page does validation/processing
-		form = SignupForm(request.POST)
+		# POST request to add_volunteer page does validation/processing
+		form = AddVolunteerForm(request.POST)
 
 		if form.is_valid():
 
@@ -92,23 +92,16 @@ def signup(request):
 
 			# hold onto that new user we just created, to 
 			# display it in the success page.
-			request.session['new_user'] = new_user.id
+			# request.session['new_user'] = new_user.id
 
-			return HttpResponseRedirect('/townsquare/signup-success')
+			return HttpResponseRedirect('/townsquare/volunteer/browse')
 
 	else:
-		# GET request to signup page displays an empty form
-		form = SignupForm()
+		# GET request to add_volunteer page displays an empty form
+		form = AddVolunteerForm()
 
-	return render(request, 'users/signup.html', 
+	return render(request, 'users/add_volunteer.html', 
 					{'f': form})
-
-
-def t2signup_success(request):
-
-    v = Volunteer.objects.get(id=request.session['new_user'])
-    return render(request, 'users/signup-display.html', 
-                    {'new_user': v})
 
 
 @login_required
@@ -126,33 +119,30 @@ def browse_volunteers(request):
 		
 @login_required
 def add_event(request):
-	
-	return render(request, 'users/add-event.html', 
-					{'f': AddEventForm()})
 
+    if request.method == 'POST':
 
-@login_required
-def t2addevent(request):
-	
-	""" Takes information from the addevent form and dumps
-		it into the database """
-	
-	if request.method == 'POST':
-		
-		evt = request.POST['event_type']
-		evl = request.POST['event_location']
-		d = request.POST['date']
-		start = request.POST['start']
-		end = request.POST['end']
-		n = request.POST['notes']
-		ivt = True if request.POST.get('is_volunteer_time', None) else False
-		
-		new_event = process_event(evt, evl, d, start, end, n, ivt)
-	
-        # TODO: add event success -> browse_events page
+        form = AddEventForm(request.POST)
 
-		return render(request, 'users/display-event.html', 
-						{'new_event': new_event})
+        if form.is_valid():
+
+            evt = form.cleaned_data['event_type']
+            evl = form.cleaned_data['event_location']
+            d = form.cleaned_data['date']
+            start = form.cleaned_data['start']
+            end = form.cleaned_data['end']
+            n = form.cleaned_data['notes']
+            ivt = form.cleaned_data['is_volunteer_time']
+            
+            new_event = process_event(evt, evl, d, start, end, n, ivt)
+
+            return HttpResponseRedirect('/townsquare/event/browse')
+
+    else:
+        form = AddEventForm()
+
+    return render(request, 'users/add-event.html', 
+                    {'f': form})
 
 
 @login_required

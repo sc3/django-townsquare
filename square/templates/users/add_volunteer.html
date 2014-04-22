@@ -11,8 +11,7 @@
 
 	<!--Setting up a form from view, with form structure passed as "f" -->
 	
-	<!--<form action='/townsquare/volunteer/add' method="post">-->
-	<form action={% url 'square.views.signup' %} method="post">
+	<form action='/townsquare/volunteer/add' method="post">
 
 	{% csrf_token %}
 	{{ f.as_p }}

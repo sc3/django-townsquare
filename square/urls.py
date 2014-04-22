@@ -19,9 +19,6 @@ urlpatterns = patterns('',
     url(r'^event/add$', views.add_event),
     url(r'^event/browse$', views.browse_events),
     url(r'^volunteer/browse$', views.browse_volunteers),
-
-    # Processing views
-    url(r'^event2$', views.t2addevent),
     
     #JSON for typeahead
     #url(r'^data/nhl.json$', views.nhl)

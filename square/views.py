@@ -1,24 +1,17 @@
 from django.http import HttpResponse, HttpResponseRedirect
-from square.models import Volunteer, Event, EventLocation
-from django.template import Context, Template, loader, RequestContext
 from django.shortcuts import render
 from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
-from square.t2forms import AddVolunteerForm, LoginForm, AddEventForm
-from square.utils import process_user, process_event
 
+from square.models import Volunteer, Event
+from square.t2forms import AddVolunteerForm, LoginForm, AddEventForm
+from square.processing import process_volunteer, process_volunteer
 
 def about(request):
-	
-	blurb = "Something about Townsquare."
-	
-	t = loader.get_template('users/about.html')
-	c = RequestContext(request, {'blurb':blurb,})
-	
-	r = t.render(c)
-	
-	return HttpResponse(r)
+    
+    blurb = "Something about Townsquare."
+    return render(request, 'users/about.html', 
+                    {'blurb': blurb,})
 
 
 def t2login(request):
@@ -41,23 +34,16 @@ def t2login(request):
                 if user.is_active:
                     
                     login(request, user)
-                    #Redirect to success page
-                    
-                    state="Logged in"
-                    
-                    #return HttpResponse(views.home)
                     return HttpResponseRedirect('/townsquare/volunteer/home')
                     
                 else:
-                    
-                    return HttpResponse("Not valid")
-                    #Redirect to signup
-            
+
+                    # if this user is not allowed to access their account
+                    return HttpResponseRedirect('/townsquare/login')
             
             else:
             
-                return HttpResponse("Sign Up")
-                #Redirect to signup
+                return HttpResponseRedirect('/townsquare/login')
                 
     
     return render(request, 'users/login.html', 
@@ -77,49 +63,41 @@ def home(request):
 
 @login_required
 def add_volunteer(request):
-	if request.method == 'POST':
-		
-		# POST request to add_volunteer page does validation/processing
-		form = AddVolunteerForm(request.POST)
+    if request.method == 'POST':
+        
+        # POST request to add_volunteer page does validation/processing
+        form = AddVolunteerForm(request.POST)
 
-		if form.is_valid():
+        if form.is_valid():
 
-			username = form.cleaned_data['Username']
-			password = form.cleaned_data['Password']
-			first = form.cleaned_data['first']
-			last = form.cleaned_data['last']
-			new_user = process_user(username, password, first, last)
+            username = form.cleaned_data['Username']
+            password = form.cleaned_data['Password']
+            first = form.cleaned_data['first']
+            last = form.cleaned_data['last']
+            new_user = process_volunteer(first, last, username, password)
 
-			# hold onto that new user we just created, to 
-			# display it in the success page.
-			# request.session['new_user'] = new_user.id
+            return HttpResponseRedirect('/townsquare/volunteer/browse')
 
-			return HttpResponseRedirect('/townsquare/volunteer/browse')
+    else:
+        # GET request to add_volunteer page displays an empty form
+        form = AddVolunteerForm()
 
-	else:
-		# GET request to add_volunteer page displays an empty form
-		form = AddVolunteerForm()
-
-	return render(request, 'users/add_volunteer.html', 
-					{'f': form})
+    return render(request, 'users/add_volunteer.html', 
+                    {'f': form})
 
 
 @login_required
 def browse_volunteers(request):
-	
-	vols = Volunteer.objects.all()
-	
-	t = loader.get_template('users/volunteer_browse.html')
-	c = RequestContext(request, {'volunteers':vols,})
-	
-	r = t.render(c)
-	
-	return HttpResponse(r)
-	
-		
+    
+    vols = Volunteer.objects.all()
+    return render(request, 'users/volunteer_browse.html',
+                    {'volunteers': vols,})
+    
+        
 @login_required
 def add_event(request):
 
+    # POST request does processing
     if request.method == 'POST':
 
         form = AddEventForm(request.POST)
@@ -133,34 +111,30 @@ def add_event(request):
             end = form.cleaned_data['end']
             n = form.cleaned_data['notes']
             ivt = form.cleaned_data['is_volunteer_time']
-            
             new_event = process_event(evt, evl, d, start, end, n, ivt)
 
             return HttpResponseRedirect('/townsquare/event/browse')
 
     else:
+        # GET request sends an empty form
         form = AddEventForm()
 
+    # render an HTTP response if it was a GET, or an invalid POST
     return render(request, 'users/add-event.html', 
                     {'f': form})
 
 
 @login_required
 def browse_events(request):
-	
-	evs = Event.objects.all()
-	
-	t = loader.get_template('users/event_browse.html')
-	c = RequestContext(request, {'events':evs,})
-	
-	r = t.render(c)
-	
-	return HttpResponse(r)
-	
-	
+    
+    evs = Event.objects.all()
+    return render(request, 'users/event_browse.html',
+                    {'events': evs,})
+    
+    
 def t2logout(request):
-	
-	logout(request)
-	return HttpResponse("Logged out")
+    
+    logout(request)
+    return HttpResponse("Logged out")
 
 

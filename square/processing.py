@@ -47,3 +47,24 @@ def process_event(event_type, event_location, date, start_time, end_time,
     e.save()
     
     return e
+
+
+def initial_event_location():
+
+    try:
+        return EventLocation.objects.get(id=1)
+    except EventLocation.DoesNotExist:
+
+        try:
+            el = EventLocation.objects.create(
+                full_name='FreeGeek Chicago', 
+                address='3411 W. Diversey Avenue',
+                city='Chicago',
+                state='IL',
+                zip_code='60647'
+            )
+            el.save()
+        except DatabaseError:
+            return None   
+
+        return el

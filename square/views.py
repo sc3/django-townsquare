@@ -24,8 +24,8 @@ def login(request):
         
         if form.is_valid():
             
-            username = form.cleaned_data['Username']
-            password = form.cleaned_data['Password']
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password']
         
             user = authenticate(username=username, password=password)
             
@@ -71,10 +71,10 @@ def add_volunteer(request):
 
         if form.is_valid():
 
-            username = form.cleaned_data['Username']
-            password = form.cleaned_data['Password']
-            first = form.cleaned_data['first']
-            last = form.cleaned_data['last']
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password']
+            first = form.cleaned_data['first_name']
+            last = form.cleaned_data['last_name']
             new_user = process_volunteer(first, last, username, password)
 
             return HttpResponseRedirect('/townsquare/volunteer/browse')

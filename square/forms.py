@@ -3,7 +3,7 @@ from django.forms import Form, ModelForm, CharField, PasswordInput, \
 from django.contrib.admin.widgets import AdminDateWidget 
 from square.models import Event, EventLocation
 
-class AddEventForm(ModelForm):
+class EventForm(ModelForm):
         
     is_volunteer_time = BooleanField(required=False, initial=True)
     event_location = ModelChoiceField(queryset=EventLocation.objects.all(), 
@@ -14,7 +14,7 @@ class AddEventForm(ModelForm):
         fields = ('event_type', 'event_location', 'date', 'start', 'end', 'notes', 'is_volunteer_time')
 
 
-class AddVolunteerForm(Form):
+class VolunteerForm(Form):
     
     first_name = CharField(label='First Name')
     last_name = CharField(label='Last Name')

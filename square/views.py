@@ -4,7 +4,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 
 from square.models import Volunteer, Event
-from square.forms import AddVolunteerForm, LoginForm, AddEventForm
+from square.forms import VolunteerForm, LoginForm, EventForm
 from square.processing import process_volunteer, process_volunteer
 
 
@@ -67,7 +67,7 @@ def add_volunteer(request):
     if request.method == 'POST':
         
         # POST request to add_volunteer page does validation/processing
-        form = AddVolunteerForm(request.POST)
+        form = VolunteerForm(request.POST)
 
         if form.is_valid():
 
@@ -81,7 +81,7 @@ def add_volunteer(request):
 
     else:
         # GET request to add_volunteer page displays an empty form
-        form = AddVolunteerForm()
+        form = VolunteerForm()
 
     return render(request, 'users/add_volunteer.html', 
                     {'f': form})
@@ -101,7 +101,7 @@ def add_event(request):
     # POST request does processing
     if request.method == 'POST':
 
-        form = AddEventForm(request.POST)
+        form = EventForm(request.POST)
 
         if form.is_valid():
 
@@ -112,16 +112,49 @@ def add_event(request):
             end = form.cleaned_data['end']
             n = form.cleaned_data['notes']
             ivt = form.cleaned_data['is_volunteer_time']
-            new_event = process_event(evt, evl, d, start, end, n, ivt)
+            process_event(evt, evl, d, start, end, n, ivt)
 
             return HttpResponseRedirect('/townsquare/event/browse')
 
     else:
         # GET request sends an empty form
-        form = AddEventForm()
+        form = EventForm()
 
     # render an HTTP response if it was a GET, or an invalid POST
-    return render(request, 'users/add-event.html', 
+    return render(request, 'users/add_event.html', 
+                    {'f': form})
+
+
+@login_required
+def edit_event(request, event_id=None):
+
+    if request.method == 'POST':
+
+        form = EventForm(request.POST)
+
+        if form.is_valid():
+
+            evt = form.cleaned_data['event_type']
+            evl = form.cleaned_data['event_location']
+            d = form.cleaned_data['date']
+            start = form.cleaned_data['start']
+            end = form.cleaned_data['end']
+            n = form.cleaned_data['notes']
+            ivt = form.cleaned_data['is_volunteer_time']
+            process_event(evt, evl, d, start, end, n, ivt)
+
+            # after a successful save, go to browse events
+            return HttpResponseRedirect('/townsquare/event/browse')
+
+    else:
+
+        event = Event.objects.get(id=int(event_id))
+        form = EventForm(instance=event)
+        return render(request, 'users/edit_event.html',
+                        {'f': form})
+
+    # render an HTTP response if it was a GET, or an invalid POST
+    return render(request, 'users/edit_event.html', 
                     {'f': form})
 
 

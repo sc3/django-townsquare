@@ -6,62 +6,50 @@ body {
   /*text-align: center;*/
 }
 
-#volunteer_list
-{
-
-		border:2px;
-		vertical-align:center;
-		
-
+#volunteer_list {
+    border:2px;
+    vertical-align:center;
 }
 
-#volunteer_list td, #volunteer_list th
-{
-
+#volunteer_list td, #volunteer_list th {
 	border:1px solid #98bf21;
 	padding:2px;
-	
-
 }
 
 
-#vol_line
-{
-
+#vol_line {
 	border:2px;
 	/*vertical-align:center;*/
 	padding-left: 5px;
 	padding-right: 4px;
 	width: 1000px;
-
-
 }
 
-
-
-#vol_line td
-{
-
+#vol_line td {
 	padding-left: 20px;
 	padding-right: 20px;
 	border:1px solid #98bf21;
-
-
 }
 
 
-#nav-global
-{
-
-	padding: 50px;
-	
+#nav-global {
+	padding: 50px;	
 }
 
+#event_list {
+    border:2px;
+    vertical-align:center;
+}
 
+#event_list td, #event_list th {
+    border:1px solid #98bf21;
+    padding:2px;
+}
 
-
-
-
-
-
+.event_details {
+    height: 80%;
+    width: 20%;
+    margin-left: 40%;
+    margin-right: 40%;
+}
 

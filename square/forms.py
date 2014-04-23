@@ -20,8 +20,8 @@ class VolunteerForm(Form):
     
     first_name = CharField(label='First Name')
     last_name = CharField(label='Last Name')
-    username = CharField(label='Username')
-    password = CharField(label='Password', widget=PasswordInput())
+    username = CharField(required=False, label='Username')
+    password = CharField(required=False, label='Password', widget=PasswordInput())
     
     
 class LoginForm(Form):

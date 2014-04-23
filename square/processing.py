@@ -11,8 +11,8 @@ def process_volunteer(first, last, uname=None, pw=None):
     if not uname:
         # if a username is not provided, make one from 
         # first name, last name, and sign up date
-        uname = '{0}{1}:{2}' % \
-            (first, last, v.signup_date.strftime('%m-%d-%y'))
+        uname = '{0}{1}:{2}'.format(
+            first, last, v.signup_date.strftime('%m-%d-%y'))
 
     if not pw:
         # if a password is not provided, generate a random one 

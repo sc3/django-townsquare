@@ -5,7 +5,7 @@ from django.contrib.auth.decorators import login_required
 
 from square.models import Volunteer, Event
 from square.forms import VolunteerForm, LoginForm, EventForm
-from square.processing import process_volunteer, process_volunteer
+from square.processing import process_event, process_volunteer
 
 
 def about(request):
@@ -94,41 +94,47 @@ def add_volunteer(request):
                     {'f': form})
 
 
-# @login_required
-# def edit_volunteer(request, vol_id=None):
+@login_required
+def edit_volunteer(request, vol_id=None):
 
-#     if request.method == 'POST':
+    if request.method == 'POST':
 
-#         form = VolunteerForm(request.POST)
+        form = VolunteerForm(request.POST)
 
-#         if form.is_valid():
+        if form.is_valid():
 
-#             # POST request to add_volunteer page does validation/processing
-#             form = VolunteerForm(request.POST)
+            # POST request to add_volunteer page does validation/processing
+            form = VolunteerForm(request.POST)
 
-#             if form.is_valid():
+            if form.is_valid():
 
-#                 uname = form.cleaned_data['username']
-#                 pw = form.cleaned_data['password']
-#                 first = form.cleaned_data['first_name']
-#                 last = form.cleaned_data['last_name']
-#                 new_user = process_volunteer(first, last, uname, pw)
+                uname = form.cleaned_data['username']
+                pw = form.cleaned_data['password']
+                first = form.cleaned_data['first_name']
+                last = form.cleaned_data['last_name']
+                new_user = process_volunteer(first, last, uname, pw)
 
-#             # after a successful save, go to browse events
-#             return HttpResponseRedirect('/townsquare/volunteer/browse')
+            # after a successful save, go to browse events
+            return HttpResponseRedirect('/townsquare/volunteer/browse')
 
-#     else:
+    else:
 
-#         vol = Volunteer.objects.get(id=int(vol_id))
-#         vol_fields = {k: v for (k, v) in vol.__dict__ if not k.startswith('_')}
-#         form = VolunteerForm(initial=vol_fields)
+        vol = Volunteer.objects.get(id=int(vol_id))
+        vol_fields = {  
+                'first_name': vol.user.first_name, 
+                'last_name': vol.user.last_name,
+                'username': vol.user.username,
+                'password': vol.user.password
+        }
+        form = VolunteerForm(initial=vol_fields)
+        # import pdb; pdb.set_trace()
         
-#         return render(request, 'users/edit_volunteer.html',
-#                         {'f': form})
+        return render(request, 'users/edit_volunteer.html',
+                        {'f': form})
 
-#     # render an HTTP response if it was a GET, or an invalid POST
-#     return render(request, 'users/edit_volunteer.html', 
-#                     {'f': form})
+    # render an HTTP response if it was a GET, or an invalid POST
+    return render(request, 'users/edit_volunteer.html', 
+                    {'f': form})
 
 
 @login_required

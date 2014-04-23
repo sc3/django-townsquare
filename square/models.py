@@ -6,24 +6,18 @@ class Volunteer(models.Model):
         
     user = models.OneToOneField(User, null=True, unique=True)
     signup_date = models.DateField("Sign-up date", default=datetime.now())
-    
-    #Editing hours to be a CharField (from FloatField, for typeahead)
     hours = models.FloatField(editable=False, default=0.0, max_length=20) 
     credentials = models.CharField(max_length=300, blank=True)
     vol_image = models.CharField(max_length=200, blank=True)
-    
-    #Editing credit to be a CharField (from FloatField, for typeahead)
-    credit = models.CharField(editable=False, default=0.0, max_length=20)   
+    credit = models.FloatField(editable=False, default=0.0, max_length=20)   
 
     def full_name(self):
         return self.user.first_name + " " + self.user.last_name
         
     def natural_key(self):
-		
 		return self.full_name()
 
     def calculate_hours(self):
-        
         hours = 0
         for s in self.session_set.all():
             if s.event.is_volunteer_time:

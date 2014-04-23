@@ -4,8 +4,9 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 
 from square.models import Volunteer, Event
-from square.t2forms import AddVolunteerForm, LoginForm, AddEventForm
+from square.forms import AddVolunteerForm, LoginForm, AddEventForm
 from square.processing import process_volunteer, process_volunteer
+
 
 def about(request):
     
@@ -14,7 +15,7 @@ def about(request):
                     {'blurb': blurb,})
 
 
-def t2login(request):
+def login(request):
     
     if request.method == 'POST':
         
@@ -23,8 +24,8 @@ def t2login(request):
         
         if form.is_valid():
             
-            username = form.cleaned_data['Username']
-            password = form.cleaned_data['Password']
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password']
         
             user = authenticate(username=username, password=password)
             
@@ -38,7 +39,7 @@ def t2login(request):
                     
                 else:
 
-                    # if this user is not allowed to access their account
+                    # this user is not allowed to access their account
                     return HttpResponseRedirect('/townsquare/login')
             
             else:
@@ -70,10 +71,10 @@ def add_volunteer(request):
 
         if form.is_valid():
 
-            username = form.cleaned_data['Username']
-            password = form.cleaned_data['Password']
-            first = form.cleaned_data['first']
-            last = form.cleaned_data['last']
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password']
+            first = form.cleaned_data['first_name']
+            last = form.cleaned_data['last_name']
             new_user = process_volunteer(first, last, username, password)
 
             return HttpResponseRedirect('/townsquare/volunteer/browse')
@@ -132,7 +133,7 @@ def browse_events(request):
                     {'events': evs,})
     
     
-def t2logout(request):
+def logout(request):
     
     logout(request)
     return HttpResponse("Logged out")

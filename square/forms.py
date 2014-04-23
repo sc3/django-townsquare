@@ -4,6 +4,7 @@ from django.contrib.admin.widgets import AdminDateWidget
 from square.models import Event, EventLocation
 from square.processing import initial_event_location
 
+
 class EventForm(ModelForm):
         
     is_volunteer_time = BooleanField(required=False, initial=True)

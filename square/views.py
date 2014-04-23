@@ -99,20 +99,16 @@ def edit_volunteer(request, vol_id=None):
 
     if request.method == 'POST':
 
+        # POST request to add_volunteer page does validation/processing
         form = VolunteerForm(request.POST)
 
         if form.is_valid():
 
-            # POST request to add_volunteer page does validation/processing
-            form = VolunteerForm(request.POST)
-
-            if form.is_valid():
-
-                uname = form.cleaned_data['username']
-                pw = form.cleaned_data['password']
-                first = form.cleaned_data['first_name']
-                last = form.cleaned_data['last_name']
-                new_user = process_volunteer(first, last, uname, pw)
+            uname = form.cleaned_data['username']
+            pw = form.cleaned_data['password']
+            first = form.cleaned_data['first_name']
+            last = form.cleaned_data['last_name']
+            process_volunteer(first, last, uname, pw)
 
             # after a successful save, go to browse events
             return HttpResponseRedirect('/townsquare/volunteer/browse')
@@ -127,12 +123,8 @@ def edit_volunteer(request, vol_id=None):
                 'password': vol.user.password
         }
         form = VolunteerForm(initial=vol_fields)
-        # import pdb; pdb.set_trace()
         
-        return render(request, 'users/edit_volunteer.html',
-                        {'f': form})
-
-    # render an HTTP response if it was a GET, or an invalid POST
+    # render an HTTP response if it was an invalid POST, or a GET
     return render(request, 'users/edit_volunteer.html', 
                     {'f': form})
 

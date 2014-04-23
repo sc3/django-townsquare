@@ -15,7 +15,7 @@ def about(request):
                     {'blurb': blurb,})
 
 
-def login(request):
+def t2login(request):
     
     if request.method == 'POST':
         
@@ -166,7 +166,7 @@ def browse_events(request):
                     {'events': evs,})
     
     
-def logout(request):
+def t2logout(request):
     
     logout(request)
     return HttpResponse("Logged out")

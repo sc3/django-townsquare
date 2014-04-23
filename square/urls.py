@@ -13,11 +13,11 @@ urlpatterns = patterns('',
 
     # Anyone can access
     url(r'^about$', views.about),
-    url(r'^login$', views.login),
+    url(r'^login$', views.t2login),
     url(r'^api/', include(v1_api.urls)),
 
     # Only volunteers can access
-    url(r'^logout$', views.logout),
+    url(r'^logout$', views.t2logout),
     url(r'^volunteer/home$', views.home),
 
     # Only admins can access

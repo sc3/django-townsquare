@@ -26,6 +26,7 @@ def process_volunteer(first, last, uname=None, pw=None):
         username=uname)
 
     u.save()
+    v.user = u
     v.save()
 
     return v

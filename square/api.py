@@ -1,10 +1,3 @@
-from copy import copy
-import csv
-import os
-
-from django.http import HttpResponse
-
-from django.contrib.auth.models import User
 
 from tastypie import fields
 from tastypie.exceptions import ApiFieldError, Unauthorized
@@ -14,7 +7,13 @@ from tastypie.authorization import DjangoAuthorization
 from tastypie.authentication import BasicAuthentication
 from tastypie.serializers import Serializer
 
+from django.http import HttpResponse
+from django.contrib.auth.models import User
+
 from square.models import Volunteer
+
+from copy import copy
+import csv, os
 
 class UserResource(ModelResource):
 	

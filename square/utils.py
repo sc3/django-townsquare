@@ -14,7 +14,6 @@ def dateize(time):
 
 
 def gen_password(length=8):
-
     myrg = random.SystemRandom()
     alphabet = string.ascii_letters + string.digits + string.punctuation
     pw = str().join(myrg.choice(alphabet) for c in range(length))

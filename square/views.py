@@ -51,6 +51,13 @@ def t2login(request):
                     {'f': LoginForm()})
 
 
+@login_required
+def t2logout(request):
+    
+    logout(request)
+    return HttpResponseRedirect('/townsquare/login')
+
+
 @login_required 
 def home(request):
     
@@ -166,9 +173,4 @@ def browse_events(request):
                     {'events': evs,})
     
     
-def t2logout(request):
-    
-    logout(request)
-    return HttpResponse("Logged out")
-
 

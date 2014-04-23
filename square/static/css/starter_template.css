@@ -1,25 +1,31 @@
+
 body {
   /*padding-top: 50px;*/
 }
+
 .starter-template {
   padding: 40px 15px;
   text-align: center;
 }
 
-#volunteer_list
-{
-
-		border:2px;
-		vertical-align:center;
-		
-
+#volunteer_list {
+	border:2px;
+	vertical-align:center;
 }
 
-#volunteer_list td, #volunteer_list th
-{
+#volunteer_list td, #volunteer_list th {
 
 	border:1px solid #98bf21;
 	padding:2px;
-	
+}
 
+#event_list {
+    border:2px;
+    vertical-align:center;
+}
+
+#event_list td, #event_list th {
+
+    border:1px solid #98bf21;
+    padding:2px;
 }

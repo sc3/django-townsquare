@@ -1,6 +1,8 @@
+
 from django.db import models
 from datetime import datetime
 from django.contrib.auth.models import User
+
 
 class Volunteer(models.Model):
         
@@ -35,6 +37,7 @@ class Volunteer(models.Model):
     def __unicode__(self):
         return self.full_name()
 
+
 class EventLocation(models.Model):
     full_name = models.CharField(max_length=200)
     address = models.CharField(max_length=200)
@@ -44,6 +47,7 @@ class EventLocation(models.Model):
 
     def __unicode__(self):
         return self.full_name
+
 
 class Event(models.Model):
     EVENT_TYPES = {
@@ -66,6 +70,7 @@ class Event(models.Model):
                 long_type = longform
             return "%s on %s" % (long_type, self.date)
 
+
 class Session(models.Model):
     volunteer = models.ForeignKey(Volunteer)
     event = models.ForeignKey(Event)
@@ -82,3 +87,4 @@ class Session(models.Model):
 
 
 from utils import timeonly_delta
+

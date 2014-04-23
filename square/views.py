@@ -82,7 +82,7 @@ def add_volunteer(request):
             password = form.cleaned_data['password']
             first = form.cleaned_data['first_name']
             last = form.cleaned_data['last_name']
-            new_user = process_volunteer(first, last, username, password)
+            process_volunteer(first, last, username, password)
 
             return HttpResponseRedirect('/townsquare/volunteer/browse')
 
@@ -95,10 +95,45 @@ def add_volunteer(request):
 
 
 @login_required
+def edit_volunteer(request, vol_id=None):
+
+    if request.method == 'POST':
+
+        form = VolunteerForm(request.POST)
+
+        if form.is_valid():
+
+            # POST request to add_volunteer page does validation/processing
+            form = VolunteerForm(request.POST)
+
+            if form.is_valid():
+
+                uname = form.cleaned_data['username']
+                pw = form.cleaned_data['password']
+                first = form.cleaned_data['first_name']
+                last = form.cleaned_data['last_name']
+                new_user = process_volunteer(first, last, uname, pw)
+
+            # after a successful save, go to browse events
+            return HttpResponseRedirect('/townsquare/volunteer/browse')
+
+    else:
+
+        vol = Volunteer.objects.get(id=int(vol_id))
+        form = VolunteerForm(instance=vol)
+        return render(request, 'users/edit_volunteer.html',
+                        {'f': form})
+
+    # render an HTTP response if it was a GET, or an invalid POST
+    return render(request, 'users/edit_volunteer.html', 
+                    {'f': form})
+
+
+@login_required
 def browse_volunteers(request):
     
     vols = Volunteer.objects.all()
-    return render(request, 'users/volunteer_browse.html',
+    return render(request, 'users/browse_volunteers.html',
                     {'volunteers': vols,})
     
         
@@ -169,7 +204,7 @@ def edit_event(request, event_id=None):
 def browse_events(request):
     
     evs = Event.objects.all()
-    return render(request, 'users/event_browse.html',
+    return render(request, 'users/browse_events.html',
                     {'events': evs,})
     
     

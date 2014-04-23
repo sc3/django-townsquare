@@ -1,0 +1,22 @@
+{% extends "users/index.html" %}
+
+{% block title %}Edit Townsquare Volunteer{% endblock %}
+
+{% block content2 %}
+
+<div class="container">
+
+    <!--Setting up a form from view, with form structure passed as "f" -->
+    
+    <form action="/townsquare/volunteer/edit" method="post">
+
+    {% csrf_token %}
+    {{ f.as_p }}
+
+    <input type="submit" value="Save" />
+
+    </form>
+
+</div>
+
+{% endblock %}

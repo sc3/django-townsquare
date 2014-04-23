@@ -27,20 +27,11 @@ def t2login(request):
             username = form.cleaned_data['username']
             password = form.cleaned_data['password']
         
-            user = authenticate(username=username, password=password)
-            
-            
-            if user is not None:
-            
-                if user.is_active:
-                    
-                    login(request, user)
-                    return HttpResponseRedirect('/townsquare/volunteer/home')
-                    
-                else:
-
-                    # this user is not allowed to access their account
-                    return HttpResponseRedirect('/townsquare/login')
+            user = authenticate(username=username, password=password)           
+            if (user is not None) and user.is_active:
+    
+                login(request, user)
+                return HttpResponseRedirect('/townsquare/volunteer/home')
             
             else:
             
@@ -114,6 +105,10 @@ def edit_volunteer(request, vol_id=None):
             return HttpResponseRedirect('/townsquare/volunteer/browse')
 
     else:
+
+        if vol_id is None:
+            raise Exception("Can't POST to this URL. Try editing a specific "
+                            "volunteer: append '/n', where n is the volunteer's id.")
 
         vol = Volunteer.objects.get(id=int(vol_id))
         vol_fields = {  

@@ -1,22 +1,17 @@
 
 from django.contrib.auth.models import User
 from square.models import Volunteer, Event, EventLocation
-from square.utils import gen_password
+from square.utils import gen_password, gen_username
 
 
-def process_volunteer(first, last, uname=None, pw=None):
+def process_volunteer(first, last, uname='', pw=''):
 
     v = Volunteer()
 
     if not uname:
         # if a username is not provided, make one from 
         # first name, last name, and sign up date
-        uname = '{0}{1}:{2}'.format(
-            first, last, v.signup_date.strftime('%m-%d-%y'))
-
-    if not pw:
-        # if a password is not provided, generate a random one 
-        pw = gen_password(length=8)
+        uname = gen_username(first, last, date)
 
     # associate a django user object with this volunteer
     u = User.objects.create_user(

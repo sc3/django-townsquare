@@ -4,6 +4,7 @@ from square.forms import VolunteerForm, LoginForm, EventForm
 from django.contrib.auth.models import User
 from datetime import datetime
 
+
 def process_valid_login_post(request, form):
 
     username = form.cleaned_data['username']

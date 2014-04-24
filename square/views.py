@@ -18,8 +18,7 @@ def about(request):
 
 def t2login(request):
     
-    if request.method == 'POST':
-        
+l        
         # POST request to login page does validation/processing
         form = LoginForm(request.POST)
         
@@ -27,7 +26,7 @@ def t2login(request):
 
             succeeded = process_valid_login_post(request, form)
             if succeeded:
-                return HttpResponseRedirect('/townsquare/volunteer/browse')
+                return HttpResponseRedirect('/townsquare/volunteer/home')
             else:
                 return HttpResponseRedirect('/townsquare/login')
     

@@ -1,6 +1,6 @@
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
-from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
 from square.forms import EventForm, VolunteerForm, LoginForm
 from square.models import Volunteer, Event
@@ -18,18 +18,16 @@ def about(request):
 
 def t2login(request):
     
-    if request.method == 'POST':
-        
-        # POST request to login page does validation/processing
-        form = LoginForm(request.POST)
-        
-        if form.is_valid():
-            
-            succeeded = process_valid_login(form, request)
-            if succeeded:
-                HttpResponseRedirect('/townsquare/volunteer/browse')
-            else:
-                HttpResponseRedirect('/townsquare/login')
+    # POST request to login page does validation/processing
+    form = LoginForm(request.POST)
+    
+    if form.is_valid():
+
+        succeeded = process_valid_login_post(request, form)
+        if succeeded:
+            return HttpResponseRedirect('/townsquare/volunteer/home')
+        else:
+            return HttpResponseRedirect('/townsquare/login')
     
     # render result of an invalid POST or a GET request
     return render(request, 'users/login.html', 

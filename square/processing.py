@@ -1,6 +1,7 @@
 from square.models import Volunteer, Event, EventLocation
 from square.utils import gen_password, gen_username
 from square.forms import VolunteerForm, LoginForm, EventForm
+from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
 from datetime import datetime
 

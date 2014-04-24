@@ -16,7 +16,6 @@ class EventAdmin(admin.ModelAdmin):
     list_display = ('event_type', 'date', 'event_location')
 
 
-
 # class VolunteerAdmin(admin.ModelAdmin):
 #     readonly_fields = ('hours',)
 #     fieldsets = [

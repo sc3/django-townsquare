@@ -22,7 +22,7 @@ def process_valid_login_post(request, form):
 def process_valid_volunteer_post(form):
 
     uname = form.cleaned_data['username']
-    password = form.cleaned_data['password']
+    pw = form.cleaned_data['password']
     first = form.cleaned_data['first_name']
     last = form.cleaned_data['last_name']
 

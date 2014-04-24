@@ -23,6 +23,7 @@ def t2login(request):
     
     if form.is_valid():
 
+        # authenticate the form
         succeeded = process_valid_login_post(request, form)
         if succeeded:
             return HttpResponseRedirect('/townsquare/volunteer/home')
@@ -44,9 +45,16 @@ def t2logout(request):
 @login_required 
 def home(request):
 
-    va = Volunteer.objects.get(id=request.user.volunteer.id)    
-    return render(request, 'users/index.html',
-                    {'va': va})
+    try:
+        va = Volunteer.objects.get(id=request.user.volunteer.id) 
+        return render(request, 'users/index.html',
+                        {'va': va})
+
+    # TODO: remove this try-except block; but wait until admin console
+    #       is fully functional
+    except Volunteer.DoesNotExist:
+        return HttpResponseRedirect('/townsquare/volunteer/browse')
+    
 
 
 @login_required
@@ -84,6 +92,7 @@ def edit_volunteer(request, vol_id=None):
 
     else:
 
+        # GET request to edit_volunteer has to load the data properly
         form = process_volunteer_get(vol_id)
         
     # render an HTTP response if it was an invalid POST, or a GET

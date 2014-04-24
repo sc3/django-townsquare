@@ -18,17 +18,16 @@ def about(request):
 
 def t2login(request):
     
-l        
-        # POST request to login page does validation/processing
-        form = LoginForm(request.POST)
-        
-        if form.is_valid():
+    # POST request to login page does validation/processing
+    form = LoginForm(request.POST)
+    
+    if form.is_valid():
 
-            succeeded = process_valid_login_post(request, form)
-            if succeeded:
-                return HttpResponseRedirect('/townsquare/volunteer/home')
-            else:
-                return HttpResponseRedirect('/townsquare/login')
+        succeeded = process_valid_login_post(request, form)
+        if succeeded:
+            return HttpResponseRedirect('/townsquare/volunteer/home')
+        else:
+            return HttpResponseRedirect('/townsquare/login')
     
     # render result of an invalid POST or a GET request
     return render(request, 'users/login.html', 

@@ -36,9 +36,7 @@ def process_valid_volunteer_post(form):
         'VO' : ''
     }
     p = form.cleaned_data['credentials']
-    if permissions[p]:
-        is_staff = True
-
+    # TODO: add proper permissions to user model
 
     # if a username is not provided, make one from 
     # first name, last name, and sign up date

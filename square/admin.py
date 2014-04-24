@@ -17,14 +17,14 @@ class EventAdmin(admin.ModelAdmin):
 
 
 
-"""class VolunteerAdmin(admin.ModelAdmin):
-    readonly_fields = ('hours',)
-    fieldsets = [
-        ('Personal Info',   {'fields': ['name', 'email']}),
-    	('Legacy Info',     {'fields': ['signup_date', 'hours']}),
-    ]
-    list_display = ('name', 'signup_date', 'hours', 'email')
-    search_fields = ['name']"""
+# class VolunteerAdmin(admin.ModelAdmin):
+#     readonly_fields = ('hours',)
+#     fieldsets = [
+#         ('Personal Info',   {'fields': ['name', 'email']}),
+#     	('Legacy Info',     {'fields': ['signup_date', 'hours']}),
+#     ]
+#     list_display = ('name', 'signup_date', 'hours', 'email')
+#     search_fields = ['name']
 
 
 admin.site.register(Event, EventAdmin)

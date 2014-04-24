@@ -1,65 +1,83 @@
-
-from django.contrib.auth.models import User
 from square.models import Volunteer, Event, EventLocation
 from square.utils import gen_password, gen_username
+from square.forms import VolunteerForm, LoginForm, EventForm
+from django.contrib.auth.models import User
+from datetime import datetime
+
+def process_valid_login_post(request, form):
+
+    username = form.cleaned_data['username']
+    password = form.cleaned_data['password']
+    
+    user = authenticate(username=username, password=password)           
+    if (user is not None) and user.is_active:
+    
+        login(request, user)
+        return True
+    
+    else:
+        return False
 
 
-def process_volunteer(first, last, uname='', pw=''):
+def process_valid_volunteer_post(form):
 
-    v = Volunteer()
+    uname = form.cleaned_data['username']
+    password = form.cleaned_data['password']
+    first = form.cleaned_data['first_name']
+    last = form.cleaned_data['last_name']
 
     if not uname:
         # if a username is not provided, make one from 
         # first name, last name, and sign up date
-        uname = gen_username(first, last, date)
+        uname = gen_username(first, last, datetime.now())
 
     # associate a django user object with this volunteer
-    u = User.objects.create_user(
-        first_name=first, 
-        last_name=last, 
-        password=pw, 
-        username=uname)
+    try:
+        u = User.objects.get(username=uname)
+    except User.DoesNotExist:
+        u = User.objects.create_user(
+            first_name=first, 
+            last_name=last, 
+            password=pw, 
+            username=uname)
+        u.save()
 
-    u.save()
-    v.user = u
+    # create or update this volunteer
+    v = Volunteer.objects.update_or_create(user=u)
     v.save()
 
-    return v
+    
+def process_volunteer_get(vol_id):
 
-    
-def process_event(event_type, event_location, date, start_time, end_time, 
-                    notes, is_volunteer_time):
-    
+    if vol_id is None:
+        raise Exception("Can't POST to this URL. Try editing a specific "
+                        "volunteer: append '/n', where n is the volunteer's id.")
+
+    vol = Volunteer.objects.get(id=int(vol_id))
+    vol_fields = {  
+            'first_name': vol.user.first_name, 
+            'last_name': vol.user.last_name,
+            'username': vol.user.username,
+            'password': vol.user.password
+    }
+    return VolunteerForm(initial=vol_fields)    
+
+
+def process_valid_event_post(form):
+
     e = Event(
-        event_type=event_type,
-        event_location=event_location,
-        date=date,
-        start=start_time,
-        end=end_time,
-        notes=notes,
-        is_volunteer_time=is_volunteer_time)
+        event_type=form.cleaned_data['event_type'],
+        event_location=form.cleaned_data['event_location'],
+        date=form.cleaned_data['date'],
+        start=form.cleaned_data['start'],
+        end=form.cleaned_data['end'],
+        notes=form.cleaned_data['notes'],
+        is_volunteer_time=form.cleaned_data['is_volunteer_time'])
     
     e.save()
-    
-    return e
 
 
-def initial_event_location():
+def process_event_get(event_id):
 
-    try:
-        return EventLocation.objects.get(id=1)
-    except EventLocation.DoesNotExist:
-
-        try:
-            el = EventLocation.objects.create(
-                full_name='FreeGeek Chicago', 
-                address='3411 W. Diversey Avenue',
-                city='Chicago',
-                state='IL',
-                zip_code='60647'
-            )
-            el.save()
-        except DatabaseError:
-            return None   
-
-        return el
+    event = Event.objects.get(id=int(event_id))
+    return EventForm(instance=event)

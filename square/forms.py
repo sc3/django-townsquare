@@ -2,7 +2,27 @@ from django.forms import Form, ModelForm, CharField, PasswordInput, \
                                 BooleanField, ModelChoiceField, DateField    
 from django.contrib.admin.widgets import AdminDateWidget 
 from square.models import Event, EventLocation
-from square.processing import initial_event_location
+
+
+def initial_event_location():
+
+    try:
+        return EventLocation.objects.get(id=1)
+    except EventLocation.DoesNotExist:
+
+        try:
+            el = EventLocation.objects.create(
+                full_name='FreeGeek Chicago', 
+                address='3411 W. Diversey Avenue',
+                city='Chicago',
+                state='IL',
+                zip_code='60647'
+            )
+            el.save()
+        except DatabaseError:
+            return None   
+
+        return el
 
 
 class EventForm(ModelForm):

@@ -23,3 +23,5 @@ def gen_password(length=8):
 def gen_username(first_name, last_name, date):
     return '{0}{1}:{2}'.format(
             first, last, v.signup_date.strftime('%m-%d-%y'))
+
+

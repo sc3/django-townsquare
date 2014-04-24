@@ -23,35 +23,57 @@ def process_valid_login_post(request, form):
 
 def process_valid_volunteer_post(form):
 
-    uname = form.cleaned_data['username']
-    pw = form.cleaned_data['password']
-    first = form.cleaned_data['first_name']
-    last = form.cleaned_data['last_name']
 
-    if not uname:
-        # if a username is not provided, make one from 
+    # define a few sets of args to initialize or update user
+    username = form.cleaned_data['username']
+    password = form.cleaned_data['password']
+
+
+    # set user permissions based on volunteer credentials
+    permissions = {
+        'ST' : 'is_staff',
+        'AD' : 'is_staff',
+        'VO' : ''
+    }
+    p = form.cleaned_data['credentials']
+    if permissions[p]:
+        is_staff = True
+
+
+    # if a username is not provided, make one from 
         # first name, last name, and sign up date
-        uname = gen_username(first, last, datetime.now())
+    first_name = form.cleaned_data['first_name']
+    last_name = form.cleaned_data['last_name']
+    if not username:
+        username = gen_username(first_name, last_name, datetime.now())
 
-    # associate a django user object with this volunteer
-    try:
-        u = User.objects.get(username=uname)
-    except User.DoesNotExist:
-        u = User.objects.create_user(
-            first_name=first, 
-            last_name=last, 
-            password=pw, 
-            username=uname)
+
+    # update or create a user object
+    u_q = User.objects.filter(username=username)
+    if u_q.count():
+        _ = u_q.update(username, password)
+        u = u_q[0]
+    else:
+        u = User.objects.create_user(username, password)
         u.save()
 
-    try:
-        v = Volunteer.objects.get(user=u)
-        # do some more updating on vol
-    except Volunteer.DoesNotExist:
-        # prepare some more values to update vol
-        v = Volunteer(user=u)
 
-    # create or update this volunteer
+    # define a set of volunteer fields, and get them from the form
+    vol_fieldnames = ['credentials']
+    vol_fields = {k: form.cleaned_data[k] for k in form.fields if k and k in vol_fieldnames}
+    
+    # add the user we created to the volunteer fields
+    vol_fields['user'] = u
+
+
+    # update or create the volunteer
+    v_q = Volunteer.objects.filter(user=u)
+    if v_q.count():
+        _  = v_q.update(**vol_fields)
+        v = v_q[0]
+    else:
+        v = Volunteer.objects.create(**vol_fields)
+
     v.save()
 
     
@@ -80,7 +102,7 @@ def process_valid_event_post(form):
             update_fields[k] = form.cleaned_data[k]
 
     result = Event.objects.update(**update_fields)
-    if result == 0:
+    if not result:
         e = Event(**update_fields)
         e.save()
 

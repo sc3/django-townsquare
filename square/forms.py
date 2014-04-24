@@ -1,8 +1,9 @@
 
 from django.forms import Form, ModelForm, CharField, PasswordInput, \
-                                BooleanField, ModelChoiceField, DateField    
+        BooleanField, ModelChoiceField, DateField, ChoiceField
+
 from django.contrib.admin.widgets import AdminDateWidget 
-from square.models import Event, EventLocation
+from square.models import Event, EventLocation, Volunteer
 
 
 def initial_event_location():
@@ -10,19 +11,14 @@ def initial_event_location():
     try:
         return EventLocation.objects.get(id=1)
     except EventLocation.DoesNotExist:
-
-        try:
-            el = EventLocation.objects.create(
-                full_name='FreeGeek Chicago', 
-                address='3411 W. Diversey Avenue',
-                city='Chicago',
-                state='IL',
-                zip_code='60647'
-            )
-            el.save()
-        except DatabaseError:
-            return None   
-
+        el = EventLocation.objects.create(
+            full_name='FreeGeek Chicago', 
+            address='3411 W. Diversey Avenue',
+            city='Chicago',
+            state='IL',
+            zip_code='60647'
+        )
+        el.save()
         return el
 
 
@@ -41,9 +37,11 @@ class EventForm(ModelForm):
 class VolunteerForm(Form):
     
     first_name = CharField(label='First Name')
+    # middle_initial = CharField(label='Middle Initial', required=False)
     last_name = CharField(label='Last Name')
-    username = CharField(required=False, label='Username')
-    password = CharField(required=False, label='Password', widget=PasswordInput())
+    username = CharField(label='Username', required=False)
+    password = CharField(label='Password', required=False, widget=PasswordInput())
+    credentials = ChoiceField(label='Permission Level', choices=Volunteer.PERMISSION_GROUPS)
     
     
 class LoginForm(Form):

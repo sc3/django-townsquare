@@ -27,7 +27,7 @@ def t2login(request):
 
             succeeded = process_valid_login_post(request, form)
             if succeeded:
-                return HttpResponseRedirect('/townsquare/volunteer/home')
+                return HttpResponseRedirect('/townsquare/volunteer/browse')
             else:
                 return HttpResponseRedirect('/townsquare/login')
     

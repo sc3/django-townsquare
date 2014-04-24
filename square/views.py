@@ -44,7 +44,11 @@ def t2logout(request):
 @login_required 
 def home(request):
 
-    va = Volunteer.objects.get(id=request.user.volunteer.id)    
+    try:
+        va = Volunteer.objects.get(id=request.user.volunteer.id)    
+    except Volunteer.DoesNotExist:
+        raise Exception("You can't access the volunteer home page from a superuser. "
+                        "In fact, you shouldn't even login here. But for now, you can!")
     return render(request, 'users/index.html',
                     {'va': va})
 

@@ -6,16 +6,24 @@ from datetime import datetime
 
 
 class Volunteer(models.Model):
+
+    PERMISSION_GROUPS = {
+        ('ST', 'Staff'),
+        ('AD', 'Admin'),
+        ('VO', 'Volunteer')
+    }
         
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
     user = models.OneToOneField(User, null=True, unique=True)
     signup_date = models.DateField("Sign-up date", default=datetime.now())
     hours = models.FloatField(editable=False, default=0.0, max_length=20) 
-    credentials = models.CharField(max_length=300, blank=True)
+    credentials = models.CharField(max_length=2, choices=PERMISSION_GROUPS, default='VO', blank=True)
     vol_image = models.CharField(max_length=200, blank=True)
     credit = models.FloatField(editable=False, default=0.0, max_length=20)   
 
     def full_name(self):
-        return self.user.first_name + " " + self.user.last_name
+        return self.first_name + " " + self.last_name
         
     def natural_key(self):
 		return self.full_name()
@@ -45,7 +53,6 @@ class EventLocation(models.Model):
     city = models.CharField(max_length=50)
     state = models.CharField(max_length=50)
     zip_code = models.CharField(max_length=6)
-
     def __unicode__(self):
         return self.full_name
 

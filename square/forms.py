@@ -39,7 +39,8 @@ class VolunteerForm(Form):
     # middle_initial = CharField(label='Middle Initial', required=False)
     last_name = CharField(label='Last Name')
     username = CharField(label='Username', required=False)
-    password = CharField(label='Password', required=False, widget=PasswordInput())
+    password = CharField(label='New Password', required=False, widget=PasswordInput())
+    password_confirm = CharField(label='Re-enter Password', required=False, widget=PasswordInput())
     credentials = ChoiceField(label='Permission Level', choices=Volunteer.PERMISSION_GROUPS)
     
     

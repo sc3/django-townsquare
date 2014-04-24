@@ -36,20 +36,27 @@ body {
 	padding: 50px;	
 }
 
-#event_list {
+#event-list {
     border:2px;
     vertical-align:center;
 }
 
-#event_list td, #event_list th {
+#event-list td, #event_list th {
     border:1px solid #98bf21;
     padding:2px;
 }
 
-.event_details {
+.event-details {
     height: 80%;
     width: 20%;
     margin-left: 40%;
     margin-right: 40%;
+}
+
+.volunteer-details {
+    height: 80%;
+    width: 40%;
+    margin-left: 30%;
+    margin-right: 30%;
 }
 

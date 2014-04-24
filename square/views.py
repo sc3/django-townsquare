@@ -2,10 +2,11 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
-
+from square.forms import EventForm, VolunteerForm, LoginForm
 from square.models import Volunteer, Event
-from square.forms import VolunteerForm, LoginForm, EventForm
-from square.processing import process_volunteer, process_volunteer
+from square.processing import process_valid_event_post,         \
+        process_valid_volunteer_post, process_valid_login_post, \
+        process_volunteer_get, process_event_get
 
 
 def about(request):
@@ -24,29 +25,13 @@ def t2login(request):
         
         if form.is_valid():
             
-            username = form.cleaned_data['username']
-            password = form.cleaned_data['password']
-        
-            user = authenticate(username=username, password=password)
-            
-            
-            if user is not None:
-            
-                if user.is_active:
-                    
-                    login(request, user)
-                    return HttpResponseRedirect('/townsquare/volunteer/home')
-                    
-                else:
-
-                    # this user is not allowed to access their account
-                    return HttpResponseRedirect('/townsquare/login')
-            
+            succeeded = process_valid_login(form, request)
+            if succeeded:
+                HttpResponseRedirect('/townsquare/volunteer/browse')
             else:
-            
-                return HttpResponseRedirect('/townsquare/login')
-                
+                HttpResponseRedirect('/townsquare/login')
     
+    # render result of an invalid POST or a GET request
     return render(request, 'users/login.html', 
                     {'f': LoginForm()})
 
@@ -60,11 +45,8 @@ def t2logout(request):
 
 @login_required 
 def home(request):
-    
-    #Assign the information on a single volunteer as an admin
-    # NOTE: catch ObjectDoesNotExist exception here, as it may occur.
-    va = Volunteer.objects.get(id=request.user.volunteer.id)
-    
+
+    va = Volunteer.objects.get(id=request.user.volunteer.id)    
     return render(request, 'users/index.html',
                     {'va': va})
 
@@ -78,12 +60,7 @@ def add_volunteer(request):
 
         if form.is_valid():
 
-            username = form.cleaned_data['username']
-            password = form.cleaned_data['password']
-            first = form.cleaned_data['first_name']
-            last = form.cleaned_data['last_name']
-            process_volunteer(first, last, username, password)
-
+            process_valid_volunteer_post(form)
             return HttpResponseRedirect('/townsquare/volunteer/browse')
 
     else:
@@ -94,41 +71,26 @@ def add_volunteer(request):
                     {'f': form})
 
 
-# @login_required
-# def edit_volunteer(request, vol_id=None):
+@login_required
+def edit_volunteer(request, vol_id=None):
 
-#     if request.method == 'POST':
+    if request.method == 'POST':
 
-#         form = VolunteerForm(request.POST)
+        # POST request to add_volunteer page does validation/processing
+        form = VolunteerForm(request.POST)
 
-#         if form.is_valid():
+        if form.is_valid():
 
-#             # POST request to add_volunteer page does validation/processing
-#             form = VolunteerForm(request.POST)
+            process_valid_volunteer_post(form)
+            return HttpResponseRedirect('/townsquare/volunteer/browse')
 
-#             if form.is_valid():
+    else:
 
-#                 uname = form.cleaned_data['username']
-#                 pw = form.cleaned_data['password']
-#                 first = form.cleaned_data['first_name']
-#                 last = form.cleaned_data['last_name']
-#                 new_user = process_volunteer(first, last, uname, pw)
-
-#             # after a successful save, go to browse events
-#             return HttpResponseRedirect('/townsquare/volunteer/browse')
-
-#     else:
-
-#         vol = Volunteer.objects.get(id=int(vol_id))
-#         vol_fields = {k: v for (k, v) in vol.__dict__ if not k.startswith('_')}
-#         form = VolunteerForm(initial=vol_fields)
+        form = process_volunteer_get(vol_id)
         
-#         return render(request, 'users/edit_volunteer.html',
-#                         {'f': form})
-
-#     # render an HTTP response if it was a GET, or an invalid POST
-#     return render(request, 'users/edit_volunteer.html', 
-#                     {'f': form})
+    # render an HTTP response if it was an invalid POST, or a GET
+    return render(request, 'users/edit_volunteer.html', 
+                    {'f': form})
 
 
 @login_required
@@ -149,15 +111,7 @@ def add_event(request):
 
         if form.is_valid():
 
-            evt = form.cleaned_data['event_type']
-            evl = form.cleaned_data['event_location']
-            d = form.cleaned_data['date']
-            start = form.cleaned_data['start']
-            end = form.cleaned_data['end']
-            n = form.cleaned_data['notes']
-            ivt = form.cleaned_data['is_volunteer_time']
-            process_event(evt, evl, d, start, end, n, ivt)
-
+            process_valid_event_post(form)
             return HttpResponseRedirect('/townsquare/event/browse')
 
     else:
@@ -178,22 +132,12 @@ def edit_event(request, event_id=None):
 
         if form.is_valid():
 
-            evt = form.cleaned_data['event_type']
-            evl = form.cleaned_data['event_location']
-            d = form.cleaned_data['date']
-            start = form.cleaned_data['start']
-            end = form.cleaned_data['end']
-            n = form.cleaned_data['notes']
-            ivt = form.cleaned_data['is_volunteer_time']
-            process_event(evt, evl, d, start, end, n, ivt)
-
-            # after a successful save, go to browse events
+            process_valid_event_post(form)
             return HttpResponseRedirect('/townsquare/event/browse')
 
     else:
 
-        event = Event.objects.get(id=int(event_id))
-        form = EventForm(instance=event)
+        form = process_event_get(event_id)
         return render(request, 'users/edit_event.html',
                         {'f': form})
 

@@ -2,30 +2,25 @@
 
 {% block title %}Browse Volunteers{% endblock %}
 
-
 {% block content2 %}
-
-
 
 <table id="volunteer_list">
 
-<tr>
-<th>Name</th>
-<th>Hours</th>
-</tr>
+  <tr>
+    <th>Name</th>
+    <th>Hours</th>
+    <th>Details</th>
+  </tr>
 
-
-{% for volunteer in volunteers %}
-<tr>
-<td>{{volunteer.user.first_name}} {{volunteer.user.last_name}}</td>
-<td>{{volunteer.hours}}</td>
-</tr>
-
-
-{% endfor %}
+  {% for volunteer in volunteers %}
+  <tr>
+    <td>{{volunteer.user.first_name}} {{volunteer.user.last_name}}</td>
+    <td>{{volunteer.hours}}</td>
+    <td><input class="volunteer-details" type="button" 
+            onClick="location.href='/townsquare/volunteer/edit/{{volunteer.id}}'"></input></td>
+  </tr>
+  {% endfor %}
 	
 </table>
-
-
 
 {% endblock %}

@@ -16,16 +16,18 @@ urlpatterns = patterns('',
     url(r'^login$', views.t2login),
     url(r'^api/', include(v1_api.urls)),
 
-    # Only volunteers/admins can access
+    # Volunteers can access
     url(r'^logout$', views.t2logout),
     url(r'^volunteer/home$', views.home),
 
-    # Only admins can access
+    # Admins can access
     url(r'^volunteer/add$', views.add_volunteer),
     url(r'^volunteer/browse$', views.browse_volunteers),
-    # url(r'^volunteer/edit/(\d+)/$', views.edit_volunteer),
+    url(r'^volunteer/edit$', views.edit_volunteer),
+    url(r'^volunteer/edit/(\d+)/$', views.edit_volunteer),
     url(r'^event/add$', views.add_event),
     url(r'^event/browse$', views.browse_events),
+    url(r'^event/edit$', views.edit_event),
     url(r'^event/edit/(\d+)/$', views.edit_event),
  
 )

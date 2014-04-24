@@ -21,7 +21,7 @@ class UserResource(ModelResource):
 		
 		queryset = User.objects.all()
 		resource_name = 'user'
-		fields = ['first_name', 'last_name']
+		fields = ['first_name', 'last_name', 'username']
 
 
 #Volunteer Model - main point of access

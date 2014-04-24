@@ -1,3 +1,4 @@
+
 from django.forms import Form, ModelForm, CharField, PasswordInput, \
                                 BooleanField, ModelChoiceField, DateField    
 from django.contrib.admin.widgets import AdminDateWidget 
@@ -49,3 +50,4 @@ class LoginForm(Form):
         
     username = CharField(label='Username')
     password = CharField(label='Password', widget=PasswordInput())
+

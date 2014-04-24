@@ -42,8 +42,14 @@ def process_valid_volunteer_post(form):
             username=uname)
         u.save()
 
+    try:
+        v = Volunteer.objects.get(user=u)
+        # do some more updating on vol
+    except Volunteer.DoesNotExist:
+        # prepare some more values to update vol
+        v = Volunteer(user=u)
+
     # create or update this volunteer
-    v = Volunteer.objects.update_or_create(user=u)
     v.save()
 
     
@@ -51,7 +57,8 @@ def process_volunteer_get(vol_id):
 
     if vol_id is None:
         raise Exception("Can't POST to this URL. Try editing a specific "
-                        "volunteer: append '/n', where n is the volunteer's id.")
+                        "volunteer: append '/n', where n is the id of the "
+                        "volunteer you want.")
 
     vol = Volunteer.objects.get(id=int(vol_id))
     vol_fields = {  
@@ -65,19 +72,26 @@ def process_volunteer_get(vol_id):
 
 def process_valid_event_post(form):
 
-    e = Event(
-        event_type=form.cleaned_data['event_type'],
-        event_location=form.cleaned_data['event_location'],
-        date=form.cleaned_data['date'],
-        start=form.cleaned_data['start'],
-        end=form.cleaned_data['end'],
-        notes=form.cleaned_data['notes'],
-        is_volunteer_time=form.cleaned_data['is_volunteer_time'])
-    
-    e.save()
+    update_fields = {}
+    for k in form.fields:
+        if form.cleaned_data[k]:
+            update_fields[k] = form.cleaned_data[k]
+
+    try:
+        result = Event.objects.update(**update_fields)
+        import pdb; pdb.set_trace();
+    except Event.DoesNotExist:
+        e = Event(**update_fields)
+        e.save()
 
 
 def process_event_get(event_id):
 
+    if event_id is None:
+        raise Exception("Can't POST to this URL. Try editing a specific "
+                        "event: append '/n', where n is the id of the event "
+                        "you want .")
+
     event = Event.objects.get(id=int(event_id))
     return EventForm(instance=event)
+

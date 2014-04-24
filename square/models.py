@@ -14,7 +14,7 @@ class Volunteer(models.Model):
     }
         
     first_name = models.CharField(max_length=100)
-    last_name models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
     user = models.OneToOneField(User, null=True, unique=True)
     signup_date = models.DateField("Sign-up date", default=datetime.now())
     hours = models.FloatField(editable=False, default=0.0, max_length=20) 
@@ -53,7 +53,6 @@ class EventLocation(models.Model):
     city = models.CharField(max_length=50)
     state = models.CharField(max_length=50)
     zip_code = models.CharField(max_length=6)
-
     def __unicode__(self):
         return self.full_name
 

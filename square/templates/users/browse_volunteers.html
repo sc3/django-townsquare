@@ -14,8 +14,8 @@
 
   {% for volunteer in volunteers %}
   <tr>
-    <td>{{volunteer.user.first_name}} {{volunteer.user.last_name}}</td>
-    <td>{{volunteer.hours}}</td>
+    <td>{{ volunteer.full_name }}</td>
+    <td>{{ volunteer.hours }}</td>
     <td><input class="volunteer-details" type="button" 
             onClick="location.href='/townsquare/volunteer/edit/{{volunteer.id}}'"></input></td>
   </tr>

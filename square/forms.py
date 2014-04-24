@@ -1,7 +1,6 @@
 
 from django.forms import Form, ModelForm, CharField, PasswordInput, \
         BooleanField, ModelChoiceField, DateField, ChoiceField
-
 from django.contrib.admin.widgets import AdminDateWidget 
 from square.models import Event, EventLocation, Volunteer
 

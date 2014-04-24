@@ -77,10 +77,8 @@ def process_valid_event_post(form):
         if form.cleaned_data[k]:
             update_fields[k] = form.cleaned_data[k]
 
-    try:
-        result = Event.objects.update(**update_fields)
-        import pdb; pdb.set_trace();
-    except Event.DoesNotExist:
+    result = Event.objects.update(**update_fields)
+    if result == 0:
         e = Event(**update_fields)
         e.save()
 

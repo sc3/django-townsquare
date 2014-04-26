@@ -27,10 +27,10 @@ class Volunteer(models.Model):
         return self.first_name + " " + self.last_name
 
     def last_seen(self):
-        s = self.session_set.latest('event__date')
         try:
+            s = self.session_set.latest('event__date')
             return s.event.date
-        except AttributeError:
+        except StandardError:
             return None
     
     def add_session(self, s):

@@ -8,9 +8,9 @@ from datetime import datetime
 class Volunteer(models.Model):
 
     PERMISSION_GROUPS = {
-        ('ST', 'Staff'),
-        ('AD', 'Admin'),
-        ('VO', 'Volunteer')
+        ('Staff', 'Staff'),
+        ('Admin', 'Admin'),
+        ('Volunteer', 'Volunteer')
     }
         
     first_name = models.CharField(max_length=100)
@@ -18,7 +18,8 @@ class Volunteer(models.Model):
     user = models.OneToOneField(User, null=True, unique=True)
     signup_date = models.DateField("Sign-up date", default=datetime.now())
     hours = models.FloatField(editable=False, default=0.0, max_length=20) 
-    credentials = models.CharField(max_length=2, choices=PERMISSION_GROUPS, default='VO', blank=True)
+    credentials = models.CharField(max_length=20, choices=PERMISSION_GROUPS, 
+                                    default='Volunteer', blank=True)
     vol_image = models.CharField(max_length=200, blank=True)
     credit = models.FloatField(editable=False, default=0.0, max_length=20)   
 

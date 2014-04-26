@@ -66,7 +66,7 @@ def process_valid_volunteer_post(form, vol_id=None):
             vol = Volunteer.objects.get(id=vol_id)
 
             # if it exists, get that volunteer's associated user
-            user = vol_queryset[0].user
+            user = vol.user
 
             # update the username and password of the user
             # with the new fields

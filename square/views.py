@@ -17,12 +17,12 @@ def about(request):
 
 
 def t2login(request):
-    
+
     # POST request to login page does validation/processing
     form = LoginForm(request.POST)
     
     if form.is_valid():
-
+        
         # authenticate the form
         succeeded = process_valid_login_post(request, form)
         if succeeded:

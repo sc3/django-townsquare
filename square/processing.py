@@ -44,42 +44,35 @@ def process_valid_volunteer_post(form, vol_id=None):
         new_username = gen_username(new_firstname, new_lastname, datetime.now())
 
 
-    # find out whether username is already being used
-    user_queryset = User.objects.filter(username=new_username)
+    # find out whether username is being used
+    try:
+        user = User.objects.get(username=new_username)
 
-    # username is already taken
-    if user_queryset.count():
-        old_user = user_queryset[0]
+        # make sure user is associated with volunteer we're editing 
+        if user.volunteer.id == vol_id:
 
-        # user with this username is the same one we're editing 
-        if old_user.volunteer.id == vol_id:
-            _ = user_queryset.update(username=new_username, 
-                                     password=new_password)
-            user = old_user
+            # update user fields
+            user.username = new_username
+            user.password = new_password
 
-        else:
-            # can't change username to that of an existing user
-            pass
+    # new username, and it's not taken
+    except User.DoesNotExist:
 
+        try:
+            # try to get the volunteer we're editing
+            vol = Volunteer.objects.get(id=vol_id)
 
-    # username not taken
-    else:
-        # get the volunteer we're trying to edit
-        vol_queryset = Volunteer.objects.filter(id=vol_id)
+            # if it exists, get that volunteer's associated user
+            user = vol_queryset[0].user
 
-        # if it exists, get that volunteer's associated user
-        if vol_queryset.count():
-            old_user = vol_queryset[0].user
+            # update the username and password of the user
+            user.username = new_username
+            user.password = new_password
 
-            # update the username and password of the user we're editing
-            old_user.username = new_username
-            old_user.password = new_password
+        # if there is no volunteer yet, just create the new user
+        except Volunteer.DoesNotExist:
 
-            user = old_user
-        else:
-            # if not, create the new user
-            new_user = User.objects.create_user(new_username, new_password)
-            user = new_user
+            user = User.objects.create_user(new_username, password=new_password)
 
     user.save()
 
@@ -88,16 +81,15 @@ def process_valid_volunteer_post(form, vol_id=None):
     vol_fieldnames = ['first_name', 'last_name', 'credentials']
     vol_fields = {k: form.cleaned_data[k] for k in form.fields if k and k in vol_fieldnames}
     
-    # add the user we created to the volunteer fields
+    # add the user we updated/created to the volunteer fields
     vol_fields['user'] = user
 
 
-    # update or create the volunteer
-    vol_queryset = Volunteer.objects.filter(user=user)
-    if vol_queryset.count():
-        _  = vol_queryset.update(**vol_fields)
-        vol = vol_queryset[0]
-    else:
+    # update/create the volunteer
+    try:
+        vol = Volunteer.objects.get(user=user)
+        vol.__dict__.update(**vol_fields)
+    except Volunteer.DoesNotExist:
         vol = Volunteer.objects.create(**vol_fields)
 
     vol.save()

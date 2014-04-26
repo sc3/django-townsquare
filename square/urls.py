@@ -23,7 +23,6 @@ urlpatterns = patterns('',
     # Admins can access
     url(r'^volunteer/add$', views.add_volunteer),
     url(r'^volunteer/browse$', views.browse_volunteers),
-    url(r'^volunteer/edit$', views.edit_volunteer),
     url(r'^volunteer/edit/(\d+)/$', views.edit_volunteer),
     url(r'^event/add$', views.add_event),
     url(r'^event/browse$', views.browse_events),

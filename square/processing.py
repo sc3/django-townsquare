@@ -21,10 +21,7 @@ def process_valid_login_post(request, form):
         return False
 
 
-def process_valid_volunteer_post(request, form):
-
-
-    vol_id = int(request.session['vol_id'])
+def process_valid_volunteer_post(form, vol_id=None):
 
     new_username = form.cleaned_data['username']
     new_password = form.cleaned_data['password']
@@ -46,7 +43,6 @@ def process_valid_volunteer_post(request, form):
     if not new_username:
         new_username = gen_username(new_firstname, new_lastname, datetime.now())
 
-    # import pdb; pdb.set_trace(); 
 
     # find out whether username is already being used
     user_queryset = User.objects.filter(username=new_username)
@@ -74,7 +70,6 @@ def process_valid_volunteer_post(request, form):
         # if it exists, get that volunteer's associated user
         if vol_queryset.count():
             old_user = vol_queryset[0].user
-            
 
             # update the username and password of the user we're editing
             old_user.username = new_username

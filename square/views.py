@@ -78,7 +78,7 @@ def add_volunteer(request):
 
 
 @login_required
-def edit_volunteer(request, vol_id=None):
+def edit_volunteer(request, vol_id):
 
     if request.method == 'POST':
 
@@ -87,18 +87,17 @@ def edit_volunteer(request, vol_id=None):
 
         if form.is_valid():
 
-            process_valid_volunteer_post(request, form)
+            process_valid_volunteer_post(form, int(vol_id))
             return HttpResponseRedirect('/townsquare/volunteer/browse')
 
     else:
 
         # GET request to edit_volunteer has to load the data properly
         form = process_volunteer_get(vol_id)
-        request.session['vol_id'] = vol_id
         
     # render an HTTP response if it was an invalid POST, or a GET
     return render(request, 'users/edit_volunteer.html', 
-                    {'f': form})
+                    {'f': form, 'vol_id': vol_id})
 
 
 @login_required

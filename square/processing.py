@@ -51,9 +51,11 @@ def process_valid_volunteer_post(form, vol_id=None):
         # make sure user is associated with volunteer we're editing 
         if user.volunteer.id == vol_id:
 
-            # update user fields
-            user.username = new_username
-            user.password = new_password
+            # update user fields if supplied
+            if new_username:
+                user.username = new_username
+            if new_password:
+                user.password = new_password
 
     # new username, and it's not taken
     except User.DoesNotExist:

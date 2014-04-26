@@ -8,40 +8,42 @@ from datetime import datetime
 class Volunteer(models.Model):
 
     PERMISSION_GROUPS = {
-        ('ST', 'Staff'),
-        ('AD', 'Admin'),
-        ('VO', 'Volunteer')
+        ('Staff', 'Staff'),
+        ('Admin', 'Admin'),
+        ('Volunteer', 'Volunteer')
     }
         
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
-    user = models.OneToOneField(User, null=True, unique=True)
+    user = models.OneToOneField(User, unique=True)
     signup_date = models.DateField("Sign-up date", default=datetime.now())
     hours = models.FloatField(editable=False, default=0.0, max_length=20) 
-    credentials = models.CharField(max_length=2, choices=PERMISSION_GROUPS, default='VO', blank=True)
+    credentials = models.CharField(max_length=20, choices=PERMISSION_GROUPS, 
+                                    default='Volunteer', blank=True)
     vol_image = models.CharField(max_length=200, blank=True)
-    credit = models.FloatField(editable=False, default=0.0, max_length=20)   
+    credit = models.FloatField(editable=False, default=0.0, max_length=20)
 
     def full_name(self):
         return self.first_name + " " + self.last_name
-        
-    def natural_key(self):
-		return self.full_name()
 
-    def calculate_hours(self):
-        hours = 0
-        for s in self.session_set.all():
-            if s.event.is_volunteer_time:
-                tdelta = timeonly_delta(s.end, s.start)
-                hour_diff = tdelta.seconds / 3600.0
-                rounded = round(hour_diff, 1)
-                hours += rounded
-        return hours
+    def last_seen(self):
+        s = self.session_set.latest('event__date')
+        try:
+            return s.event.date
+        except AttributeError:
+            return None
+    
+    def add_session(self, s):
+        if s.event.is_volunteer_time:
+            tdelta = timeonly_delta(s.end, s.start)
+            hour_diff = tdelta.seconds / 3600.0
+            rounded = round(hour_diff, 1)
+            self.hours += rounded
+            self.calculate_credit(rounded)
+            self.save()
 
-    def save(self, *args, **kwargs):
-        self.hours = self.calculate_hours()
-        self.credit += self.hours
-        super(Volunteer, self).save(*args, **kwargs)
+    def calculate_credit(hours):
+        self.credit += hours
 
     def __unicode__(self):
         return self.full_name()
@@ -88,7 +90,7 @@ class Session(models.Model):
 
     def save(self, *args, **kwargs):
         super(Session, self).save(*args, **kwargs)
-        self.volunteer.save()
+        self.volunteer.add_session(self)
 
     def __unicode__(self):
         return "%s at %s" % (self.volunteer, self.event)

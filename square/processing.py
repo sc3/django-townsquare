@@ -21,59 +21,82 @@ def process_valid_login_post(request, form):
         return False
 
 
-def process_valid_volunteer_post(form):
+def process_valid_volunteer_post(form, vol_id=None):
 
-
-    # define a few sets of args to initialize or update user
-    username = form.cleaned_data['username']
-    password = form.cleaned_data['password']
-
+    new_username = form.cleaned_data['username']
+    new_password = form.cleaned_data['password']
 
     # set user permissions based on volunteer credentials
-    permissions = {
-        'ST' : 'is_superuser',
-        'AD' : 'is_staff',
-        'VO' : ''
-    }
-    p = form.cleaned_data['credentials']
+    # permissions = {
+    #     'ST' : 'is_superuser',
+    #     'AD' : 'is_staff',
+    #     'VO' : ''
+    # }
+    # new_permissions = form.cleaned_data['credentials']
     # TODO: add proper permissions to user model
+
 
     # if a username is not provided, make one from 
     # first name, last name, and sign up date
-    first_name = form.cleaned_data['first_name']
-    last_name = form.cleaned_data['last_name']
-    if not username:
-        username = gen_username(first_name, last_name, datetime.now())
+    new_firstname = form.cleaned_data['first_name']
+    new_lastname = form.cleaned_data['last_name']
+    if not new_username:
+        new_username = gen_username(new_firstname, new_lastname,
+                                        datetime.now())
 
 
-    # update or create a user object
-    u_q = User.objects.filter(username=username)
-    if u_q.count():
-        u = u_q[0]
-        _ = u_q.update(username=username, 
-                        password=password)
-    else:
-        u = User.objects.create_user(username, password)
-        u.save()
+    # find out whether new username is being used
+    try:
+        user = User.objects.get(username=new_username)
+
+        # if it is, make sure it's by volunteer we're editing 
+        if user.volunteer.id == vol_id:
+
+            # update user fields if supplied
+            if new_username:
+                user.username = new_username
+            if new_password:
+                user.password = new_password
+
+    # new username hasn't been taken
+    except User.DoesNotExist:
+
+        try:
+            # try to get the volunteer we're editing
+            vol = Volunteer.objects.get(id=vol_id)
+
+            # if it exists, get that volunteer's associated user
+            user = vol_queryset[0].user
+
+            # update the username and password of the user
+            # with the new fields
+            user.username = new_username
+            user.password = new_password
+
+        # if there is no volunteer yet, just create the new user
+        except Volunteer.DoesNotExist:
+
+            user = User.objects.create_user(new_username, password=new_password)
+
+    user.save()
 
 
     # define a set of volunteer fields, and get them from the form
     vol_fieldnames = ['first_name', 'last_name', 'credentials']
     vol_fields = {k: form.cleaned_data[k] for k in form.fields if k and k in vol_fieldnames}
     
-    # add the user we created to the volunteer fields
-    vol_fields['user'] = u
+    # add the user we updated/created to the volunteer fields
+    vol_fields['user'] = user
 
 
-    # update or create the volunteer
-    v_q = Volunteer.objects.filter(user=u)
-    if v_q.count():
-        _  = v_q.update(**vol_fields)
-        v = v_q[0]
-    else:
-        v = Volunteer.objects.create(**vol_fields)
+    # update/create the volunteer
+    try:
+        vol = Volunteer.objects.get(user=user)
+        vol.__dict__.update(**vol_fields)
+    except Volunteer.DoesNotExist:
+        vol = Volunteer.objects.create(**vol_fields)
 
-    v.save()
+    vol.save()
 
     
 def process_volunteer_get(vol_id):
@@ -94,7 +117,7 @@ def process_volunteer_get(vol_id):
     return VolunteerForm(initial=vol_fields) 
 
 
-def process_valid_event_post(form):
+def process_valid_event_post(form, vol_id=None):
 
     update_fields = {}
     for k in form.fields:

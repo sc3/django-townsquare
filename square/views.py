@@ -17,12 +17,12 @@ def about(request):
 
 
 def t2login(request):
-    
+
     # POST request to login page does validation/processing
     form = LoginForm(request.POST)
     
     if form.is_valid():
-
+        
         # authenticate the form
         succeeded = process_valid_login_post(request, form)
         if succeeded:
@@ -56,7 +56,6 @@ def home(request):
         return HttpResponseRedirect('/townsquare/volunteer/browse')
     
 
-
 @login_required
 def add_volunteer(request):
     if request.method == 'POST':
@@ -71,14 +70,14 @@ def add_volunteer(request):
 
     else:
         # GET request to add_volunteer page displays an empty form
-        form = VolunteerForm()
+        form = VolunteerForm(initial={'credentials': 'Volunteer'})
 
     return render(request, 'users/add_volunteer.html', 
                     {'f': form})
 
 
 @login_required
-def edit_volunteer(request, vol_id=None):
+def edit_volunteer(request, vol_id):
 
     if request.method == 'POST':
 
@@ -87,7 +86,7 @@ def edit_volunteer(request, vol_id=None):
 
         if form.is_valid():
 
-            process_valid_volunteer_post(form)
+            process_valid_volunteer_post(form, int(vol_id))
             return HttpResponseRedirect('/townsquare/volunteer/browse')
 
     else:
@@ -97,7 +96,7 @@ def edit_volunteer(request, vol_id=None):
         
     # render an HTTP response if it was an invalid POST, or a GET
     return render(request, 'users/edit_volunteer.html', 
-                    {'f': form})
+                    {'f': form, 'vol_id': vol_id})
 
 
 @login_required
@@ -139,7 +138,7 @@ def edit_event(request, event_id=None):
 
         if form.is_valid():
 
-            process_valid_event_post(form)
+            process_valid_event_post(form, event_id)
             return HttpResponseRedirect('/townsquare/event/browse')
 
     else:

@@ -6,7 +6,7 @@
 
 <div class="container">
     
-    <form action="/townsquare/volunteer/edit" method="post">
+    <form action="/townsquare/volunteer/edit/{{vol_id}}/" method="post">
 
     {% csrf_token %}
     {{ f.as_p }}

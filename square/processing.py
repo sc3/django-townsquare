@@ -21,40 +21,72 @@ def process_valid_login_post(request, form):
         return False
 
 
-def process_valid_volunteer_post(form):
+def process_valid_volunteer_post(request, form):
 
 
-    # define a few sets of args to initialize or update user
-    username = form.cleaned_data['username']
-    password = form.cleaned_data['password']
+    vol_id = int(request.session['vol_id'])
 
+    new_username = form.cleaned_data['username']
+    new_password = form.cleaned_data['password']
 
     # set user permissions based on volunteer credentials
-    permissions = {
-        'ST' : 'is_superuser',
-        'AD' : 'is_staff',
-        'VO' : ''
-    }
-    p = form.cleaned_data['credentials']
+    # permissions = {
+    #     'ST' : 'is_superuser',
+    #     'AD' : 'is_staff',
+    #     'VO' : ''
+    # }
+    # new_permissions = form.cleaned_data['credentials']
     # TODO: add proper permissions to user model
+
 
     # if a username is not provided, make one from 
     # first name, last name, and sign up date
-    first_name = form.cleaned_data['first_name']
-    last_name = form.cleaned_data['last_name']
-    if not username:
-        username = gen_username(first_name, last_name, datetime.now())
+    new_firstname = form.cleaned_data['first_name']
+    new_lastname = form.cleaned_data['last_name']
+    if not new_username:
+        new_username = gen_username(new_firstname, new_lastname, datetime.now())
+
+    # import pdb; pdb.set_trace(); 
+
+    # find out whether username is already being used
+    user_queryset = User.objects.filter(username=new_username)
+
+    # username is already taken
+    if user_queryset.count():
+        old_user = user_queryset[0]
+
+        # user with this username is the same one we're editing 
+        if old_user.volunteer.id == vol_id:
+            _ = user_queryset.update(username=new_username, 
+                                     password=new_password)
+            user = old_user
+
+        else:
+            # can't change username to that of an existing user
+            pass
 
 
-    # update or create a user object
-    u_q = User.objects.filter(username=username)
-    if u_q.count():
-        u = u_q[0]
-        _ = u_q.update(username=username, 
-                        password=password)
+    # username not taken
     else:
-        u = User.objects.create_user(username, password)
-        u.save()
+        # get the volunteer we're trying to edit
+        vol_queryset = Volunteer.objects.filter(id=vol_id)
+
+        # if it exists, get that volunteer's associated user
+        if vol_queryset.count():
+            old_user = vol_queryset[0].user
+            
+
+            # update the username and password of the user we're editing
+            old_user.username = new_username
+            old_user.password = new_password
+
+            user = old_user
+        else:
+            # if not, create the new user
+            new_user = User.objects.create_user(new_username, new_password)
+            user = new_user
+
+    user.save()
 
 
     # define a set of volunteer fields, and get them from the form
@@ -62,18 +94,18 @@ def process_valid_volunteer_post(form):
     vol_fields = {k: form.cleaned_data[k] for k in form.fields if k and k in vol_fieldnames}
     
     # add the user we created to the volunteer fields
-    vol_fields['user'] = u
+    vol_fields['user'] = user
 
 
     # update or create the volunteer
-    v_q = Volunteer.objects.filter(user=u)
-    if v_q.count():
-        _  = v_q.update(**vol_fields)
-        v = v_q[0]
+    vol_queryset = Volunteer.objects.filter(user=user)
+    if vol_queryset.count():
+        _  = vol_queryset.update(**vol_fields)
+        vol = vol_queryset[0]
     else:
-        v = Volunteer.objects.create(**vol_fields)
+        vol = Volunteer.objects.create(**vol_fields)
 
-    v.save()
+    vol.save()
 
     
 def process_volunteer_get(vol_id):
@@ -94,7 +126,7 @@ def process_volunteer_get(vol_id):
     return VolunteerForm(initial=vol_fields) 
 
 
-def process_valid_event_post(form):
+def process_valid_event_post(form, vol_id=None):
 
     update_fields = {}
     for k in form.fields:

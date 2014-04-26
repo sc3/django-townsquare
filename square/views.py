@@ -56,7 +56,6 @@ def home(request):
         return HttpResponseRedirect('/townsquare/volunteer/browse')
     
 
-
 @login_required
 def add_volunteer(request):
     if request.method == 'POST':
@@ -71,7 +70,7 @@ def add_volunteer(request):
 
     else:
         # GET request to add_volunteer page displays an empty form
-        form = VolunteerForm()
+        form = VolunteerForm(initial={'credentials': 'Volunteer'})
 
     return render(request, 'users/add_volunteer.html', 
                     {'f': form})

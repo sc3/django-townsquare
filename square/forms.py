@@ -36,12 +36,16 @@ class EventForm(ModelForm):
 class VolunteerForm(Form):
     
     first_name = CharField(label='First Name')
-    # middle_initial = CharField(label='Middle Initial', required=False)
+    # middle_initial = CharField(label='Middle Initial',
+    #       required=False)
     last_name = CharField(label='Last Name')
     username = CharField(label='Username', required=False)
-    password = CharField(label='New Password', required=False, widget=PasswordInput())
-    password_confirm = CharField(label='Re-enter Password', required=False, widget=PasswordInput())
-    credentials = ChoiceField(label='Permission Level', choices=Volunteer.PERMISSION_GROUPS)
+    password = CharField(label='New Password', 
+            required=False, widget=PasswordInput())
+    password_confirm = CharField(label='Re-enter Password', 
+            required=False, widget=PasswordInput())
+    credentials = ChoiceField(label='Permission Level', 
+            choices=Volunteer.PERMISSION_GROUPS)
     
     
 class LoginForm(Form):

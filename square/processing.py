@@ -41,14 +41,15 @@ def process_valid_volunteer_post(form, vol_id=None):
     new_firstname = form.cleaned_data['first_name']
     new_lastname = form.cleaned_data['last_name']
     if not new_username:
-        new_username = gen_username(new_firstname, new_lastname, datetime.now())
+        new_username = gen_username(new_firstname, new_lastname,
+                                        datetime.now())
 
 
-    # find out whether username is being used
+    # find out whether new username is being used
     try:
         user = User.objects.get(username=new_username)
 
-        # make sure user is associated with volunteer we're editing 
+        # if it is, make sure it's by volunteer we're editing 
         if user.volunteer.id == vol_id:
 
             # update user fields if supplied
@@ -57,7 +58,7 @@ def process_valid_volunteer_post(form, vol_id=None):
             if new_password:
                 user.password = new_password
 
-    # new username, and it's not taken
+    # new username hasn't been taken
     except User.DoesNotExist:
 
         try:
@@ -68,6 +69,7 @@ def process_valid_volunteer_post(form, vol_id=None):
             user = vol_queryset[0].user
 
             # update the username and password of the user
+            # with the new fields
             user.username = new_username
             user.password = new_password
 

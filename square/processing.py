@@ -117,7 +117,7 @@ def process_volunteer_get(vol_id):
     return VolunteerForm(initial=vol_fields) 
 
 
-def process_valid_event_post(form, vol_id=None):
+def process_valid_event_post(form, event_id=None):
 
     update_fields = {}
     for k in form.fields:

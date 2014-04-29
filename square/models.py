@@ -21,7 +21,7 @@ class Volunteer(models.Model):
     credentials = models.CharField(max_length=20, choices=PERMISSION_GROUPS, 
                                     default='Volunteer', blank=True)
     vol_image = models.CharField(max_length=200, blank=True)
-    credit = models.FloatField(editable=False, default=0.0, max_length=20)
+    credit = models.IntegerField(editable=False, default=0, max_length=20)
 
     def full_name(self):
         return self.first_name + " " + self.last_name
@@ -37,12 +37,12 @@ class Volunteer(models.Model):
         if s.event.is_volunteer_time:
             tdelta = timeonly_delta(s.end, s.start)
             hour_diff = tdelta.seconds / 3600.0
-            rounded = round(hour_diff, 2)
-            self.hours += round(rounded, 1)
+            rounded = round(hour_diff, 1)
+            self.hours += rounded
             self.calculate_credit(rounded)
 
     def calculate_credit(self, hours):
-        self.credit += hours
+        self.credit += (hours * 100)
 
     def __unicode__(self):
         return self.full_name()

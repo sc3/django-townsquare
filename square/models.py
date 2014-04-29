@@ -37,12 +37,11 @@ class Volunteer(models.Model):
         if s.event.is_volunteer_time:
             tdelta = timeonly_delta(s.end, s.start)
             hour_diff = tdelta.seconds / 3600.0
-            rounded = round(hour_diff, 1)
-            self.hours += rounded
+            rounded = round(hour_diff, 2)
+            self.hours += round(rounded, 1)
             self.calculate_credit(rounded)
-            self.save()
 
-    def calculate_credit(hours):
+    def calculate_credit(self, hours):
         self.credit += hours
 
     def __unicode__(self):
@@ -80,6 +79,11 @@ class Event(models.Model):
                 long_type = longform
             return "%s on %s" % (long_type, self.date)
 
+    def save(self, *args, **kwargs):
+        super(Event, self).save(*args, **kwargs)
+        for s in self.session_set.all():
+            s.save()
+
 
 class Session(models.Model):
     volunteer = models.ForeignKey(Volunteer)
@@ -91,6 +95,7 @@ class Session(models.Model):
     def save(self, *args, **kwargs):
         super(Session, self).save(*args, **kwargs)
         self.volunteer.add_session(self)
+        self.volunteer.save()
 
     def __unicode__(self):
         return "%s at %s" % (self.volunteer, self.event)

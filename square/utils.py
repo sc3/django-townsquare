@@ -20,8 +20,8 @@ def gen_password(length=8):
     return pw
 
     
-def gen_username(first_name, last_name, date):
+def gen_username(first_name, last_name, signup_date):
     return '{0}{1}:{2}'.format(
-            first, last, v.signup_date.strftime('%m-%d-%y'))
+            first_name, last_name, signup_date.strftime('%m-%d-%y'))
 
 

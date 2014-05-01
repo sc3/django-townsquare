@@ -15,27 +15,12 @@ class Volunteer(models.Model):
         
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
-    user = models.OneToOneField(User, unique=True)
+    user = models.OneToOneField(User, unique=True, null=True)
     signup_date = models.DateField("Sign-up date", default=datetime.now())
     hours = models.FloatField(editable=False, default=0.0, max_length=20) 
-    credentials = models.CharField(max_length=20, choices=PERMISSION_GROUPS, 
-                                    default='Volunteer', blank=True)
+    credentials = models.CharField(max_length=200, null=True, blank=True)
     vol_image = models.CharField(max_length=200, blank=True)
     credit = models.IntegerField(editable=False, default=0, max_length=20)
-
-    def _get_full_name(self):
-        return self.first_name + " " + self.last_name
-
-    full_name = property(_get_full_name)
-
-    def _get_last_seen(self):
-        try:
-            s = self.session_set.latest('event__date')
-            return s.event.date
-        except StandardError:
-            return None
-    
-    last_seen = property(_get_last_seen)
 
     def add_session(self, s):
         if s.event.is_volunteer_time:
@@ -47,6 +32,23 @@ class Volunteer(models.Model):
 
     def calculate_credit(self, hours):
         self.credit += (hours * 100)
+
+    def _get_full_name(self):
+        return self.first_name + " " + self.last_name
+
+    def _get_last_seen(self):
+        try:
+            s = self.session_set.latest('event__date')
+            return s.event.date
+        except StandardError:
+            return None
+
+    def _get_permission(self):
+    	return self.user.groups.filter()[0].name
+
+    full_name = property(_get_full_name)
+    last_seen = property(_get_last_seen)
+    permission = property(_get_permission)
 
     def __unicode__(self):
         return self.full_name

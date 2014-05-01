@@ -12,6 +12,7 @@
     <th>Credentials</th>
     <th>Hours</th>
     <th>Store Credit</th>
+    <th>Permission Level</th>
     <th>Account Info</th>
   </tr>
 
@@ -21,7 +22,8 @@
     <td>{{ volunteer.signup_date }}</td>
     <td>{{ volunteer.credentials }}</td>
     <td>{{ volunteer.hours }}</td>
-    <td>{{ volunteer.credit }}</td>    
+    <td>{{ volunteer.credit }}</td>
+    <td>{{ volunteer.permission }}</td>    
     <td><input class="volunteer-details" type="button" 
             onClick="location.href='/townsquare/volunteer/edit/{{volunteer.id}}'"></input></td>
   </tr>

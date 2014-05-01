@@ -3,22 +3,7 @@ from django.forms import Form, ModelForm, CharField, PasswordInput, \
         BooleanField, ModelChoiceField, DateField, ChoiceField
 from django.contrib.admin.widgets import AdminDateWidget 
 from square.models import Event, EventLocation, Volunteer
-
-
-def initial_event_location():
-
-    try:
-        return EventLocation.objects.get(id=1)
-    except EventLocation.DoesNotExist:
-        el = EventLocation.objects.create(
-            full_name='FreeGeek Chicago', 
-            address='3411 W. Diversey Avenue',
-            city='Chicago',
-            state='IL',
-            zip_code='60647'
-        )
-        el.save()
-        return el
+from management.commands.initialize import initial_event_location
 
 
 class EventForm(ModelForm):
@@ -38,7 +23,7 @@ class VolunteerForm(Form):
     first_name = CharField(label='First Name')
     last_name = CharField(label='Last Name')
     username = CharField(label='Username', required=False)
-    credentials = ChoiceField(label='Permission Level', 
+    permission = ChoiceField(label='Permission Level', initial='Volunteer',
             choices=Volunteer.PERMISSION_GROUPS)
     password = CharField(label='New Password', 
             required=False, widget=PasswordInput())

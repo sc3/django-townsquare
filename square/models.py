@@ -23,16 +23,20 @@ class Volunteer(models.Model):
     vol_image = models.CharField(max_length=200, blank=True)
     credit = models.IntegerField(editable=False, default=0, max_length=20)
 
-    def full_name(self):
+    def _get_full_name(self):
         return self.first_name + " " + self.last_name
 
-    def last_seen(self):
+    full_name = property(_get_full_name)
+
+    def _get_last_seen(self):
         try:
             s = self.session_set.latest('event__date')
             return s.event.date
         except StandardError:
             return None
     
+    last_seen = property(_get_last_seen)
+
     def add_session(self, s):
         if s.event.is_volunteer_time:
             tdelta = timeonly_delta(s.end, s.start)

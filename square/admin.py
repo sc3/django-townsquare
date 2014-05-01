@@ -18,15 +18,12 @@ class EventAdmin(admin.ModelAdmin):
 
 class VolunteerAdmin(admin.ModelAdmin):
 
-    def full_name(self, obj):
-        return obj.full_name()
-    full_name.short_description = 'Name'
-
     list_display = ('full_name', 'signup_date', 'hours')
     search_fields = ['full_name']
 
-    readonly_fields = ('hours',)
+    readonly_fields = ('hours', 'credit')
     fieldsets = [
+    	('Personal Info', 	{'fields': ['first_name', 'last_name']}),
     	('Legacy Info',     {'fields': ['signup_date', 'hours']}),
     ]
     

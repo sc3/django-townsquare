@@ -15,24 +15,13 @@ class Volunteer(models.Model):
         
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
-    user = models.OneToOneField(User, unique=True)
+    user = models.OneToOneField(User, unique=True, null=True)
     signup_date = models.DateField("Sign-up date", default=datetime.now())
     hours = models.FloatField(editable=False, default=0.0, max_length=20) 
-    credentials = models.CharField(max_length=20, choices=PERMISSION_GROUPS, 
-                                    default='Volunteer', blank=True)
+    credentials = models.CharField(max_length=200, null=True, blank=True)
     vol_image = models.CharField(max_length=200, blank=True)
-    credit = models.FloatField(editable=False, default=0.0, max_length=20)
+    credit = models.IntegerField(editable=False, default=0, max_length=20)
 
-    def full_name(self):
-        return self.first_name + " " + self.last_name
-
-    def last_seen(self):
-        s = self.session_set.latest('event__date')
-        try:
-            return s.event.date
-        except AttributeError:
-            return None
-    
     def add_session(self, s):
         if s.event.is_volunteer_time:
             tdelta = timeonly_delta(s.end, s.start)
@@ -40,13 +29,29 @@ class Volunteer(models.Model):
             rounded = round(hour_diff, 1)
             self.hours += rounded
             self.calculate_credit(rounded)
-            self.save()
 
-    def calculate_credit(hours):
-        self.credit += hours
+    def calculate_credit(self, hours):
+        self.credit += (hours * 100)
+
+    def _get_full_name(self):
+        return self.first_name + " " + self.last_name
+
+    def _get_last_seen(self):
+        try:
+            s = self.session_set.latest('event__date')
+            return s.event.date
+        except StandardError:
+            return None
+
+    def _get_permission(self):
+    	return self.user.groups.filter()[0].name
+
+    full_name = property(_get_full_name)
+    last_seen = property(_get_last_seen)
+    permission = property(_get_permission)
 
     def __unicode__(self):
-        return self.full_name()
+        return self.full_name
 
 
 class EventLocation(models.Model):
@@ -80,6 +85,11 @@ class Event(models.Model):
                 long_type = longform
             return "%s on %s" % (long_type, self.date)
 
+    def save(self, *args, **kwargs):
+        super(Event, self).save(*args, **kwargs)
+        for s in self.session_set.all():
+            s.save()
+
 
 class Session(models.Model):
     volunteer = models.ForeignKey(Volunteer)
@@ -91,6 +101,7 @@ class Session(models.Model):
     def save(self, *args, **kwargs):
         super(Session, self).save(*args, **kwargs)
         self.volunteer.add_session(self)
+        self.volunteer.save()
 
     def __unicode__(self):
         return "%s at %s" % (self.volunteer, self.event)

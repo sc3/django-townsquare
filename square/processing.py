@@ -2,7 +2,7 @@ from square.models import Volunteer, Event, EventLocation
 from square.utils import gen_password, gen_username
 from square.forms import VolunteerForm, LoginForm, EventForm
 from django.contrib.auth import authenticate, login
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, Group
 from datetime import datetime
 
 
@@ -25,15 +25,6 @@ def process_valid_volunteer_post(form, vol_id=None):
 
     new_username = form.cleaned_data['username']
     new_password = form.cleaned_data['password']
-
-    # set user permissions based on volunteer credentials
-    # permissions = {
-    #     'ST' : 'is_superuser',
-    #     'AD' : 'is_staff',
-    #     'VO' : ''
-    # }
-    # new_permissions = form.cleaned_data['credentials']
-    # TODO: add proper permissions to user model
 
 
     # if a username is not provided, make one from 
@@ -66,7 +57,7 @@ def process_valid_volunteer_post(form, vol_id=None):
             vol = Volunteer.objects.get(id=vol_id)
 
             # if it exists, get that volunteer's associated user
-            user = vol_queryset[0].user
+            user = vol.user
 
             # update the username and password of the user
             # with the new fields
@@ -78,16 +69,23 @@ def process_valid_volunteer_post(form, vol_id=None):
 
             user = User.objects.create_user(new_username, password=new_password)
 
+
+    # add volunteer permission to user
+    new_permission = form.cleaned_data['permission']
+    try:
+        new_group = Group.objects.get(name=new_permission)
+    except Group.DoesNotExist:
+        raise Exception("Invalid permission level: '{0}'".format(new_permission))
+    user.groups.add(new_group)
     user.save()
 
 
     # define a set of volunteer fields, and get them from the form
-    vol_fieldnames = ['first_name', 'last_name', 'credentials']
+    vol_fieldnames = ['first_name', 'last_name']
     vol_fields = {k: form.cleaned_data[k] for k in form.fields if k and k in vol_fieldnames}
     
     # add the user we updated/created to the volunteer fields
     vol_fields['user'] = user
-
 
     # update/create the volunteer
     try:
@@ -101,23 +99,18 @@ def process_valid_volunteer_post(form, vol_id=None):
     
 def process_volunteer_get(vol_id):
 
-    if vol_id is None:
-        raise Exception("Can't POST to this URL. Try editing a specific "
-                        "volunteer: append '/n', where n is the id of the "
-                        "volunteer you want.")
-
     vol = Volunteer.objects.get(id=int(vol_id))
     vol_fields = {  
             'first_name': vol.first_name, 
             'last_name': vol.last_name,
             'username': vol.user.username,
             'password': vol.user.password,
-            'credentials': vol.credentials
+            'permission': vol.permission
     }
     return VolunteerForm(initial=vol_fields) 
 
 
-def process_valid_event_post(form, vol_id=None):
+def process_valid_event_post(form, event_id=None):
 
     update_fields = {}
     for k in form.fields:

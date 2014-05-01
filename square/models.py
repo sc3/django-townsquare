@@ -49,7 +49,7 @@ class Volunteer(models.Model):
         self.credit += (hours * 100)
 
     def __unicode__(self):
-        return self.full_name()
+        return self.full_name
 
 
 class EventLocation(models.Model):

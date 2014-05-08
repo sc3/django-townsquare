@@ -17,7 +17,6 @@ class Volunteer(models.Model):
     last_name = models.CharField(max_length=100)
     user = models.OneToOneField(User, unique=True, null=True)
     signup_date = models.DateField("Sign-up date", default=datetime.now())
-    credentials = models.CharField(max_length=200, null=True, blank=True)
     vol_image = models.CharField(max_length=200, blank=True)
 
     @property

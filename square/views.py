@@ -70,7 +70,7 @@ def add_volunteer(request):
 
     else:
         # GET request to add_volunteer page displays an empty form
-        form = VolunteerForm(initial={'credentials': 'Volunteer'})
+        form = VolunteerForm()
 
     return render(request, 'users/add_volunteer.html', 
                     {'f': form})

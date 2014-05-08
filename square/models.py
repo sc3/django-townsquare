@@ -17,38 +17,46 @@ class Volunteer(models.Model):
     last_name = models.CharField(max_length=100)
     user = models.OneToOneField(User, unique=True, null=True)
     signup_date = models.DateField("Sign-up date", default=datetime.now())
-    hours = models.FloatField(editable=False, default=0.0, max_length=20) 
-    credentials = models.CharField(max_length=200, null=True, blank=True)
     vol_image = models.CharField(max_length=200, blank=True)
-    credit = models.IntegerField(editable=False, default=0, max_length=20)
 
-    def add_session(self, s):
-        if s.event.is_volunteer_time:
-            tdelta = timeonly_delta(s.end, s.start)
-            hour_diff = tdelta.seconds / 3600.0
-            rounded = round(hour_diff, 1)
-            self.hours += rounded
-            self.calculate_credit(rounded)
+    @property
+    def hours(self):
+        hours = 0.0
+        for s in self.session_set.filter(event__is_volunteer_time=True):
+            hours += s.elapsed_time
+        
+        return hours
 
-    def calculate_credit(self, hours):
-        self.credit += (hours * 100)
+    @property
+    def rewards_used(self):
+        pass
+        # rewards_used = 0
+        # for s in self.sale_set:
+        #     if s.uses_rewards:
+        #         rewards_used += s.amount
 
-    def _get_full_name(self):
+    @property
+    def credit(self):
+        return self.hours
+        # return (self.hours - self.rewards_used) 
+
+    @ property
+    def full_name(self):
         return self.first_name + " " + self.last_name
 
-    def _get_last_seen(self):
+    @property
+    def last_seen(self):
         try:
             s = self.session_set.latest('event__date')
             return s.event.date
         except StandardError:
             return None
 
-    def _get_permission(self):
+    @property
+    def permission(self):
+        # take the first permission group a volunteer is in;
+        # they should only be in one 
     	return self.user.groups.filter()[0].name
-
-    full_name = property(_get_full_name)
-    last_seen = property(_get_last_seen)
-    permission = property(_get_permission)
 
     def __unicode__(self):
         return self.full_name
@@ -85,11 +93,6 @@ class Event(models.Model):
                 long_type = longform
             return "%s on %s" % (long_type, self.date)
 
-    def save(self, *args, **kwargs):
-        super(Event, self).save(*args, **kwargs)
-        for s in self.session_set.all():
-            s.save()
-
 
 class Session(models.Model):
     volunteer = models.ForeignKey(Volunteer)
@@ -98,10 +101,22 @@ class Session(models.Model):
     end = models.TimeField()
     orientation = models.BooleanField(default=False)
 
-    def save(self, *args, **kwargs):
-        super(Session, self).save(*args, **kwargs)
-        self.volunteer.add_session(self)
-        self.volunteer.save()
+    @property
+    def elapsed_time(self):
+        tdelta = timeonly_delta(self.end, self.start)
+        hour_diff = tdelta.seconds / 3600.0
+        return round(hour_diff, 1)
 
     def __unicode__(self):
         return "%s at %s" % (self.volunteer, self.event)
+
+
+# class Sale(models.Model):
+#     uses_rewards = models.BooleanField(default=False)
+#     # price in cents
+#     total_price = models.IntegerField(default=0)
+#     staff = models.ForeignKey(Volunteer)
+#     description = models.TextField()
+
+
+

@@ -11,6 +11,7 @@ class EventForm(ModelForm):
     is_volunteer_time = BooleanField(required=False, initial=True)
     event_location = ModelChoiceField(queryset=EventLocation.objects.all(), 
                                         initial=initial_event_location())
+    event_type = ChoiceField(initial='Open Build', choices=Event.EVENT_TYPES)
 
     class Meta:
         model = Event

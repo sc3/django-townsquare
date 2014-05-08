@@ -74,9 +74,9 @@ class EventLocation(models.Model):
 
 class Event(models.Model):
     EVENT_TYPES = {
-        ('VP', 'Volunteer Program'),
-        ('ME', 'Meeting'),
-        ('SP', 'Special Event')
+        ('Open Build', 'Open Build'),
+        ('Community Council', 'Community Council'),
+        ('Special Event', 'Special Event')
     }
 
     event_type = models.CharField(max_length=2, choices=EVENT_TYPES, default='VP')

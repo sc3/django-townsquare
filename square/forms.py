@@ -1,9 +1,10 @@
 
 from django.forms import Form, ModelForm, CharField, PasswordInput, \
-        BooleanField, ModelChoiceField, DateField, ChoiceField
+        BooleanField, ModelChoiceField, DateField, ChoiceField, TimeField
 from django.contrib.admin.widgets import AdminDateWidget 
 from square.models import Event, EventLocation, Volunteer
 from management.commands.initialize import initial_event_location
+from datetime import datetime
 
 
 class EventForm(ModelForm):
@@ -12,6 +13,9 @@ class EventForm(ModelForm):
     event_location = ModelChoiceField(queryset=EventLocation.objects.all(), 
                                         initial=initial_event_location())
     event_type = ChoiceField(initial='Open Build', choices=Event.EVENT_TYPES)
+    start = TimeField(initial=datetime.strptime('11:00AM', '%I:%M%p'))
+    end = TimeField(initial=datetime.strptime('5:00PM', '%I:%M%p'))
+    date = DateField(initial=datetime.now)
 
     class Meta:
         model = Event

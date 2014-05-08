@@ -79,19 +79,16 @@ class Event(models.Model):
         ('Special Event', 'Special Event')
     }
 
-    event_type = models.CharField(max_length=2, choices=EVENT_TYPES, default='VP')
-    date = models.DateField(default=datetime.now())
-    start = models.TimeField(default=datetime.strptime('11:00AM', '%I:%M%p'))
-    end = models.TimeField(default=datetime.strptime('5:00PM', '%I:%M%p'))
+    event_type = models.CharField(max_length=50, choices=EVENT_TYPES)
+    date = models.DateField()
+    start = models.TimeField()
+    end = models.TimeField()
     event_location = models.ForeignKey(EventLocation)
     notes = models.TextField(blank=True)
     is_volunteer_time = models.BooleanField('Counts towards volunteer hours')
 
     def __unicode__(self):
-    	for abbrev, longform in self.EVENT_TYPES:
-            if abbrev == self.event_type:
-                long_type = longform
-            return "%s on %s" % (long_type, self.date)
+        return "{0} on {1}".format(self.event_type, self.date)
 
 
 class Session(models.Model):
@@ -108,7 +105,7 @@ class Session(models.Model):
         return round(hour_diff, 1)
 
     def __unicode__(self):
-        return "%s at %s" % (self.volunteer, self.event)
+        return "{0} at {1}".format(self.volunteer, self.event)
 
 
 # class Sale(models.Model):

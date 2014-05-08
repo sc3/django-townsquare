@@ -1,5 +1,6 @@
 from django.contrib import admin
 from square.models import Event, EventLocation, Session, Volunteer
+from square.forms import EventForm, VolunteerForm
 
 class SessionInline(admin.TabularInline):
     model = Session
@@ -14,6 +15,7 @@ class EventAdmin(admin.ModelAdmin):
     ]
     inlines = [SessionInline]
     list_display = ('event_type', 'date', 'event_location')
+    form = EventForm
 
 
 class VolunteerAdmin(admin.ModelAdmin):
@@ -25,8 +27,7 @@ class VolunteerAdmin(admin.ModelAdmin):
     fieldsets = [
     	('Personal Info', 	{'fields': ['first_name', 'last_name']}),
     	('Legacy Info',     {'fields': ['signup_date', 'hours']}),
-    ]
-    
+    ]    
 
 
 admin.site.register(Event, EventAdmin)

@@ -1,7 +1,6 @@
 
 from django.db import models
 from django.contrib.auth.models import User
-from square.utils import timeonly_delta
 from datetime import datetime
 
 
@@ -16,7 +15,7 @@ class Volunteer(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     user = models.OneToOneField(User, unique=True, null=True)
-    signup_date = models.DateField("Sign-up date", default=datetime.now())
+    signup_date = models.DateField("Sign-up date")
     vol_image = models.CharField(max_length=200, blank=True)
 
     @property
@@ -47,7 +46,7 @@ class Volunteer(models.Model):
     @property
     def last_seen(self):
         try:
-            s = self.session_set.latest('event__date')
+            s = self.session_set.latest('event__start')
             return s.event.date
         except StandardError:
             return None
@@ -80,15 +79,14 @@ class Event(models.Model):
     }
 
     event_type = models.CharField(max_length=50, choices=EVENT_TYPES)
-    date = models.DateField()
-    start = models.TimeField()
-    end = models.TimeField()
+    start = models.DateTimeField()
+    end = models.DateTimeField()
     event_location = models.ForeignKey(EventLocation)
     notes = models.TextField(blank=True)
     is_volunteer_time = models.BooleanField('Counts towards volunteer hours')
 
     def __unicode__(self):
-        return "{0} on {1}".format(self.event_type, self.date)
+        return "{0} on {1}".format(self.event_type, self.start.strftime('%m/%d/%Y'))
 
 
 class Session(models.Model):
@@ -100,8 +98,8 @@ class Session(models.Model):
 
     @property
     def elapsed_time(self):
-        tdelta = timeonly_delta(self.end, self.start)
-        hour_diff = tdelta.seconds / 3600.0
+        delta = (self.end - self.start)
+        hour_diff = delta.seconds / 3600.0
         return round(hour_diff, 1)
 
     def __unicode__(self):

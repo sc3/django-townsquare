@@ -8,13 +8,17 @@ class SessionInline(admin.TabularInline):
 
 
 class EventAdmin(admin.ModelAdmin):
-    fieldsets = [
-        ('What and Where is it?', {'fields': ['event_type', 'event_location']}),
-    	('When is it?',           {'fields': ['start', 'end']}),
-        ('Additional Info',       {'fields': ['notes', 'is_volunteer_time'], 'classes': ['collapse']}),
-    ]
+    readonly_fields = ('total_participants', 'total_service_hours')
+    fieldsets = (
+        ('Summary', {
+                'fields': (('total_participants', 'total_service_hours'), )
+        }), 
+        ('Event Details', {
+            'classes': ('collapse',),
+            'fields': ('date', ('start', 'end'), 'location', 'notes', 'is_volunteer_time'),
+        })
+    )
     inlines = [SessionInline]
-    list_display = ('event_type', 'start', 'end', 'event_location')
     form = EventForm
 
 

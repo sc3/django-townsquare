@@ -3,8 +3,11 @@ from datetime import date, time, datetime
 import random, string
 
 
-def time_today(hour):
-    return datetime.combine(datetime.now(), time(hour=hour))
+def timeonly_delta(timea, timeb):
+    datea = datetime.combine(datetime.today(), timea)
+    dateb = datetime.combine(datetime.today(), timeb)
+    delta = datea - dateb
+    return delta.seconds / 3600.0
 
 
 def gen_password(length=8):
@@ -17,5 +20,3 @@ def gen_password(length=8):
 def gen_username(first_name, last_name, signup_date):
     return '{0}{1}:{2}'.format(
             first_name, last_name, signup_date.strftime('%m-%d-%y'))
-
-

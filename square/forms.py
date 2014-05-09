@@ -1,26 +1,26 @@
 
 from django.forms import Form, ModelForm, CharField, PasswordInput, \
-        BooleanField, ModelChoiceField, DateTimeField, ChoiceField, SplitDateTimeField
-from django.contrib.admin.widgets import AdminDateWidget 
-from django.forms.widgets import SplitDateTimeWidget
+        BooleanField, ModelChoiceField, ChoiceField, SplitDateTimeField, \
+        DateField, TimeField
 from square.models import Event, EventLocation, Volunteer
 from management.commands.initialize import initial_event_location
 from datetime import datetime, time
-from square.utils import time_today
 
 
 class EventForm(ModelForm):
-        
-    is_volunteer_time = BooleanField(required=False, initial=True)
-    event_type = ChoiceField(initial='Open Build', choices=Event.EVENT_TYPES)
-    start = SplitDateTimeField(initial=time_today(11), widget=SplitDateTimeWidget)
-    end = SplitDateTimeField(initial=time_today(17), widget=SplitDateTimeWidget)
-    event_location = ModelChoiceField(queryset=EventLocation.objects.all(), 
+    type = ChoiceField(label='Event Type', initial='Open Build', choices=Event.EVENT_TYPES)
+    date = DateField(label='Event Date', initial=datetime.today())
+    start = TimeField(initial=time(11))
+    end = TimeField(initial=time(17))
+    location = ModelChoiceField(
+            label='Event Location',
+            queryset=EventLocation.objects.all(), 
             initial=initial_event_location())
+    is_volunteer_time = BooleanField(required=False, initial=True)
 
     class Meta:
         model = Event
-        fields = ('notes',)
+        fields = ['type', 'date', 'start', 'end', 'location', 'notes', 'is_volunteer_time']
 
 
 class VolunteerForm(Form):

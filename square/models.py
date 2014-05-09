@@ -12,11 +12,10 @@ class Volunteer(models.Model):
         ('Volunteer', 'Volunteer')
     }
         
-    first_name = models.CharField(max_length=100)
-    last_name = models.CharField(max_length=100)
+    full_name = models.CharField(max_length=200)
+    email = models.CharField(max_length=200)
     user = models.OneToOneField(User, unique=True, null=True)
-    signup_date = models.DateField("Sign-up date")
-    vol_image = models.CharField(max_length=200, blank=True)
+    signup_date = models.DateField("Date of Orientation")
 
     @property
     def hours(self):
@@ -28,7 +27,7 @@ class Volunteer(models.Model):
 
     @property
     def rewards_used(self):
-        rewards_used = 0
+        rewards_used = 0.0
         # for s in self.sale_set.all():
         #     if s.uses_rewards:
         #         rewards_used += s.amount
@@ -37,10 +36,6 @@ class Volunteer(models.Model):
     @property
     def credit(self):
         return (self.hours - self.rewards_used) 
-
-    @property
-    def full_name(self):
-        return self.first_name + " " + self.last_name
 
     @property
     def last_seen(self):

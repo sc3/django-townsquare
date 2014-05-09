@@ -27,16 +27,20 @@ class EventAdmin(admin.ModelAdmin):
 
 class VolunteerAdmin(admin.ModelAdmin):
 
-    list_display = ('full_name', 'signup_date', 'hours')
+    list_display = ('full_name', 'signup_date', 'hours', 'credit')
     search_fields = ['full_name']
 
     readonly_fields = ('hours', 'credit')
-    fieldsets = [
-    	('Personal Info', 	
-            {'fields': ['first_name', 'last_name']}),
-    	('Legacy Info',     
-            {'fields': ['signup_date', 'hours']}),
-    ]    
+    fieldsets = (
+    	('Contact Info', {
+            'fields': ('full_name', 'email')
+        }),
+        ('Account Info', {
+            'fields': ('username', 'signup_date', 'hours', 'credit')
+        }),
+    )    
+
+    form = VolunteerForm
 
 
 admin.site.register(Event, EventAdmin)

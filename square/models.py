@@ -1,8 +1,8 @@
 
 from django.db import models
 from django.contrib.auth.models import User
+from square.utils import timeonly_delta
 from datetime import datetime
-
 
 class Volunteer(models.Model):
 
@@ -28,18 +28,17 @@ class Volunteer(models.Model):
 
     @property
     def rewards_used(self):
-        pass
-        # rewards_used = 0
-        # for s in self.sale_set:
+        rewards_used = 0
+        # for s in self.sale_set.all():
         #     if s.uses_rewards:
         #         rewards_used += s.amount
+        return rewards_used
 
     @property
     def credit(self):
-        return self.hours
-        # return (self.hours - self.rewards_used) 
+        return (self.hours - self.rewards_used) 
 
-    @ property
+    @property
     def full_name(self):
         return self.first_name + " " + self.last_name
 
@@ -54,8 +53,8 @@ class Volunteer(models.Model):
     @property
     def permission(self):
         # take the first permission group a volunteer is in;
-        # they should only be in one 
-    	return self.user.groups.filter()[0].name
+        # they should be in exactly one group 
+        return self.user.groups.filter()[0].name
 
     def __unicode__(self):
         return self.full_name
@@ -70,6 +69,11 @@ class EventLocation(models.Model):
     def __unicode__(self):
         return self.full_name
 
+#
+# after EventLocation to avoid recursive import
+from square.management.commands.initialize import initial_event_location
+#
+#
 
 class Event(models.Model):
     EVENT_TYPES = {
@@ -78,15 +82,27 @@ class Event(models.Model):
         ('Special Event', 'Special Event')
     }
 
-    event_type = models.CharField(max_length=50, choices=EVENT_TYPES)
-    start = models.DateTimeField()
-    end = models.DateTimeField()
-    event_location = models.ForeignKey(EventLocation)
+    type = models.CharField(max_length=50, choices=EVENT_TYPES, default='Open Build')
+    date = models.DateField(default=datetime.today())
+    start = models.TimeField(default=datetime.now())
+    end = models.TimeField(default=datetime.now())
+    location = models.ForeignKey(EventLocation, default=initial_event_location())
     notes = models.TextField(blank=True)
     is_volunteer_time = models.BooleanField('Counts towards volunteer hours')
 
+    @property
+    def total_participants(self):
+        return self.session_set.count()
+
+    @property
+    def total_service_hours(self):
+        hours = 0
+        for s in self.session_set.all():
+            hours += s.elapsed_time
+        return hours
+
     def __unicode__(self):
-        return "{0} on {1}".format(self.event_type, self.start.strftime('%m/%d/%Y'))
+        return "{0} on {1}".format(self.type, self.date)
 
 
 class Session(models.Model):
@@ -98,9 +114,8 @@ class Session(models.Model):
 
     @property
     def elapsed_time(self):
-        delta = (self.end - self.start)
-        hour_diff = delta.seconds / 3600.0
-        return round(hour_diff, 1)
+        tdelta = timeonly_delta(self.end, self.start)
+        return round(tdelta, 1)
 
     def __unicode__(self):
         return "{0} at {1}".format(self.volunteer, self.event)
@@ -112,6 +127,3 @@ class Session(models.Model):
 #     total_price = models.IntegerField(default=0)
 #     staff = models.ForeignKey(Volunteer)
 #     description = models.TextField()
-
-
-

@@ -23,7 +23,7 @@ class EventForm(ModelForm):
         fields = ['type', 'date', 'start', 'end', 'location', 'notes', 'is_volunteer_time']
 
 
-class VolunteerForm(Form):
+class VolunteerForm(ModelForm):
     
     first_name = CharField(label='First Name')
     last_name = CharField(label='Last Name')
@@ -34,7 +34,10 @@ class VolunteerForm(Form):
             required=False, widget=PasswordInput())
     password_confirm = CharField(label='Re-enter Password', 
             required=False, widget=PasswordInput())
-    
+
+    class Meta:
+        model = Volunteer
+        
     
 class LoginForm(Form):
         

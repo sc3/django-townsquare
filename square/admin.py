@@ -8,10 +8,13 @@ class SessionInline(admin.TabularInline):
 
 
 class EventAdmin(admin.ModelAdmin):
+
+    list_display = ('type', 'date', 'total_participants', 'total_service_hours')
     readonly_fields = ('total_participants', 'total_service_hours')
+    
     fieldsets = (
         ('Summary', {
-                'fields': (('total_participants', 'total_service_hours'), )
+            'fields': (('total_participants', 'total_service_hours'), )
         }), 
         ('Event Details', {
             'classes': ('collapse',),
@@ -29,8 +32,10 @@ class VolunteerAdmin(admin.ModelAdmin):
 
     readonly_fields = ('hours', 'credit')
     fieldsets = [
-    	('Personal Info', 	{'fields': ['first_name', 'last_name']}),
-    	('Legacy Info',     {'fields': ['signup_date', 'hours']}),
+    	('Personal Info', 	
+            {'fields': ['first_name', 'last_name']}),
+    	('Legacy Info',     
+            {'fields': ['signup_date', 'hours']}),
     ]    
 
 

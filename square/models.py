@@ -70,7 +70,8 @@ class EventLocation(models.Model):
         return self.full_name
 
 #
-# after EventLocation to avoid recursive import
+# after EventLocation to avoid recursive import; before Event
+# so that it can be used there
 from square.management.commands.initialize import initial_event_location
 #
 #
@@ -101,7 +102,7 @@ class Event(models.Model):
             hours += s.elapsed_time
         return hours
 
-    def __unicode__(self):
+    def __str__(self):
         return "{0} on {1}".format(self.type, self.date)
 
 

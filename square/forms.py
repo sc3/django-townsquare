@@ -1,6 +1,6 @@
 
 from django.forms import Form, ModelForm, CharField, PasswordInput, \
-        BooleanField, ModelChoiceField, DateTimeField, ChoiceField
+        BooleanField, ModelChoiceField, DateTimeField, ChoiceField, SplitDateTimeField
 from django.contrib.admin.widgets import AdminDateWidget 
 from django.forms.widgets import SplitDateTimeWidget
 from square.models import Event, EventLocation, Volunteer
@@ -13,15 +13,14 @@ class EventForm(ModelForm):
         
     is_volunteer_time = BooleanField(required=False, initial=True)
     event_type = ChoiceField(initial='Open Build', choices=Event.EVENT_TYPES)
-    start = DateTimeField(initial=time_today(11), widget=SplitDateTimeWidget)
-    end = DateTimeField(initial=time_today(17), widget=SplitDateTimeWidget)
+    start = SplitDateTimeField(initial=time_today(11), widget=SplitDateTimeWidget)
+    end = SplitDateTimeField(initial=time_today(17), widget=SplitDateTimeWidget)
     event_location = ModelChoiceField(queryset=EventLocation.objects.all(), 
-                                        initial=initial_event_location())
+            initial=initial_event_location())
 
     class Meta:
         model = Event
-        fields = ('event_type', 'event_location', 'start',
-                    'end', 'notes', 'is_volunteer_time')
+        fields = ('notes',)
 
 
 class VolunteerForm(Form):
@@ -31,7 +30,6 @@ class VolunteerForm(Form):
     username = CharField(label='Username', required=False)
     permission = ChoiceField(label='Permission Level', initial='Volunteer',
             choices=Volunteer.PERMISSION_GROUPS)
-    # signup_date = DateTimeField(initial=datetime.now())
     password = CharField(label='New Password', 
             required=False, widget=PasswordInput())
     password_confirm = CharField(label='Re-enter Password', 

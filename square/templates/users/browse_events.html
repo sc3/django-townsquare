@@ -9,8 +9,8 @@
 <table id="event-list">
 
     <tr>
-      <td><b>Date</b></td>
-      <td><b>Time</b></td>
+      <td><b>Start</b></td>
+      <td><b>End</b></td>
       <td><b>Type</b></td>
       <td><b>Location</b></td>
       <td><b>Details</b></td>
@@ -18,8 +18,8 @@
 
 	{% for event in events %}
 		<tr>
-      <td>{{event.date}}</td>
-      <td>{{event.start}} to {{event.end}}</td>
+      <td>{{event.start}}</td>
+      <td>{{event.end}}</td>
 			<td>{{event.get_event_type_display}}</td>
 			<td>{{event.event_location}}</td>
       <td><input class="event-details" type="button" 

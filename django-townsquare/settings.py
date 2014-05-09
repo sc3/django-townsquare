@@ -165,8 +165,13 @@ LOGGING = {
 }
 
 TIME_INPUT_FORMATS = (
+    '%I:%M %p',
     '%I:%M%p',
-    '%I:%M',
+)
+
+DATE_INPUT_FORMATS = (
+    '%m/%d/%Y'
+    '%m-%d-%Y'
 )
 
 LOGIN_URL = '/townsquare/login'

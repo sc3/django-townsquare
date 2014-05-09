@@ -12,10 +12,10 @@ class Volunteer(models.Model):
         ('Volunteer', 'Volunteer')
     }
         
-    full_name = models.CharField(max_length=200)
-    email = models.CharField(max_length=200)
+    full_name = models.CharField(max_length=200, default='')
+    email = models.CharField(max_length=200, null=True)
     user = models.OneToOneField(User, unique=True, null=True)
-    signup_date = models.DateField("Date of Orientation")
+    signup_date = models.DateField("Date of Orientation", default=datetime.today())
 
     @property
     def hours(self):

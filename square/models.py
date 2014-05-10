@@ -55,7 +55,7 @@ class Volunteer(models.Model):
             return None
 
 
-    def __unicode__(self):
+    def __str__(self):
         return self.full_name
 
 
@@ -65,13 +65,13 @@ class EventLocation(models.Model):
     city = models.CharField(max_length=50)
     state = models.CharField(max_length=50)
     zip_code = models.CharField(max_length=6)
-    def __unicode__(self):
+    def __str__(self):
         return self.full_name
 
 #
 # after EventLocation to avoid recursive import; before Event
 # so that it can be used there
-# from square.management.commands.initialize import initial_event_location
+from square.management.commands.initialize import initial_event_location
 #
 #
 
@@ -86,7 +86,7 @@ class Event(models.Model):
     date = models.DateField(default=datetime.today())
     start = models.TimeField(default=datetime.now())
     end = models.TimeField(default=datetime.now())
-    location = models.ForeignKey(EventLocation, default=EventLocation(id=1))
+    location = models.ForeignKey(EventLocation, default=initial_event_location())
     notes = models.TextField(blank=True)
     is_volunteer_time = models.BooleanField('Counts towards volunteer hours', default=True)
 
@@ -96,7 +96,7 @@ class Event(models.Model):
 
     @property
     def total_service_hours(self):
-        hours = 0
+        hours = 0.0
         for s in self.session_set.all():
             hours += s.elapsed_time
         return hours
@@ -117,7 +117,7 @@ class Session(models.Model):
         tdelta = timeonly_delta(self.end, self.start)
         return round(tdelta, 1)
 
-    def __unicode__(self):
+    def __str__(self):
         return "{0} at {1}".format(self.volunteer, self.event)
 
 

@@ -12,10 +12,13 @@ class Volunteer(models.Model):
         ('Volunteer', 'Volunteer')
     }
         
-    full_name = models.CharField(max_length=200, default='')
+    full_name = models.CharField(max_length=200, null=True)
     email = models.CharField(max_length=200, null=True)
     user = models.OneToOneField(User, unique=True, null=True)
     signup_date = models.DateField("Date of Orientation", default=datetime.today())
+    contact_name = models.CharField(max_length=200, null=True)
+    contact_relationship = models.CharField(max_length=200, null=True)
+    contact_phone_number = models.CharField(max_length=200, null=True)
 
     @property
     def hours(self):
@@ -71,7 +74,7 @@ class EventLocation(models.Model):
 #
 # after EventLocation to avoid recursive import; before Event
 # so that it can be used there
-from square.management.commands.initialize import initial_event_location
+# from square.management.commands.initialize import initial_event_location
 #
 #
 
@@ -86,7 +89,7 @@ class Event(models.Model):
     date = models.DateField(default=datetime.today())
     start = models.TimeField(default=datetime.now())
     end = models.TimeField(default=datetime.now())
-    location = models.ForeignKey(EventLocation, default=initial_event_location())
+    location = models.ForeignKey(EventLocation, default=EventLocation(id=1)) #initial_event_location())
     notes = models.TextField(blank=True)
     is_volunteer_time = models.BooleanField('Counts towards volunteer hours', default=True)
 

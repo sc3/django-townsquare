@@ -11,10 +11,13 @@ class Migration(SchemaMigration):
         # Adding model 'Volunteer'
         db.create_table(u'square_volunteer', (
             (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('full_name', self.gf('django.db.models.fields.CharField')(default='', max_length=200)),
+            ('full_name', self.gf('django.db.models.fields.CharField')(max_length=200, null=True)),
             ('email', self.gf('django.db.models.fields.CharField')(max_length=200, null=True)),
             ('user', self.gf('django.db.models.fields.related.OneToOneField')(to=orm['auth.User'], unique=True, null=True)),
             ('signup_date', self.gf('django.db.models.fields.DateField')(default=datetime.datetime(2014, 5, 9, 0, 0))),
+            ('contact_name', self.gf('django.db.models.fields.CharField')(max_length=200, null=True)),
+            ('contact_relationship', self.gf('django.db.models.fields.CharField')(max_length=200, null=True)),
+            ('contact_phone_number', self.gf('django.db.models.fields.CharField')(max_length=200, null=True)),
         ))
         db.send_create_signal(u'square', ['Volunteer'])
 
@@ -38,7 +41,7 @@ class Migration(SchemaMigration):
             ('end', self.gf('django.db.models.fields.TimeField')(default=datetime.datetime(2014, 5, 9, 0, 0))),
             ('location', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['square.EventLocation'])),
             ('notes', self.gf('django.db.models.fields.TextField')(blank=True)),
-            ('is_volunteer_time', self.gf('django.db.models.fields.BooleanField')()),
+            ('is_volunteer_time', self.gf('django.db.models.fields.BooleanField')(default=True)),
         ))
         db.send_create_signal(u'square', ['Event'])
 
@@ -110,7 +113,7 @@ class Migration(SchemaMigration):
             'date': ('django.db.models.fields.DateField', [], {'default': 'datetime.datetime(2014, 5, 9, 0, 0)'}),
             'end': ('django.db.models.fields.TimeField', [], {'default': 'datetime.datetime(2014, 5, 9, 0, 0)'}),
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
-            'is_volunteer_time': ('django.db.models.fields.BooleanField', [], {}),
+            'is_volunteer_time': ('django.db.models.fields.BooleanField', [], {'default': 'True'}),
             'location': ('django.db.models.fields.related.ForeignKey', [], {'to': u"orm['square.EventLocation']"}),
             'notes': ('django.db.models.fields.TextField', [], {'blank': 'True'}),
             'start': ('django.db.models.fields.TimeField', [], {'default': 'datetime.datetime(2014, 5, 9, 0, 0)'}),
@@ -136,8 +139,11 @@ class Migration(SchemaMigration):
         },
         u'square.volunteer': {
             'Meta': {'object_name': 'Volunteer'},
+            'contact_name': ('django.db.models.fields.CharField', [], {'max_length': '200', 'null': 'True'}),
+            'contact_phone_number': ('django.db.models.fields.CharField', [], {'max_length': '200', 'null': 'True'}),
+            'contact_relationship': ('django.db.models.fields.CharField', [], {'max_length': '200', 'null': 'True'}),
             'email': ('django.db.models.fields.CharField', [], {'max_length': '200', 'null': 'True'}),
-            'full_name': ('django.db.models.fields.CharField', [], {'default': "''", 'max_length': '200'}),
+            'full_name': ('django.db.models.fields.CharField', [], {'max_length': '200', 'null': 'True'}),
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'signup_date': ('django.db.models.fields.DateField', [], {'default': 'datetime.datetime(2014, 5, 9, 0, 0)'}),
             'user': ('django.db.models.fields.related.OneToOneField', [], {'to': u"orm['auth.User']", 'unique': 'True', 'null': 'True'})

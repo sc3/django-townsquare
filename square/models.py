@@ -13,19 +13,23 @@ class Volunteer(models.Model):
     }
         
     full_name = models.CharField(max_length=200, null=True)
-    email = models.CharField(max_length=200, null=True)
+    email = models.CharField(max_length=200, null=True, blank=True)
     user = models.OneToOneField(User, unique=True, null=True)
     signup_date = models.DateField("Date of Orientation", default=datetime.today())
-    contact_name = models.CharField(max_length=200, null=True)
-    contact_relationship = models.CharField(max_length=200, null=True)
-    contact_phone_number = models.CharField(max_length=200, null=True)
+    legal_date = models.DateField("Date Signed Waiver and Code of Conduct", 
+                                    null=True, blank=True)
+    birth_date = models.DateField(null=True, blank=True)
+    contact_name = models.CharField(max_length=200, null=True, blank=True)
+    contact_relationship = models.CharField(max_length=200, null=True, blank=True)
+    contact_phone_number = models.CharField(max_length=200, null=True, blank=True)
+    medical_notes = models.TextField(max_length=400, null=True, blank=True)
+    conduct_notes = models.TextField(max_length=400, null=True, blank=True)
 
     @property
     def hours(self):
         hours = 0.0
         for s in self.session_set.filter(event__is_volunteer_time=True):
             hours += s.elapsed_time
-        
         return hours
 
     @property
@@ -100,7 +104,7 @@ class Event(models.Model):
     @property
     def total_service_hours(self):
         hours = 0.0
-        for s in self.session_set.all():
+        for s in self.session_set.filter(event__is_volunteer_time=True):
             hours += s.elapsed_time
         return hours
 

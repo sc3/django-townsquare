@@ -6,7 +6,6 @@ from django.contrib.admin.widgets import AdminTimeWidget, AdminDateWidget
 from square.models import Event, EventLocation, Volunteer
 from management.commands.initialize import initial_event_location
 from datetime import datetime, time
-from square.settings import DATE_INPUT_FORMATS
 
 
 class EventForm(ModelForm):
@@ -34,7 +33,6 @@ class VolunteerForm(ModelForm):
 
     class Meta:
         model = Volunteer
-        fields = ('full_name', 'email', 'signup_date')
         
     
 class LoginForm(Form):

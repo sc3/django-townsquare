@@ -18,7 +18,7 @@ class EventAdmin(admin.ModelAdmin):
         }), 
         ('Event Details', {
             'classes': ('collapse',),
-            'fields': ('date', ('start', 'end'), 'location', 'notes', 'is_volunteer_time'),
+            'fields': ('type', 'date', ('start', 'end'), 'location', 'notes', 'is_volunteer_time'),
         })
     )
     inlines = [SessionInline]
@@ -32,20 +32,22 @@ class VolunteerAdmin(admin.ModelAdmin):
 
     readonly_fields = ('hours', 'credit')
     fieldsets = (
-    	('Basic', {
-            'fields': ('full_name', 'email')
+    	('Basic Information', {
+            'fields': ('full_name', 'email', 'hours', 'credit')
         }),
-        ('Emergency Contact', {
-            'fields': ('contact_name', 'contact_relationship', 
-                        'contact_phone_number')
-        }),
-        ('Account', {
+        ('Account Information', {
             'fields': ('username', 'password', 'password_confirm', 
                         'permission')
         }),
-        ('Volunteer', {
-            'fields': ('signup_date', 'hours', 'credit')
-        })
+        ('Additional', {
+            'fields': ('signup_date', 'legal_date', 'birth_date', 'conduct_notes', 'medical_notes'),
+            # 'classes': ('collapse',)
+        }),
+        ('Emergency Contact', {
+            'fields': ('contact_name', 'contact_relationship', 
+                        'contact_phone_number'),
+            # 'classes': ('collapse',)
+        }),
     )    
 
     form = VolunteerForm

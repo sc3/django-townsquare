@@ -2,14 +2,16 @@
 from django.forms import Form, ModelForm, CharField, PasswordInput, \
         BooleanField, ModelChoiceField, ChoiceField, SplitDateTimeField, \
         DateField, TimeField
+from django.contrib.admin.widgets import AdminTimeWidget, AdminDateWidget
 from square.models import Event, EventLocation, Volunteer
 from management.commands.initialize import initial_event_location
 from datetime import datetime, time
+from square.settings import DATE_INPUT_FORMATS
 
 
 class EventForm(ModelForm):
-    start = TimeField(initial=time(11))
-    end = TimeField(initial=time(17))
+    start = TimeField(initial=time(11), widget=AdminTimeWidget)
+    end = TimeField(initial=time(17), widget=AdminTimeWidget)
     location = ModelChoiceField(
             label='Event Location',
             queryset=EventLocation.objects.all(), 

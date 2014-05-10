@@ -84,7 +84,7 @@ class Event(models.Model):
     end = models.TimeField(default=datetime.now())
     location = models.ForeignKey(EventLocation, default=EventLocation(id=1))
     notes = models.TextField(blank=True)
-    is_volunteer_time = models.BooleanField('Counts towards volunteer hours')
+    is_volunteer_time = models.BooleanField('Counts towards volunteer hours', default=True)
 
     @property
     def total_participants(self):

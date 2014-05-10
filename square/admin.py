@@ -32,12 +32,20 @@ class VolunteerAdmin(admin.ModelAdmin):
 
     readonly_fields = ('hours', 'credit')
     fieldsets = (
-    	('Contact Info', {
+    	('Basic', {
             'fields': ('full_name', 'email')
         }),
-        ('Account Info', {
-            'fields': ('username', 'signup_date', 'hours', 'credit')
+        ('Emergency Contact', {
+            'fields': ('contact_name', 'contact_relationship', 
+                        'contact_phone_number')
         }),
+        ('Account', {
+            'fields': ('username', 'password', 'password_confirm', 
+                        'permission')
+        }),
+        ('Volunteer', {
+            'fields': ('signup_date', 'hours', 'credit')
+        })
     )    
 
     form = VolunteerForm

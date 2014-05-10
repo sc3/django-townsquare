@@ -1,5 +1,6 @@
 from django.contrib import admin
 from square.models import Event, EventLocation, Session, Volunteer
+from square.forms import EventForm, VolunteerForm
 
 class SessionInline(admin.TabularInline):
     model = Session
@@ -7,26 +8,49 @@ class SessionInline(admin.TabularInline):
 
 
 class EventAdmin(admin.ModelAdmin):
-    fieldsets = [
-        ('What and Where is it?', {'fields': ['event_type', 'event_location']}),
-    	('When is it?',           {'fields': ['date', 'start', 'end']}),
-        ('Additional Info',       {'fields': ['notes', 'is_volunteer_time'], 'classes': ['collapse']}),
-    ]
+
+    list_display = ('type', 'date', 'total_participants', 'total_service_hours')
+    readonly_fields = ('total_participants', 'total_service_hours')
+    
+    fieldsets = (
+        ('Summary', {
+            'fields': (('total_participants', 'total_service_hours'), )
+        }), 
+        ('Event Details', {
+            'classes': ('collapse',),
+            'fields': ('type', 'date', ('start', 'end'), 'location', 'notes', 'is_volunteer_time'),
+        })
+    )
     inlines = [SessionInline]
-    list_display = ('event_type', 'date', 'event_location')
+    form = EventForm
 
 
 class VolunteerAdmin(admin.ModelAdmin):
 
-    list_display = ('full_name', 'signup_date', 'hours')
+    list_display = ('full_name', 'signup_date', 'hours', 'credit')
     search_fields = ['full_name']
 
     readonly_fields = ('hours', 'credit')
-    fieldsets = [
-    	('Personal Info', 	{'fields': ['first_name', 'last_name']}),
-    	('Legacy Info',     {'fields': ['signup_date', 'hours']}),
-    ]
-    
+    fieldsets = (
+    	('Basic Information', {
+            'fields': ('full_name', 'email', 'hours', 'credit')
+        }),
+        ('Account Information', {
+            'fields': ('username', 'password', 'password_confirm', 
+                        'permission')
+        }),
+        ('Additional', {
+            'fields': ('signup_date', 'legal_date', 'birth_date', 'conduct_notes', 'medical_notes'),
+            # 'classes': ('collapse',)
+        }),
+        ('Emergency Contact', {
+            'fields': ('contact_name', 'contact_relationship', 
+                        'contact_phone_number'),
+            # 'classes': ('collapse',)
+        }),
+    )    
+
+    form = VolunteerForm
 
 
 admin.site.register(Event, EventAdmin)

@@ -3,14 +3,11 @@ from datetime import date, time, datetime
 import random, string
 
 
-def timeonly_delta(time1, time2):
-    start_date = dateize(time1)
-    end_date = dateize(time2)
-    return start_date-end_date
-
-
-def dateize(time):
-    return datetime.combine(date.today(), time)
+def timeonly_delta(timea, timeb):
+    datea = datetime.combine(datetime.today(), timea)
+    dateb = datetime.combine(datetime.today(), timeb)
+    delta = datea - dateb
+    return delta.seconds / 3600.0
 
 
 def gen_password(length=8):
@@ -23,5 +20,3 @@ def gen_password(length=8):
 def gen_username(first_name, last_name, signup_date):
     return '{0}{1}:{2}'.format(
             first_name, last_name, signup_date.strftime('%m-%d-%y'))
-
-

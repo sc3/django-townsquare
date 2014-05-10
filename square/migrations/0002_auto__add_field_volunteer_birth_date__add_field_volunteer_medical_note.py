@@ -8,15 +8,31 @@ from django.db import models
 class Migration(SchemaMigration):
 
     def forwards(self, orm):
-        # Deleting field 'Volunteer.credentials'
-        db.delete_column(u'square_volunteer', 'credentials')
+        # Adding field 'Volunteer.birth_date'
+        db.add_column(u'square_volunteer', 'birth_date',
+                      self.gf('django.db.models.fields.DateField')(null=True, blank=True),
+                      keep_default=False)
+
+        # Adding field 'Volunteer.medical_notes'
+        db.add_column(u'square_volunteer', 'medical_notes',
+                      self.gf('django.db.models.fields.TextField')(max_length=400, null=True),
+                      keep_default=False)
+
+        # Adding field 'Volunteer.conduct_notes'
+        db.add_column(u'square_volunteer', 'conduct_notes',
+                      self.gf('django.db.models.fields.TextField')(max_length=400, null=True),
+                      keep_default=False)
 
 
     def backwards(self, orm):
-        # Adding field 'Volunteer.credentials'
-        db.add_column(u'square_volunteer', 'credentials',
-                      self.gf('django.db.models.fields.CharField')(max_length=200, null=True, blank=True),
-                      keep_default=False)
+        # Deleting field 'Volunteer.birth_date'
+        db.delete_column(u'square_volunteer', 'birth_date')
+
+        # Deleting field 'Volunteer.medical_notes'
+        db.delete_column(u'square_volunteer', 'medical_notes')
+
+        # Deleting field 'Volunteer.conduct_notes'
+        db.delete_column(u'square_volunteer', 'conduct_notes')
 
 
     models = {
@@ -58,14 +74,14 @@ class Migration(SchemaMigration):
         },
         u'square.event': {
             'Meta': {'object_name': 'Event'},
-            'date': ('django.db.models.fields.DateField', [], {'default': 'datetime.datetime(2014, 5, 8, 0, 0)'}),
-            'end': ('django.db.models.fields.TimeField', [], {'default': 'datetime.datetime(1900, 1, 1, 0, 0)'}),
-            'event_location': ('django.db.models.fields.related.ForeignKey', [], {'to': u"orm['square.EventLocation']"}),
-            'event_type': ('django.db.models.fields.CharField', [], {'default': "'VP'", 'max_length': '2'}),
+            'date': ('django.db.models.fields.DateField', [], {'default': 'datetime.datetime(2014, 5, 9, 0, 0)'}),
+            'end': ('django.db.models.fields.TimeField', [], {'default': 'datetime.datetime(2014, 5, 9, 0, 0)'}),
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
-            'is_volunteer_time': ('django.db.models.fields.BooleanField', [], {}),
+            'is_volunteer_time': ('django.db.models.fields.BooleanField', [], {'default': 'True'}),
+            'location': ('django.db.models.fields.related.ForeignKey', [], {'to': u"orm['square.EventLocation']"}),
             'notes': ('django.db.models.fields.TextField', [], {'blank': 'True'}),
-            'start': ('django.db.models.fields.TimeField', [], {'default': 'datetime.datetime(1900, 1, 1, 0, 0)'})
+            'start': ('django.db.models.fields.TimeField', [], {'default': 'datetime.datetime(2014, 5, 9, 0, 0)'}),
+            'type': ('django.db.models.fields.CharField', [], {'default': "'Open Build'", 'max_length': '50'})
         },
         u'square.eventlocation': {
             'Meta': {'object_name': 'EventLocation'},
@@ -87,12 +103,17 @@ class Migration(SchemaMigration):
         },
         u'square.volunteer': {
             'Meta': {'object_name': 'Volunteer'},
-            'first_name': ('django.db.models.fields.CharField', [], {'max_length': '100'}),
+            'birth_date': ('django.db.models.fields.DateField', [], {'null': 'True', 'blank': 'True'}),
+            'conduct_notes': ('django.db.models.fields.TextField', [], {'max_length': '400', 'null': 'True'}),
+            'contact_name': ('django.db.models.fields.CharField', [], {'max_length': '200', 'null': 'True'}),
+            'contact_phone_number': ('django.db.models.fields.CharField', [], {'max_length': '200', 'null': 'True'}),
+            'contact_relationship': ('django.db.models.fields.CharField', [], {'max_length': '200', 'null': 'True'}),
+            'email': ('django.db.models.fields.CharField', [], {'max_length': '200', 'null': 'True'}),
+            'full_name': ('django.db.models.fields.CharField', [], {'max_length': '200', 'null': 'True'}),
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
-            'last_name': ('django.db.models.fields.CharField', [], {'max_length': '100'}),
-            'signup_date': ('django.db.models.fields.DateField', [], {'default': 'datetime.datetime(2014, 5, 8, 0, 0)'}),
-            'user': ('django.db.models.fields.related.OneToOneField', [], {'to': u"orm['auth.User']", 'unique': 'True', 'null': 'True'}),
-            'vol_image': ('django.db.models.fields.CharField', [], {'max_length': '200', 'blank': 'True'})
+            'medical_notes': ('django.db.models.fields.TextField', [], {'max_length': '400', 'null': 'True'}),
+            'signup_date': ('django.db.models.fields.DateField', [], {'default': 'datetime.datetime(2014, 5, 9, 0, 0)'}),
+            'user': ('django.db.models.fields.related.OneToOneField', [], {'to': u"orm['auth.User']", 'unique': 'True', 'null': 'True'})
         }
     }
 

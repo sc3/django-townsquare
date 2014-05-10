@@ -1,27 +1,28 @@
 
 from django.forms import Form, ModelForm, CharField, PasswordInput, \
-        BooleanField, ModelChoiceField, DateField, ChoiceField
-from django.contrib.admin.widgets import AdminDateWidget 
+        BooleanField, ModelChoiceField, ChoiceField, SplitDateTimeField, \
+        DateField, TimeField
+from django.contrib.admin.widgets import AdminTimeWidget, AdminDateWidget
 from square.models import Event, EventLocation, Volunteer
 from management.commands.initialize import initial_event_location
+from datetime import datetime, time
 
 
 class EventForm(ModelForm):
-        
-    is_volunteer_time = BooleanField(required=False, initial=True)
-    event_location = ModelChoiceField(queryset=EventLocation.objects.all(), 
-                                        initial=initial_event_location())
+    start = TimeField(initial=time(11), widget=AdminTimeWidget)
+    end = TimeField(initial=time(17), widget=AdminTimeWidget)
+    location = ModelChoiceField(
+            label='Event Location',
+            queryset=EventLocation.objects.all(), 
+            initial=initial_event_location())
 
     class Meta:
         model = Event
-        fields = ('event_type', 'event_location', 'date', 'start',
-                    'end', 'notes', 'is_volunteer_time')
+        fields = '__all__'
 
 
-class VolunteerForm(Form):
+class VolunteerForm(ModelForm):
     
-    first_name = CharField(label='First Name')
-    last_name = CharField(label='Last Name')
     username = CharField(label='Username', required=False)
     permission = ChoiceField(label='Permission Level', initial='Volunteer',
             choices=Volunteer.PERMISSION_GROUPS)
@@ -29,7 +30,11 @@ class VolunteerForm(Form):
             required=False, widget=PasswordInput())
     password_confirm = CharField(label='Re-enter Password', 
             required=False, widget=PasswordInput())
-    
+
+    class Meta:
+        model = Volunteer
+        exclude = ('user', )
+        
     
 class LoginForm(Form):
         

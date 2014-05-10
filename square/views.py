@@ -154,7 +154,6 @@ def edit_event(request, event_id=None):
 
 @login_required
 def browse_events(request):
-    
     evs = Event.objects.all()
     return render(request, 'users/browse_events.html',
                     {'events': evs,})

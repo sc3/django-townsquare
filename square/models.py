@@ -67,7 +67,7 @@ class EventLocation(models.Model):
 #
 # after EventLocation to avoid recursive import; before Event
 # so that it can be used there
-from square.management.commands.initialize import initial_event_location
+# from square.management.commands.initialize import initial_event_location
 #
 #
 
@@ -82,7 +82,7 @@ class Event(models.Model):
     date = models.DateField(default=datetime.today())
     start = models.TimeField(default=datetime.now())
     end = models.TimeField(default=datetime.now())
-    location = models.ForeignKey(EventLocation, default=initial_event_location())
+    location = models.ForeignKey(EventLocation, default=EventLocation(id=1))
     notes = models.TextField(blank=True)
     is_volunteer_time = models.BooleanField('Counts towards volunteer hours')
 
@@ -104,8 +104,8 @@ class Event(models.Model):
 class Session(models.Model):
     volunteer = models.ForeignKey(Volunteer)
     event = models.ForeignKey(Event)
-    start = models.TimeField()
-    end = models.TimeField()
+    start = models.TimeField('Time In')
+    end = models.TimeField('Time Out')
     orientation = models.BooleanField(default=False)
 
     @property

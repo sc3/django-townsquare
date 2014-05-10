@@ -18,7 +18,7 @@ class EventForm(ModelForm):
 
     class Meta:
         model = Event
-        fields = ('type', 'date', 'start', 'end', 'location', 'notes', 'is_volunteer_time')
+        fields = '__all__'
 
 
 class VolunteerForm(ModelForm):
@@ -33,6 +33,7 @@ class VolunteerForm(ModelForm):
 
     class Meta:
         model = Volunteer
+        exclude = ('user', )
         
     
 class LoginForm(Form):

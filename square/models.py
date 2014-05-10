@@ -17,13 +17,13 @@ class Volunteer(models.Model):
     user = models.OneToOneField(User, unique=True, null=True)
     signup_date = models.DateField("Date of Orientation", default=datetime.today())
     legal_date = models.DateField("Date Signed Waiver and Code of Conduct", 
-                                    null=True, blank=True)
+                                    null=True, blank=True, default=datetime.today())
     birth_date = models.DateField(null=True, blank=True)
     contact_name = models.CharField(max_length=200, null=True, blank=True)
     contact_relationship = models.CharField(max_length=200, null=True, blank=True)
     contact_phone_number = models.CharField(max_length=200, null=True, blank=True)
     medical_notes = models.TextField(max_length=400, null=True, blank=True)
-    conduct_notes = models.TextField(max_length=400, null=True, blank=True)
+    conduct_notes = models.TextField("Code of Conduct Notes", max_length=400, null=True, blank=True)
 
     @property
     def hours(self):

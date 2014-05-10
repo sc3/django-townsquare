@@ -49,7 +49,11 @@ class Volunteer(models.Model):
     def permission(self):
         # take the first permission group a volunteer is in;
         # they should be in exactly one group 
-        return self.user.groups.filter()[0].name
+        try:
+            return self.user.groups.filter()[0].name
+        except IndexError:
+            return None
+
 
     def __unicode__(self):
         return self.full_name

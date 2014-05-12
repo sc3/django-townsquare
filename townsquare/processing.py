@@ -109,6 +109,9 @@ def process_volunteer_get(vol_id):
 
 def process_valid_event_post(form, event_id=None):
 
+    # TODO: Fix this! Does this code never result
+    # in more than one event being created?
+
     update_fields = {}
     for k in form.fields:
         if form.cleaned_data[k]:
@@ -122,11 +125,9 @@ def process_valid_event_post(form, event_id=None):
 
 def process_event_get(event_id):
 
-    if event_id is None:
-        raise Exception("Can't POST to this URL. Try editing a specific "
-                        "event: append '/n', where n is the id of the event "
-                        "you want .")
+    if event_id is not None:
+        event = Event.objects.get(id=int(event_id))
+        return EventForm(instance=event)
+        
 
-    event = Event.objects.get(id=int(event_id))
-    return EventForm(instance=event)
 

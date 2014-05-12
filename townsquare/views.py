@@ -2,9 +2,9 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
-from square.forms import EventForm, VolunteerForm, LoginForm
-from square.models import Volunteer, Event
-from square.processing import process_valid_event_post,         \
+from townsquare.forms import EventForm, VolunteerForm, LoginForm
+from townsquare.models import Volunteer, Event
+from townsquare.processing import process_valid_event_post,         \
         process_valid_volunteer_post, process_valid_login_post, \
         process_volunteer_get, process_event_get
 

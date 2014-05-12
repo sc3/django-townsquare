@@ -5,15 +5,14 @@ from django.db.utils import IntegrityError
 from django.core.management import call_command
 from django.core.management.base import BaseCommand
 
-from square.models import EventLocation
-
+from townsquare.models import initial_event_location
 
 ###########################
 # Permissions
 ###########################
 
 
-APP_NAME = 'square'
+APP_NAME = 'townsquare'
 
 def get_ct(content_name):
     result = ContentType.objects.filter(app_label=APP_NAME, name=content_name)
@@ -40,27 +39,6 @@ def create_new_group(name, ct_names):
 
     group.permissions.add(*group_perms) 
     group.save()
-
-
-##########################
-# Event Location
-##########################
-
-
-def initial_event_location():
-
-    try:
-        return EventLocation.objects.get(id=1)
-    except EventLocation.DoesNotExist:
-        el = EventLocation.objects.create(
-            full_name='FreeGeek Chicago', 
-            address='3411 W. Diversey Avenue',
-            city='Chicago',
-            state='IL',
-            zip_code='60647'
-        )
-        el.save()
-        return el
 
 
 class Command(BaseCommand):

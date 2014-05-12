@@ -10,7 +10,7 @@ from tastypie.serializers import Serializer
 from django.http import HttpResponse
 from django.contrib.auth.models import User
 
-from square.models import Volunteer
+from townsquare.models import Volunteer
 
 from copy import copy
 import csv, os

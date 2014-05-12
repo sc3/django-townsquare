@@ -1,6 +1,6 @@
 from django.test import TestCase
 from django.test.client import Client
-from square.models import Volunteer
+from townsquare.models import Volunteer
 from django.contrib.auth.models import User
 
 class Test_Volunteer_URLs(TestCase):

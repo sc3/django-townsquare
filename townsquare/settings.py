@@ -105,17 +105,17 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'django-townsquare.urls'
+ROOT_URLCONF = 'townsquare.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = 'django-townsquare.wsgi.application'
+WSGI_APPLICATION = 'townsquare.wsgi.application'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Append the template dir with a leading slash to the project root.
-    os.path.join(PROJECT_ROOT, '/square/templates/'),
-    os.path.join(PROJECT_ROOT, '/square/templates/users')
+    os.path.join(PROJECT_ROOT, '/townsquare/templates/'),
+    os.path.join(PROJECT_ROOT, '/townsquare/templates/users')
     
     
 )
@@ -127,7 +127,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'square',
+    'townsquare',
     'south',
     #'django_admin_bootstrapped',
     'django.contrib.admin',

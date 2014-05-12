@@ -1,6 +1,6 @@
 from django.contrib import admin
-from square.models import Event, EventLocation, Session, Volunteer
-from square.forms import EventForm, VolunteerForm
+from townsquare.models import Event, EventLocation, Session, Volunteer
+from townsquare.forms import EventForm, VolunteerForm
 
 class SessionInline(admin.TabularInline):
     model = Session

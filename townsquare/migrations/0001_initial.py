@@ -9,20 +9,24 @@ class Migration(SchemaMigration):
 
     def forwards(self, orm):
         # Adding model 'Volunteer'
-        db.create_table(u'square_volunteer', (
+        db.create_table(u'townsquare_volunteer', (
             (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
             ('full_name', self.gf('django.db.models.fields.CharField')(max_length=200, null=True)),
-            ('email', self.gf('django.db.models.fields.CharField')(max_length=200, null=True)),
+            ('email', self.gf('django.db.models.fields.CharField')(max_length=200, null=True, blank=True)),
             ('user', self.gf('django.db.models.fields.related.OneToOneField')(to=orm['auth.User'], unique=True, null=True)),
-            ('signup_date', self.gf('django.db.models.fields.DateField')(default=datetime.datetime(2014, 5, 9, 0, 0))),
-            ('contact_name', self.gf('django.db.models.fields.CharField')(max_length=200, null=True)),
-            ('contact_relationship', self.gf('django.db.models.fields.CharField')(max_length=200, null=True)),
-            ('contact_phone_number', self.gf('django.db.models.fields.CharField')(max_length=200, null=True)),
+            ('signup_date', self.gf('django.db.models.fields.DateField')(default=datetime.datetime(2014, 5, 11, 0, 0))),
+            ('legal_date', self.gf('django.db.models.fields.DateField')(default=datetime.datetime(2014, 5, 11, 0, 0), null=True, blank=True)),
+            ('birth_date', self.gf('django.db.models.fields.DateField')(null=True, blank=True)),
+            ('contact_name', self.gf('django.db.models.fields.CharField')(max_length=200, null=True, blank=True)),
+            ('contact_relationship', self.gf('django.db.models.fields.CharField')(max_length=200, null=True, blank=True)),
+            ('contact_phone_number', self.gf('django.db.models.fields.CharField')(max_length=200, null=True, blank=True)),
+            ('medical_notes', self.gf('django.db.models.fields.TextField')(max_length=400, null=True, blank=True)),
+            ('conduct_notes', self.gf('django.db.models.fields.TextField')(max_length=400, null=True, blank=True)),
         ))
-        db.send_create_signal(u'square', ['Volunteer'])
+        db.send_create_signal(u'townsquare', ['Volunteer'])
 
         # Adding model 'EventLocation'
-        db.create_table(u'square_eventlocation', (
+        db.create_table(u'townsquare_eventlocation', (
             (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
             ('full_name', self.gf('django.db.models.fields.CharField')(max_length=200)),
             ('address', self.gf('django.db.models.fields.CharField')(max_length=200)),
@@ -30,45 +34,45 @@ class Migration(SchemaMigration):
             ('state', self.gf('django.db.models.fields.CharField')(max_length=50)),
             ('zip_code', self.gf('django.db.models.fields.CharField')(max_length=6)),
         ))
-        db.send_create_signal(u'square', ['EventLocation'])
+        db.send_create_signal(u'townsquare', ['EventLocation'])
 
         # Adding model 'Event'
-        db.create_table(u'square_event', (
+        db.create_table(u'townsquare_event', (
             (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
             ('type', self.gf('django.db.models.fields.CharField')(default='Open Build', max_length=50)),
-            ('date', self.gf('django.db.models.fields.DateField')(default=datetime.datetime(2014, 5, 9, 0, 0))),
-            ('start', self.gf('django.db.models.fields.TimeField')(default=datetime.datetime(2014, 5, 9, 0, 0))),
-            ('end', self.gf('django.db.models.fields.TimeField')(default=datetime.datetime(2014, 5, 9, 0, 0))),
-            ('location', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['square.EventLocation'])),
+            ('date', self.gf('django.db.models.fields.DateField')(default=datetime.datetime(2014, 5, 11, 0, 0))),
+            ('start', self.gf('django.db.models.fields.TimeField')(default=datetime.datetime(2014, 5, 11, 0, 0))),
+            ('end', self.gf('django.db.models.fields.TimeField')(default=datetime.datetime(2014, 5, 11, 0, 0))),
+            ('location', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['townsquare.EventLocation'])),
             ('notes', self.gf('django.db.models.fields.TextField')(blank=True)),
             ('is_volunteer_time', self.gf('django.db.models.fields.BooleanField')(default=True)),
         ))
-        db.send_create_signal(u'square', ['Event'])
+        db.send_create_signal(u'townsquare', ['Event'])
 
         # Adding model 'Session'
-        db.create_table(u'square_session', (
+        db.create_table(u'townsquare_session', (
             (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
-            ('volunteer', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['square.Volunteer'])),
-            ('event', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['square.Event'])),
+            ('volunteer', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['townsquare.Volunteer'])),
+            ('event', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['townsquare.Event'])),
             ('start', self.gf('django.db.models.fields.TimeField')()),
             ('end', self.gf('django.db.models.fields.TimeField')()),
             ('orientation', self.gf('django.db.models.fields.BooleanField')(default=False)),
         ))
-        db.send_create_signal(u'square', ['Session'])
+        db.send_create_signal(u'townsquare', ['Session'])
 
 
     def backwards(self, orm):
         # Deleting model 'Volunteer'
-        db.delete_table(u'square_volunteer')
+        db.delete_table(u'townsquare_volunteer')
 
         # Deleting model 'EventLocation'
-        db.delete_table(u'square_eventlocation')
+        db.delete_table(u'townsquare_eventlocation')
 
         # Deleting model 'Event'
-        db.delete_table(u'square_event')
+        db.delete_table(u'townsquare_event')
 
         # Deleting model 'Session'
-        db.delete_table(u'square_session')
+        db.delete_table(u'townsquare_session')
 
 
     models = {
@@ -108,18 +112,18 @@ class Migration(SchemaMigration):
             'model': ('django.db.models.fields.CharField', [], {'max_length': '100'}),
             'name': ('django.db.models.fields.CharField', [], {'max_length': '100'})
         },
-        u'square.event': {
+        u'townsquare.event': {
             'Meta': {'object_name': 'Event'},
-            'date': ('django.db.models.fields.DateField', [], {'default': 'datetime.datetime(2014, 5, 9, 0, 0)'}),
-            'end': ('django.db.models.fields.TimeField', [], {'default': 'datetime.datetime(2014, 5, 9, 0, 0)'}),
+            'date': ('django.db.models.fields.DateField', [], {'default': 'datetime.datetime(2014, 5, 11, 0, 0)'}),
+            'end': ('django.db.models.fields.TimeField', [], {'default': 'datetime.datetime(2014, 5, 11, 0, 0)'}),
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'is_volunteer_time': ('django.db.models.fields.BooleanField', [], {'default': 'True'}),
-            'location': ('django.db.models.fields.related.ForeignKey', [], {'to': u"orm['square.EventLocation']"}),
+            'location': ('django.db.models.fields.related.ForeignKey', [], {'to': u"orm['townsquare.EventLocation']"}),
             'notes': ('django.db.models.fields.TextField', [], {'blank': 'True'}),
-            'start': ('django.db.models.fields.TimeField', [], {'default': 'datetime.datetime(2014, 5, 9, 0, 0)'}),
+            'start': ('django.db.models.fields.TimeField', [], {'default': 'datetime.datetime(2014, 5, 11, 0, 0)'}),
             'type': ('django.db.models.fields.CharField', [], {'default': "'Open Build'", 'max_length': '50'})
         },
-        u'square.eventlocation': {
+        u'townsquare.eventlocation': {
             'Meta': {'object_name': 'EventLocation'},
             'address': ('django.db.models.fields.CharField', [], {'max_length': '200'}),
             'city': ('django.db.models.fields.CharField', [], {'max_length': '50'}),
@@ -128,26 +132,30 @@ class Migration(SchemaMigration):
             'state': ('django.db.models.fields.CharField', [], {'max_length': '50'}),
             'zip_code': ('django.db.models.fields.CharField', [], {'max_length': '6'})
         },
-        u'square.session': {
+        u'townsquare.session': {
             'Meta': {'object_name': 'Session'},
             'end': ('django.db.models.fields.TimeField', [], {}),
-            'event': ('django.db.models.fields.related.ForeignKey', [], {'to': u"orm['square.Event']"}),
+            'event': ('django.db.models.fields.related.ForeignKey', [], {'to': u"orm['townsquare.Event']"}),
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'orientation': ('django.db.models.fields.BooleanField', [], {'default': 'False'}),
             'start': ('django.db.models.fields.TimeField', [], {}),
-            'volunteer': ('django.db.models.fields.related.ForeignKey', [], {'to': u"orm['square.Volunteer']"})
+            'volunteer': ('django.db.models.fields.related.ForeignKey', [], {'to': u"orm['townsquare.Volunteer']"})
         },
-        u'square.volunteer': {
+        u'townsquare.volunteer': {
             'Meta': {'object_name': 'Volunteer'},
-            'contact_name': ('django.db.models.fields.CharField', [], {'max_length': '200', 'null': 'True'}),
-            'contact_phone_number': ('django.db.models.fields.CharField', [], {'max_length': '200', 'null': 'True'}),
-            'contact_relationship': ('django.db.models.fields.CharField', [], {'max_length': '200', 'null': 'True'}),
-            'email': ('django.db.models.fields.CharField', [], {'max_length': '200', 'null': 'True'}),
+            'birth_date': ('django.db.models.fields.DateField', [], {'null': 'True', 'blank': 'True'}),
+            'conduct_notes': ('django.db.models.fields.TextField', [], {'max_length': '400', 'null': 'True', 'blank': 'True'}),
+            'contact_name': ('django.db.models.fields.CharField', [], {'max_length': '200', 'null': 'True', 'blank': 'True'}),
+            'contact_phone_number': ('django.db.models.fields.CharField', [], {'max_length': '200', 'null': 'True', 'blank': 'True'}),
+            'contact_relationship': ('django.db.models.fields.CharField', [], {'max_length': '200', 'null': 'True', 'blank': 'True'}),
+            'email': ('django.db.models.fields.CharField', [], {'max_length': '200', 'null': 'True', 'blank': 'True'}),
             'full_name': ('django.db.models.fields.CharField', [], {'max_length': '200', 'null': 'True'}),
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
-            'signup_date': ('django.db.models.fields.DateField', [], {'default': 'datetime.datetime(2014, 5, 9, 0, 0)'}),
+            'legal_date': ('django.db.models.fields.DateField', [], {'default': 'datetime.datetime(2014, 5, 11, 0, 0)', 'null': 'True', 'blank': 'True'}),
+            'medical_notes': ('django.db.models.fields.TextField', [], {'max_length': '400', 'null': 'True', 'blank': 'True'}),
+            'signup_date': ('django.db.models.fields.DateField', [], {'default': 'datetime.datetime(2014, 5, 11, 0, 0)'}),
             'user': ('django.db.models.fields.related.OneToOneField', [], {'to': u"orm['auth.User']", 'unique': 'True', 'null': 'True'})
         }
     }
 
-    complete_apps = ['square']
+    complete_apps = ['townsquare']

@@ -1,6 +1,6 @@
-from square.models import Volunteer, Event, EventLocation
-from square.utils import gen_password, gen_username
-from square.forms import VolunteerForm, LoginForm, EventForm
+from townsquare.models import Volunteer, Event, EventLocation
+from townsquare.utils import gen_password, gen_username
+from townsquare.forms import VolunteerForm, LoginForm, EventForm
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User, Group
 from datetime import datetime
@@ -29,11 +29,9 @@ def process_valid_volunteer_post(form, vol_id=None):
 
     # if a username is not provided, make one from 
     # first name, last name, and sign up date
-    new_firstname = form.cleaned_data['first_name']
-    new_lastname = form.cleaned_data['last_name']
+    new_full_name = form.cleaned_data['full_name']
     if not new_username:
-        new_username = gen_username(new_firstname, new_lastname,
-                                        datetime.now())
+        new_username = gen_username(new_full_name, datetime.now())
 
 
     # find out whether new username is being used
@@ -81,7 +79,7 @@ def process_valid_volunteer_post(form, vol_id=None):
 
 
     # define a set of volunteer fields, and get them from the form
-    vol_fieldnames = ['first_name', 'last_name']
+    vol_fieldnames = ['full_name']
     vol_fields = {k: form.cleaned_data[k] for k in form.fields if k and k in vol_fieldnames}
     
     # add the user we updated/created to the volunteer fields
@@ -101,8 +99,7 @@ def process_volunteer_get(vol_id):
 
     vol = Volunteer.objects.get(id=int(vol_id))
     vol_fields = {  
-            'first_name': vol.first_name, 
-            'last_name': vol.last_name,
+            'full_name': vol.full_name,
             'username': vol.user.username,
             'password': vol.user.password,
             'permission': vol.permission

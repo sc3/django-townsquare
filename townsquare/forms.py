@@ -3,7 +3,7 @@ from django.forms import Form, ModelForm, CharField, PasswordInput, \
         BooleanField, ModelChoiceField, ChoiceField, SplitDateTimeField, \
         DateField, TimeField
 from django.contrib.admin.widgets import AdminTimeWidget, AdminDateWidget
-from square.models import Event, EventLocation, Volunteer
+from townsquare.models import Event, EventLocation, Volunteer
 from management.commands.initialize import initial_event_location
 from datetime import datetime, time
 

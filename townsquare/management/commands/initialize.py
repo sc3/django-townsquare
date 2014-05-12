@@ -5,7 +5,7 @@ from django.db.utils import IntegrityError
 from django.core.management import call_command
 from django.core.management.base import BaseCommand
 
-from square.models import EventLocation
+from townsquare.models import EventLocation
 
 
 ###########################
@@ -13,7 +13,7 @@ from square.models import EventLocation
 ###########################
 
 
-APP_NAME = 'square'
+APP_NAME = 'townsquare'
 
 def get_ct(content_name):
     result = ContentType.objects.filter(app_label=APP_NAME, name=content_name)

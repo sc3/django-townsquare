@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, url, include
-from square import views
-from square.api import VolunteerResource, UserResource
+from townsquare import views
+from townsquare.api import VolunteerResource, UserResource
 from tastypie.api import Api
 
 

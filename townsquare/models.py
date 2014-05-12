@@ -1,7 +1,7 @@
 
 from django.db import models
 from django.contrib.auth.models import User
-from square.utils import timeonly_delta
+from townsquare.utils import timeonly_delta
 from datetime import datetime
 
 class Volunteer(models.Model):
@@ -78,7 +78,7 @@ class EventLocation(models.Model):
 #
 # after EventLocation to avoid recursive import; before Event
 # so that it can be used there
-# from square.management.commands.initialize import initial_event_location
+# from townsquare.management.commands.initialize import initial_event_location
 #
 #
 
